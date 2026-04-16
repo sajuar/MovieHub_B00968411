@@ -1,0 +1,42 @@
+# ── Python / Backend ──────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+env/
+.venv/
+.env/
+
+# Environment variables / secrets
+.env
+*.env
+config.local.py
+
+# Python eggs
+*.egg-info/
+dist/
+build/
+
+# ── Node / Angular / Frontend ─────────────────
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Angular build output
+dist/
+.angular/
+out-tsc/
+coverage/
+
+# ── IDEs ──────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ── OS ────────────────────────────────────────
+.DS_Store
+Thumbs.db
