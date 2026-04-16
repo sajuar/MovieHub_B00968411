@@ -1,0 +1,59 @@
+<div class="container py-4">
+  <div class="page-header">
+    <h1>Top Rated Movies</h1>
+    <p>The highest rated films in MovieHub</p>
+  </div>
+
+  <div class="limit-control mb-4">
+    <label>Show top:</label>
+    <select [(ngModel)]="limit" (change)="loadTopRated()">
+      <option [value]="5">5</option>
+      <option [value]="10">10</option>
+      <option [value]="20">20</option>
+      <option [value]="50">50</option>
+    </select>
+  </div>
+
+  @if (loading) {
+    <div class="loading-spinner">
+      <div class="spinner"></div>
+      <span>Loading...</span>
+    </div>
+  }
+
+  @if (error) {
+    <div class="alert alert-error">{{ error }}</div>
+  }
+
+  @if (!loading) {
+    <div class="ranked-list">
+      @for (movie of movies; track movie.movie_id; let i = $index) {
+        <a [routerLink]="['/movies', movie.movie_id]" class="ranked-item text-decoration-none">
+          <div class="rank-number" [class.top3]="i < 3">#{{ i + 1 }}</div>
+          <div class="rank-poster">
+            <img [src]="movie.image_url || 'https://picsum.photos/seed/' + movie.movie_id + '/80/120'"
+                 [alt]="movie.title" loading="lazy" />
+          </div>
+          <div class="rank-info">
+            <div class="rank-title">{{ movie.title }}</div>
+            <div class="rank-meta">
+              <span>{{ movie.director }}</span>
+              <span>{{ movie.release_year }}</span>
+              <span>{{ movie.language }}</span>
+              <span>{{ movie.duration_minutes }} min</span>
+            </div>
+            <div class="genre-tags">
+              @for (g of movie.genres.slice(0,3); track g) {
+                <span class="genre-tag">{{ g }}</span>
+              }
+            </div>
+          </div>
+          <div class="rank-rating">
+            <div class="big-rating">{{ movie.ratings.average | number:'1.1-1' }}</div>
+            <div class="rating-sub">{{ movie.ratings.votes }} votes</div>
+          </div>
+        </a>
+      }
+    </div>
+  }
+</div>

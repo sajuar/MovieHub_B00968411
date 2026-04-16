@@ -1,0 +1,201 @@
+@if (!loading && movie) {
+  <div class="container py-4">
+
+    <a routerLink="/movies" class="back-link">← Back to Movies</a>
+
+    <!-- Movie header -->
+    <div class="row g-4 movie-header mb-4">
+      <div class="col-lg-2 col-md-3">
+        <div class="movie-poster-large">
+          <img [src]="movie.image_url || 'https://picsum.photos/seed/' + movie.movie_id + '/300/450'"
+               [alt]="movie.title" loading="lazy" />
+        </div>
+      </div>
+      <div class="col-lg-10 col-md-9 movie-info">
+        <h1>{{ movie.title }}</h1>
+        <div class="meta-row">
+          <span class="rating-badge">⭐ {{ movie.ratings.average | number:'1.1-1' }} / 10</span>
+          <span class="meta-item">{{ movie.ratings.votes }} votes</span>
+          <span class="meta-item">{{ movie.release_year }}</span>
+          <span class="meta-item">{{ movie.duration_minutes }} min</span>
+          <span class="meta-item">{{ movie.language }}</span>
+        </div>
+        <div class="genres-row">
+          @for (g of movie.genres; track g) {
+            <a [routerLink]="['/movies']" [queryParams]="{genre: g}" class="genre-tag">{{ g }}</a>
+          }
+        </div>
+        <table class="info-table">
+          <tbody>
+            <tr><td>Director</td><td>{{ movie.director }}</td></tr>
+            <tr><td>Country</td><td>{{ movie.release.country }}</td></tr>
+            <tr><td>Release Date</td><td>{{ movie.release.date }}</td></tr>
+            <tr>
+              <td>Cast</td>
+              <td>
+                @for (c of movie.cast; track $index; let last = $last) {
+                  {{ c.actor_name }} <em>({{ c.role }})</em>@if (!last) { , }
+                }
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        @if (movie.tags.length > 0) {
+          <div class="tags-row">
+            @for (t of movie.tags; track t) {
+              <span class="tag">{{ t }}</span>
+            }
+          </div>
+        }
+        @if (isAdmin) {
+          <div class="admin-actions">
+            <a [routerLink]="['/admin']" [queryParams]="{edit: movie.movie_id}" class="btn btn-secondary btn-sm">
+              ✏️ Edit Movie
+            </a>
+            <button class="btn btn-danger btn-sm" (click)="confirmDeleteMovie()">
+              🗑️ Delete Movie
+            </button>
+          </div>
+        }
+      </div>
+    </div>
+
+    @if (alert) {
+      <div class="alert" [class.alert-success]="alertType==='success'" [class.alert-error]="alertType==='error'">
+        {{ alert }}
+      </div>
+    }
+
+    <!-- Reviews section -->
+    <div class="reviews-section">
+      <div class="section-header-row">
+        <h2>Reviews ({{ reviews.length }})</h2>
+        @if (reviews.length > 0) {
+          <div class="review-pagination">
+            <button class="btn btn-secondary btn-sm" [disabled]="reviewPage===1" (click)="prevReviewPage()">←</button>
+            <span>Page {{ reviewPage }}</span>
+            <button class="btn btn-secondary btn-sm" [disabled]="reviews.length < reviewPageSize" (click)="nextReviewPage()">→</button>
+          </div>
+        }
+      </div>
+
+      @if (loadingReviews) {
+        <div class="loading-spinner"><div class="spinner"></div></div>
+      }
+
+      @if (!loadingReviews && reviews.length === 0) {
+        <div class="empty-state">
+          <h3>No reviews yet</h3>
+          <p>Be the first to review this movie!</p>
+        </div>
+      }
+
+      <div class="reviews-list">
+        @for (review of reviews; track review.review_id) {
+          <div class="review-card">
+            @if (editingReviewId !== review.review_id) {
+              <div class="review-header">
+                <div>
+                  <span class="review-user">
+                    <a [routerLink]="['/users']" [queryParams]="{userId: review.user_id}">{{ review.user_id }}</a>
+                  </span>
+                  <span class="review-stars">{{ getStars(review.rating) }}</span>
+                  <span class="review-rating">{{ review.rating }}/5</span>
+                </div>
+                <div class="review-meta">
+                  <span>{{ review.review_date }}</span>
+                  @if (review.helpful_votes > 0) {
+                    <span>👍 {{ review.helpful_votes }}</span>
+                  }
+                </div>
+              </div>
+              @if (review.comment) {
+                <p class="review-comment">{{ review.comment }}</p>
+              } @else {
+                <p class="review-comment no-comment">No comment left.</p>
+              }
+              @if (canModifyReview(review)) {
+                <div class="review-actions">
+                  <button class="btn btn-secondary btn-sm" (click)="startEditReview(review)">Edit</button>
+                  <button class="btn btn-danger btn-sm" (click)="deleteReview(review)">Delete</button>
+                </div>
+              }
+            } @else {
+              <div class="edit-review-form">
+                <h4>Edit Review</h4>
+                <div class="form-group">
+                  <label>Rating (1–5)</label>
+                  <select [(ngModel)]="editRating">
+                    <option [value]="1">1 ⭐</option>
+                    <option [value]="2">2 ⭐⭐</option>
+                    <option [value]="3">3 ⭐⭐⭐</option>
+                    <option [value]="4">4 ⭐⭐⭐⭐</option>
+                    <option [value]="5">5 ⭐⭐⭐⭐⭐</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Comment</label>
+                  <textarea [(ngModel)]="editComment" rows="3"></textarea>
+                </div>
+                <div class="d-flex gap-2">
+                  <button class="btn btn-primary btn-sm" (click)="submitEditReview(review)">Save</button>
+                  <button class="btn btn-secondary btn-sm" (click)="cancelEdit()">Cancel</button>
+                </div>
+              </div>
+            }
+          </div>
+        }
+      </div>
+
+      <!-- Add review -->
+      @if (isLoggedIn && !hasUserReviewed) {
+        <div class="add-review-section">
+          <h3>Write a Review</h3>
+          <div class="form-group">
+            <label>Rating (1–5)</label>
+            <select [(ngModel)]="newRating">
+              <option [value]="1">1 ⭐</option>
+              <option [value]="2">2 ⭐⭐</option>
+              <option [value]="3">3 ⭐⭐⭐</option>
+              <option [value]="4">4 ⭐⭐⭐⭐</option>
+              <option [value]="5">5 ⭐⭐⭐⭐⭐</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Comment (optional)</label>
+            <textarea [(ngModel)]="newComment" rows="3" placeholder="Share your thoughts..."></textarea>
+          </div>
+          <button class="btn btn-primary" (click)="submitReview()" [disabled]="submitting">
+            {{ submitting ? 'Submitting...' : 'Submit Review' }}
+          </button>
+        </div>
+      }
+
+      @if (isLoggedIn && hasUserReviewed) {
+        <div class="add-review-section">
+          <p class="already-reviewed">✓ You have already reviewed this movie.</p>
+        </div>
+      }
+
+      @if (!isLoggedIn) {
+        <div class="add-review-section">
+          <p><a routerLink="/login">Log in</a> to write a review.</p>
+        </div>
+      }
+    </div>
+  </div>
+}
+
+@if (loading) {
+  <div class="loading-spinner" style="margin-top:3rem;">
+    <div class="spinner"></div>
+    <span>Loading movie...</span>
+  </div>
+}
+
+@if (!loading && !movie) {
+  <div class="container py-4">
+    <div class="alert alert-error">Movie not found.</div>
+    <a routerLink="/movies" class="btn btn-secondary mt-3">← Back</a>
+  </div>
+}

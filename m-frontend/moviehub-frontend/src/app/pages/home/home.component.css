@@ -1,0 +1,122 @@
+.hero {
+  background: linear-gradient(135deg, #1a0a0a 0%, #0d0d0d 50%, #0a0a1a 100%);
+  border-bottom: 1px solid #2a2a2a;
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.hero-inner { max-width: 600px; margin: 0 auto; }
+
+.hero h1 {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.hero-actions { display: flex; gap: 1rem; justify-content: center; }
+
+.stat-card {
+  padding: 1.5rem;
+}
+
+.stat-num {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+
+.section-title {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.2rem;
+}
+
+.section-header .section-title { margin-bottom: 0; }
+
+.see-all {
+  color: var(--accent);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.genre-bars { display: flex; flex-direction: column; gap: 8px; }
+
+.genre-bar-row {
+  display: grid;
+  grid-template-columns: 130px 1fr 40px;
+  align-items: center;
+  gap: 10px;
+}
+
+.genre-bar-label {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.genre-bar-label:hover { color: var(--accent); }
+
+.genre-bar-track {
+  background: var(--bg-secondary);
+  border-radius: 2px;
+  height: 18px;
+  overflow: hidden;
+}
+
+.genre-bar-fill {
+  background: var(--accent);
+  height: 100%;
+  border-radius: 2px;
+  opacity: 0.7;
+  transition: width 0.5s ease;
+}
+
+.genre-bar-count {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-align: right;
+}
+
+.genre-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 6px; }
+
+.poster-year {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-family: var(--font-body);
+}
+
+@media (max-width: 768px) {
+  .hero h1 { font-size: 2rem; }
+  .genre-bar-row { grid-template-columns: 100px 1fr 30px; }
+}

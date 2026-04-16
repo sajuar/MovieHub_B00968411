@@ -1,0 +1,39 @@
+<div class="auth-page">
+  <div class="auth-card card">
+    <div class="auth-logo">🎬 MovieHub</div>
+    <h1>Sign In</h1>
+
+    @if (error) {
+      <div class="alert alert-error">{{ error }}</div>
+    }
+
+    <div class="form-group">
+      <label>Username or Email</label>
+      <input
+        type="text"
+        [(ngModel)]="identifier"
+        placeholder="Enter username or email"
+        (keyup.enter)="login()"
+      />
+    </div>
+
+    <div class="form-group">
+      <label>Password</label>
+      <input
+        type="password"
+        [(ngModel)]="password"
+        placeholder="Enter password"
+        (keyup.enter)="login()"
+      />
+    </div>
+
+    <button class="btn btn-primary w-100 py-2" (click)="login()" [disabled]="loading">
+      {{ loading ? 'Signing in...' : 'Sign In' }}
+    </button>
+
+    <p class="auth-switch">
+      Don't have an account? <a routerLink="/register">Register here</a>
+    </p>
+
+  </div>
+</div>

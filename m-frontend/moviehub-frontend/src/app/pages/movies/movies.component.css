@@ -1,0 +1,58 @@
+.filters-panel {
+  padding: 1.2rem;
+  position: sticky;
+  top: 70px;
+}
+
+.filters-panel h3 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.sort-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.sort-controls,
+.page-size-control {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sort-controls label,
+.page-size-control label {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.sort-controls select,
+.page-size-control select {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text-primary);
+  font-size: 0.85rem;
+  padding: 4px 8px;
+}
+
+.genre-tags { display: flex; flex-wrap: wrap; gap: 3px; }
+
+.movie-director {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+@media (max-width: 991px) {
+  .filters-panel { position: static; }
+}

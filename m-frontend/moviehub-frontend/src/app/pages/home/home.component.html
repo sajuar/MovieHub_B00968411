@@ -1,0 +1,101 @@
+<div class="hero">
+  <div class="hero-inner">
+    <h1>Your Movie Universe</h1>
+    <p>Browse 100+ movies, read reviews, and share your thoughts with the community.</p>
+    <div class="hero-actions">
+      <a routerLink="/movies" class="btn btn-primary">Browse Movies</a>
+      <a routerLink="/top-rated" class="btn btn-secondary">Top Rated</a>
+    </div>
+  </div>
+</div>
+
+<div class="container py-4">
+
+  <!-- Stats row -->
+  <div class="row g-3 mb-4">
+    <div class="col-6 col-md-3">
+      <div class="stat-card card text-center">
+        <div class="stat-num">100+</div>
+        <div class="stat-label">Movies</div>
+      </div>
+    </div>
+    <div class="col-6 col-md-3">
+      <div class="stat-card card text-center">
+        <div class="stat-num">300+</div>
+        <div class="stat-label">Reviews</div>
+      </div>
+    </div>
+    <div class="col-6 col-md-3">
+      <div class="stat-card card text-center">
+        <div class="stat-num">30+</div>
+        <div class="stat-label">Users</div>
+      </div>
+    </div>
+    <div class="col-6 col-md-3">
+      <div class="stat-card card text-center">
+        <div class="stat-num">{{ genreStats.length }}</div>
+        <div class="stat-label">Genres</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Genre stats -->
+  <section class="section mb-5">
+    <h2 class="section-title">Movies by Genre</h2>
+    @if (loadingGenres) {
+      <div class="loading-spinner"><div class="spinner"></div></div>
+    } @else {
+      <div class="genre-bars">
+        @for (stat of genreStats; track stat.genre) {
+          <div class="genre-bar-row">
+            <a [routerLink]="['/movies']" [queryParams]="{genre: stat.genre}" class="genre-bar-label">
+              {{ stat.genre }}
+            </a>
+            <div class="genre-bar-track">
+              <div class="genre-bar-fill" [style.width.%]="getBarWidth(stat.count)"></div>
+            </div>
+            <span class="genre-bar-count">{{ stat.count }}</span>
+          </div>
+        }
+      </div>
+    }
+  </section>
+
+  <!-- Top rated preview -->
+  <section class="section mb-5">
+    <div class="section-header">
+      <h2 class="section-title">Top Rated Movies</h2>
+      <a routerLink="/top-rated" class="see-all">See all →</a>
+    </div>
+    @if (loadingTop) {
+      <div class="loading-spinner"><div class="spinner"></div></div>
+    } @else {
+      <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-xl-6 g-3">
+        @for (movie of topMovies; track movie.movie_id) {
+          <div class="col">
+            <a [routerLink]="['/movies', movie.movie_id]" class="movie-card d-block text-decoration-none">
+              <div class="movie-card-poster">
+                <img [src]="movie.image_url || 'https://picsum.photos/seed/' + movie.movie_id + '/300/450'"
+                     [alt]="movie.title" loading="lazy" />
+                <div class="poster-year">{{ movie.release_year }}</div>
+              </div>
+              <div class="movie-card-body">
+                <div class="movie-card-title" [title]="movie.title">{{ movie.title }}</div>
+                <div class="movie-card-meta">
+                  <span class="rating-badge">⭐ {{ movie.ratings.average | number:'1.1-1' }}</span>
+                  <span>{{ movie.release_year }}</span>
+                </div>
+                <div class="genre-tags">
+                  @for (g of movie.genres.slice(0,2); track g) {
+                    <span class="genre-tag">{{ g }}</span>
+                  }
+                </div>
+              </div>
+            </a>
+          </div>
+        }
+      </div>
+    }
+  </section>
+
+</div>

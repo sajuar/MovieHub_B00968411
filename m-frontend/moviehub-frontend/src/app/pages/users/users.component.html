@@ -1,0 +1,124 @@
+<div class="container py-4">
+  <div class="page-header">
+    <h1>Users</h1>
+    <p>All registered members of MovieHub</p>
+  </div>
+
+  @if (loading) {
+    <div class="loading-spinner"><div class="spinner"></div></div>
+  }
+  @if (error) {
+    <div class="alert alert-error">{{ error }}</div>
+  }
+  @if (alert) {
+    <div class="alert" [class.alert-success]="alertType === 'success'" [class.alert-error]="alertType === 'error'">
+      {{ alert }}
+    </div>
+  }
+
+  @if (!loading && users.length > 0) {
+    <div class="users-table-wrapper">
+      <table class="users-table">
+        <thead>
+          <tr>
+            <th>User ID</th>
+            <th>Username</th>
+            <th>Role</th>
+            <th>Joined</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (user of users; track user.user_id) {
+
+            <tr [class.row-active]="expandedUserId === user.user_id">
+              <td class="mono">{{ user.user_id }}</td>
+              <td>
+                <div class="user-cell">
+                  <div class="user-avatar-sm">{{ user.username[0].toUpperCase() }}</div>
+                  <button class="username-btn" (click)="openInfo(user)">{{ user.username }}</button>
+                </div>
+              </td>
+              <td>
+                <span class="role-pill" [class.admin-pill]="user.role === 'admin'">{{ user.role }}</span>
+              </td>
+              <td class="joined-date">{{ user.joined_date }}</td>
+              <td>
+                <div class="action-btns">
+                  <button class="btn-action btn-view" (click)="openReviews(user)">Reviews</button>
+                  @if (user.role !== 'admin') {
+                    <button class="btn-action btn-promote" (click)="promoteUser(user)">Promote</button>
+                  }
+                  @if (user.user_id !== currentUserId && user.role !== 'admin') {
+                    <button class="btn-action btn-delete" (click)="deleteUser(user)">Delete</button>
+                  }
+                </div>
+              </td>
+            </tr>
+
+            <!-- Inline expand row -->
+            @if (expandedUserId === user.user_id && expandedUser) {
+              <tr class="expand-row">
+                <td colspan="5">
+                  <div class="expand-panel">
+                    <button class="close-btn" (click)="collapse()">✕</button>
+
+                    @if (expandMode === 'info') {
+                      <div class="expand-header">
+                        <div class="expand-avatar">{{ expandedUser.username[0].toUpperCase() }}</div>
+                        <div>
+                          <h3 class="expand-username">{{ expandedUser.username }}</h3>
+                          <span class="role-pill" [class.admin-pill]="expandedUser.role === 'admin'">{{ expandedUser.role }}</span>
+                        </div>
+                      </div>
+                      <div class="info-grid">
+                        <div class="info-item">
+                          <span class="info-label">User ID</span>
+                          <span class="info-value mono">{{ expandedUser.user_id }}</span>
+                        </div>
+                        @if (expandedUser.email) {
+                          <div class="info-item">
+                            <span class="info-label">Email</span>
+                            <span class="info-value">{{ expandedUser.email }}</span>
+                          </div>
+                        }
+                        <div class="info-item">
+                          <span class="info-label">Joined</span>
+                          <span class="info-value">{{ expandedUser.joined_date }}</span>
+                        </div>
+                        <div class="info-item">
+                          <span class="info-label">Role</span>
+                          <span class="info-value">{{ expandedUser.role }}</span>
+                        </div>
+                      </div>
+                    }
+
+                    @if (expandMode === 'reviews') {
+                      <h4 class="reviews-heading">Reviews by {{ expandedUser.username }}</h4>
+                      @if (loadingReviews) {
+                        <p class="muted-text">Loading reviews...</p>
+                      }
+                      @if (!loadingReviews && userReviews.length === 0) {
+                        <p class="muted-text">No reviews yet.</p>
+                      }
+                      @for (r of userReviews; track r.review_id) {
+                        <div class="mini-review">
+                          <a [routerLink]="['/movies', r.movie_id]" class="mini-movie-id">{{ r.movie_id }}</a>
+                          <span class="review-stars">{{ getStars(r.rating) }}</span>
+                          <span class="mini-comment">{{ r.comment || 'No comment' }}</span>
+                          <span class="mini-date">{{ r.review_date }}</span>
+                        </div>
+                      }
+                    }
+
+                  </div>
+                </td>
+              </tr>
+            }
+
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+</div>

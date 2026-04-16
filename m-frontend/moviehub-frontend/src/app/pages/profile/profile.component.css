@@ -1,0 +1,92 @@
+.profile-card {
+  padding: 1.5rem;
+  position: sticky;
+  top: 70px;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  background: var(--accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 auto 1rem;
+}
+
+.profile-card h2 {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.5rem;
+}
+
+.role-pill {
+  display: inline-block;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  padding: 2px 8px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-secondary);
+}
+
+.admin-pill {
+  background: rgba(229,9,20,0.15);
+  border-color: rgba(229,9,20,0.3);
+  color: var(--accent);
+}
+
+.info-table { border-collapse: collapse; }
+.info-table td { padding: 6px 0; font-size: 0.85rem; text-align: left; border: none; }
+.info-table td:first-child { color: var(--text-secondary); min-width: 80px; }
+
+.reviews-heading {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+}
+
+.reviews-list { display: flex; flex-direction: column; gap: 0.8rem; }
+
+.review-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem 1.2rem;
+}
+
+.review-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 6px;
+}
+
+.movie-link {
+  font-weight: 700;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.review-stars { color: var(--star-color); font-size: 0.85rem; }
+.review-rating { font-size: 0.82rem; color: var(--text-secondary); }
+.review-date { font-size: 0.78rem; color: var(--text-muted); margin-left: auto; }
+.review-comment { font-size: 0.88rem; color: var(--text-secondary); }
+.no-comment { color: var(--text-muted); font-style: italic; font-size: 0.85rem; }
+.helpful { font-size: 0.78rem; color: var(--text-muted); margin-top: 6px; }
+
+@media (max-width: 991px) {
+  .profile-card { position: static; }
+}
