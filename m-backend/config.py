@@ -19,3 +19,7 @@ users.create_index("user_id", unique=True)
 users.create_index("username", unique=True)
 users.create_index("email", unique=True)
 reviews.create_index("review_id", unique=True)
+
+# TTL index: MongoDB automatically deletes token documents once the
+# datetime stored in expires_at is reached
+tokens.create_index("expires_at", expireAfterSeconds=0)

@@ -44,10 +44,7 @@
       <div class="navbar-auth d-flex align-items-center gap-2 my-2 my-lg-0">
         @if (isLoggedIn) {
           <a routerLink="/profile" class="username-link" (click)="mobileOpen=false">
-            👤 {{ username }}
-            @if (isAdmin) {
-              <span class="role-badge">Admin</span>
-            }
+            👤 {{ username }}@if (isAdmin) { — Admin}
           </a>
           <button class="btn btn-secondary btn-sm" (click)="logout(); mobileOpen=false">Logout</button>
         } @else {

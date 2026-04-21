@@ -6,10 +6,13 @@ import uuid        # Generates unique login tokens
 import bcrypt      # Hashes and verifies passwords
 import re          # Used to validate email format
 
-from datetime import date
+from datetime import date, datetime, timedelta, timezone
 
 # Import MongoDB collections from config file
 from config import users, tokens
+
+# How long a freshly issued token stays valid for, in minutes
+TOKEN_LIFETIME_MINUTES = 5
 
 
 # --------------------------------------------------
@@ -148,13 +151,20 @@ def login_user():
 
             return make_response(jsonify({"Error": "Invalid username/email or password"}), 401)
 
+        # Invalidate any previous tokens for this user so each login
+        # produces a brand new token (token rotation)
+        tokens.delete_many({"user_id": user["user_id"]})
+
         # Generate unique session token
         token = str(uuid.uuid4())
+        expires_at = datetime.now(timezone.utc) + timedelta(minutes=TOKEN_LIFETIME_MINUTES)
 
-        # Store token in tokens collection
+        # Store token in tokens collection. The TTL index on expires_at
+        # will let MongoDB auto-delete this document once it expires.
         tokens.insert_one({
             "user_id": user["user_id"],
-            "token": token
+            "token": token,
+            "expires_at": expires_at
         })
 
         # Return login result
@@ -162,11 +172,55 @@ def login_user():
             "message": "Login successful",
             "token": token,
             "user_id": user["user_id"],
-            "role": user["role"]
+            "username": user["username"],
+            "role": user["role"],
+            "expires_in": TOKEN_LIFETIME_MINUTES * 60
         }), 200)
 
     else:
         return make_response(jsonify({"Error": "missing data"}), 400)
+
+
+# --------------------------------------------------
+# Refresh token — issues a new token before the old one expires
+# so the user stays signed in without interruption
+# --------------------------------------------------
+@auth_bp.route('/api/auth/refresh', methods=['POST'])
+def refresh_token():
+
+    token = request.headers.get("x-access-token")
+
+    if token is None:
+        return make_response(jsonify({"Error": "Token missing"}), 401)
+
+    saved_token = tokens.find_one({"token": token})
+
+    if saved_token is None:
+        return make_response(jsonify({"Error": "Invalid token"}), 401)
+
+    # Reject if already expired
+    expires_at = saved_token.get("expires_at")
+    if expires_at and expires_at <= datetime.utcnow():
+        tokens.delete_one({"token": token})
+        return make_response(jsonify({"Error": "Token expired"}), 401)
+
+    # Rotate: delete old token and issue a fresh one
+    user_id = saved_token["user_id"]
+    tokens.delete_one({"token": token})
+
+    new_token = str(uuid.uuid4())
+    new_expires_at = datetime.now(timezone.utc) + timedelta(minutes=TOKEN_LIFETIME_MINUTES)
+
+    tokens.insert_one({
+        "user_id": user_id,
+        "token": new_token,
+        "expires_at": new_expires_at
+    })
+
+    return make_response(jsonify({
+        "token": new_token,
+        "expires_in": TOKEN_LIFETIME_MINUTES * 60
+    }), 200)
 
 
 # --------------------------------------------------

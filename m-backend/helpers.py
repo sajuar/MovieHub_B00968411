@@ -1,5 +1,10 @@
 from flask import request
+from datetime import datetime, timedelta, timezone
 from config import users, tokens, movies, reviews
+
+# Tokens stay alive for this many minutes after the most recent
+# authenticated request (sliding session)
+TOKEN_LIFETIME_MINUTES = 5
 
 
 # --------------------------------------------------
@@ -17,7 +22,27 @@ def get_logged_in_user():
     if saved_token is None:
         return None
 
+    # Reject tokens whose expiry has already passed (in case the TTL
+    # cleanup hasn't run yet). Stored value is a naive UTC datetime
+    # written by PyMongo, so compare against utcnow().
+    expires_at = saved_token.get("expires_at")
+    if expires_at is not None and expires_at <= datetime.utcnow():
+        tokens.delete_one({"token": token})
+        return None
+
     user = users.find_one({"user_id": saved_token["user_id"]})
+
+    if user is None:
+        return None
+
+    # Sliding session: extend the token's expiry every time it is used,
+    # so an active user stays signed in even though tokens are short-lived
+    new_expiry = datetime.now(timezone.utc) + timedelta(minutes=TOKEN_LIFETIME_MINUTES)
+    tokens.update_one(
+        {"token": token},
+        {"$set": {"expires_at": new_expiry}}
+    )
+
     return user
 
 
