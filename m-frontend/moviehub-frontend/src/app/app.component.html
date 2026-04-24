@@ -1,67 +1,139 @@
-<nav class="navbar navbar-expand-lg sticky-top" id="main-navbar">
-  <div class="container-xxl">
-    <a class="navbar-brand brand-link" routerLink="/">
-      <span class="brand-icon">🎬</span>
-      <span class="brand-text">MovieHub</span>
+<nav class="site-nav" [class.scrolled]="!navTransparent" [class.on-hero]="navTransparent">
+  <div class="nav-inner">
+
+    <a routerLink="/" class="nav-brand">
+      <div class="brand-icon-wrap">🎬</div>
+      <span class="brand-text">MOVIEHUB</span>
     </a>
 
-    <button class="navbar-toggler border-0" type="button" (click)="mobileOpen = !mobileOpen"
-      aria-label="Toggle navigation">
-      ☰
+    <div class="nav-links">
+      <a routerLink="/movies"    routerLinkActive="active" class="nav-link">Browse</a>
+      <a routerLink="/top-rated" routerLinkActive="active" class="nav-link">Top Rated</a>
+      @if (isAdmin) {
+        <a routerLink="/users" routerLinkActive="active" class="nav-link">Users</a>
+        <a routerLink="/admin" routerLinkActive="active" class="nav-link nav-link-admin">Admin</a>
+      }
+    </div>
+
+    <div class="nav-search">
+      <span class="search-icon">⌕</span>
+      <input type="text" placeholder="Quick search..."
+             [(ngModel)]="quickSearch"
+             (keyup.enter)="doQuickSearch()"
+             class="search-input" />
+    </div>
+
+    <button class="theme-toggle" (click)="toggleDarkMode()" [title]="darkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'">
+      {{ darkMode ? '☀️' : '🌙' }}
     </button>
 
-    <div class="navbar-collapse collapse" [class.show]="mobileOpen">
-      <ul class="navbar-nav me-auto align-items-lg-center gap-lg-1">
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/movies" routerLinkActive="active" (click)="mobileOpen=false">Browse</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/top-rated" routerLinkActive="active" (click)="mobileOpen=false">Top Rated</a>
-        </li>
-@if (isAdmin) {
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/users" routerLinkActive="active" (click)="mobileOpen=false">Users</a>
-          </li>
-        }
-        @if (isAdmin) {
-          <li class="nav-item">
-            <a class="nav-link admin-link" routerLink="/admin" routerLinkActive="active"
-              (click)="mobileOpen=false">Admin</a>
-          </li>
-        }
-      </ul>
+    <div class="nav-auth">
+      @if (isLoggedIn) {
+        <a routerLink="/profile" class="nav-user">
+          <div class="nav-avatar">{{ (username || 'U')[0].toUpperCase() }}</div>
+          <span class="nav-username">{{ username }}</span>
+          @if (isAdmin) { <span class="admin-badge">ADMIN</span> }
+        </a>
+        <button class="nav-logout-btn" (click)="logout()">Logout</button>
+      } @else {
+        <a routerLink="/login"    class="nav-btn-outline">Login</a>
+        <a routerLink="/register" class="nav-btn-fill">Register</a>
+      }
+    </div>
 
-      <div class="navbar-search mx-lg-3 my-2 my-lg-0">
-        <input
-          type="text"
-          placeholder="Quick search..."
-          [(ngModel)]="quickSearch"
-          (keyup.enter)="doQuickSearch()"
-          class="quick-search-input"
-        />
+    <button class="hamburger" (click)="mobileOpen = !mobileOpen" aria-label="Menu">☰</button>
+  </div>
+
+  @if (mobileOpen) {
+    <div class="mobile-menu">
+      <a routerLink="/movies"    (click)="mobileOpen=false" class="mobile-link">Browse</a>
+      <a routerLink="/top-rated" (click)="mobileOpen=false" class="mobile-link">Top Rated</a>
+      @if (isAdmin) {
+        <a routerLink="/users" (click)="mobileOpen=false" class="mobile-link">Users</a>
+        <a routerLink="/admin" (click)="mobileOpen=false" class="mobile-link">Admin</a>
+      }
+      <div class="mobile-search">
+        <input type="text" placeholder="Quick search..."
+               [(ngModel)]="quickSearch"
+               (keyup.enter)="doQuickSearch()"
+               class="search-input" />
       </div>
-
-      <div class="navbar-auth d-flex align-items-center gap-2 my-2 my-lg-0">
+      <div class="mobile-auth">
         @if (isLoggedIn) {
-          <a routerLink="/profile" class="username-link" (click)="mobileOpen=false">
-            👤 {{ username }}@if (isAdmin) { — Admin}
-          </a>
-          <button class="btn btn-secondary btn-sm" (click)="logout(); mobileOpen=false">Logout</button>
+          <a routerLink="/profile" (click)="mobileOpen=false" class="nav-btn-outline">{{ username }}</a>
+          <button class="nav-btn-outline" (click)="logout()">Logout</button>
         } @else {
-          <a routerLink="/login" class="btn btn-secondary btn-sm" (click)="mobileOpen=false">Login</a>
-          <a routerLink="/register" class="btn btn-primary btn-sm" (click)="mobileOpen=false">Register</a>
+          <a routerLink="/login"    (click)="mobileOpen=false" class="nav-btn-outline">Login</a>
+          <a routerLink="/register" (click)="mobileOpen=false" class="nav-btn-fill">Register</a>
         }
       </div>
     </div>
-  </div>
+  }
 </nav>
 
 <main>
   <router-outlet></router-outlet>
 </main>
 
+<!-- Footer -->
 <footer class="site-footer">
-  <div class="container-xxl">
-    <p>MovieHub &copy; 2026 — COM661 Full Stack Development Project</p>
+  <div class="footer-inner">
+
+    <div class="footer-top">
+      <!-- Brand -->
+      <div class="footer-brand-col">
+        <div class="footer-brand">
+          <div class="brand-icon-wrap">🎬</div>
+          <span class="footer-brand-text">MOVIEHUB</span>
+        </div>
+        <p class="footer-tagline">Your cinematic universe. Browse 100+ movies, read reviews, and share your thoughts.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-btn" title="Twitter/X">𝕏</a>
+          <a href="#" class="social-btn" title="Instagram">📷</a>
+          <a href="#" class="social-btn" title="YouTube">▶</a>
+          <a href="#" class="social-btn" title="Facebook">f</a>
+        </div>
+      </div>
+
+      <!-- About -->
+      <div class="footer-col">
+        <h4 class="footer-col-title">About</h4>
+        <ul class="footer-links">
+          <li><a href="#" class="footer-link">About MovieHub</a></li>
+          <li><a href="#" class="footer-link">How It Works</a></li>
+          <li><a href="#" class="footer-link">Our Team</a></li>
+          <li><a href="#" class="footer-link">Careers</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="footer-col">
+        <h4 class="footer-col-title">Contact</h4>
+        <ul class="footer-links">
+          <li><a href="#" class="footer-link">Help Centre</a></li>
+          <li><a href="#" class="footer-link">Contact Us</a></li>
+          <li><a href="#" class="footer-link">Report an Issue</a></li>
+          <li><a href="#" class="footer-link">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <!-- Explore -->
+      <div class="footer-col">
+        <h4 class="footer-col-title">Explore</h4>
+        <ul class="footer-links">
+          <li><a routerLink="/movies"    class="footer-link">Browse Movies</a></li>
+          <li><a routerLink="/top-rated" class="footer-link">Top Rated</a></li>
+          <li><a routerLink="/register"  class="footer-link">Create Account</a></li>
+          <li><a routerLink="/login"     class="footer-link">Sign In</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 MovieHub — COM661 Full Stack Development Project</p>
+      <p class="footer-copy">Built with Angular &amp; Flask</p>
+    </div>
   </div>
 </footer>
+
+<button class="scroll-top-btn" (click)="scrollToTop()" [class.visible]="showScrollTop" title="Back to top">↑</button>

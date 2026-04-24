@@ -1,17 +1,17 @@
-@if (!loading && movie) {
-  <div class="container py-4">
+@if (loading) {
+  <div class="loading-spinner" style="margin-top:5rem;"><div class="spinner"></div></div>
+}
 
+@if (!loading && movie) {
+  <div class="page-wrap">
     <a routerLink="/movies" class="back-link">← Back to Movies</a>
 
-    <!-- Movie header -->
-    <div class="row g-4 movie-header mb-4">
-      <div class="col-lg-2 col-md-3">
-        <div class="movie-poster-large">
-          <img [src]="movie.image_url || 'https://picsum.photos/seed/' + movie.movie_id + '/300/450'"
-               [alt]="movie.title" loading="lazy" />
-        </div>
+    <div class="movie-header">
+      <div class="movie-poster-large">
+        <img [src]="movie.image_url || 'https://picsum.photos/seed/' + movie.movie_id + '/300/450'"
+             [alt]="movie.title" loading="lazy" />
       </div>
-      <div class="col-lg-10 col-md-9 movie-info">
+      <div class="movie-info">
         <h1>{{ movie.title }}</h1>
         <div class="meta-row">
           <span class="rating-badge">⭐ {{ movie.ratings.average | number:'1.1-1' }} / 10</span>
@@ -29,7 +29,7 @@
           <tbody>
             <tr><td>Director</td><td>{{ movie.director }}</td></tr>
             <tr><td>Country</td><td>{{ movie.release.country }}</td></tr>
-            <tr><td>Release Date</td><td>{{ movie.release.date }}</td></tr>
+            <tr><td>Release</td><td>{{ movie.release.date }}</td></tr>
             <tr>
               <td>Cast</td>
               <td>
@@ -49,12 +49,8 @@
         }
         @if (isAdmin) {
           <div class="admin-actions">
-            <a [routerLink]="['/admin']" [queryParams]="{edit: movie.movie_id}" class="btn btn-secondary btn-sm">
-              ✏️ Edit Movie
-            </a>
-            <button class="btn btn-danger btn-sm" (click)="confirmDeleteMovie()">
-              🗑️ Delete Movie
-            </button>
+            <a [routerLink]="['/admin']" [queryParams]="{edit: movie.movie_id}" class="btn btn-secondary btn-sm">✏️ Edit Movie</a>
+            <button class="btn btn-danger btn-sm" (click)="confirmDeleteMovie()">🗑️ Delete Movie</button>
           </div>
         }
       </div>
@@ -66,7 +62,7 @@
       </div>
     }
 
-    <!-- Reviews section -->
+    <!-- Reviews -->
     <div class="reviews-section">
       <div class="section-header-row">
         <h2>Reviews ({{ reviews.length }})</h2>
@@ -79,15 +75,10 @@
         }
       </div>
 
-      @if (loadingReviews) {
-        <div class="loading-spinner"><div class="spinner"></div></div>
-      }
+      @if (loadingReviews) { <div class="loading-spinner"><div class="spinner"></div></div> }
 
       @if (!loadingReviews && reviews.length === 0) {
-        <div class="empty-state">
-          <h3>No reviews yet</h3>
-          <p>Be the first to review this movie!</p>
-        </div>
+        <div class="empty-state"><h3>No reviews yet</h3><p>Be the first to review this movie!</p></div>
       }
 
       <div class="reviews-list">
@@ -95,7 +86,7 @@
           <div class="review-card">
             @if (editingReviewId !== review.review_id) {
               <div class="review-header">
-                <div>
+                <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
                   <span class="review-user">
                     <a [routerLink]="['/users']" [queryParams]="{userId: review.user_id}">{{ review.user_id }}</a>
                   </span>
@@ -104,9 +95,7 @@
                 </div>
                 <div class="review-meta">
                   <span>{{ review.review_date }}</span>
-                  @if (review.helpful_votes > 0) {
-                    <span>👍 {{ review.helpful_votes }}</span>
-                  }
+                  @if (review.helpful_votes > 0) { <span>👍 {{ review.helpful_votes }}</span> }
                 </div>
               </div>
               @if (review.comment) {
@@ -126,10 +115,8 @@
                 <div class="form-group">
                   <label>Rating (1–5)</label>
                   <select [(ngModel)]="editRating">
-                    <option [value]="1">1 ⭐</option>
-                    <option [value]="2">2 ⭐⭐</option>
-                    <option [value]="3">3 ⭐⭐⭐</option>
-                    <option [value]="4">4 ⭐⭐⭐⭐</option>
+                    <option [value]="1">1 ⭐</option><option [value]="2">2 ⭐⭐</option>
+                    <option [value]="3">3 ⭐⭐⭐</option><option [value]="4">4 ⭐⭐⭐⭐</option>
                     <option [value]="5">5 ⭐⭐⭐⭐⭐</option>
                   </select>
                 </div>
@@ -137,7 +124,7 @@
                   <label>Comment</label>
                   <textarea [(ngModel)]="editComment" rows="3"></textarea>
                 </div>
-                <div class="d-flex gap-2">
+                <div class="edit-form-btns">
                   <button class="btn btn-primary btn-sm" (click)="submitEditReview(review)">Save</button>
                   <button class="btn btn-secondary btn-sm" (click)="cancelEdit()">Cancel</button>
                 </div>
@@ -154,10 +141,8 @@
           <div class="form-group">
             <label>Rating (1–5)</label>
             <select [(ngModel)]="newRating">
-              <option [value]="1">1 ⭐</option>
-              <option [value]="2">2 ⭐⭐</option>
-              <option [value]="3">3 ⭐⭐⭐</option>
-              <option [value]="4">4 ⭐⭐⭐⭐</option>
+              <option [value]="1">1 ⭐</option><option [value]="2">2 ⭐⭐</option>
+              <option [value]="3">3 ⭐⭐⭐</option><option [value]="4">4 ⭐⭐⭐⭐</option>
               <option [value]="5">5 ⭐⭐⭐⭐⭐</option>
             </select>
           </div>
@@ -170,32 +155,23 @@
           </button>
         </div>
       }
-
       @if (isLoggedIn && hasUserReviewed) {
         <div class="add-review-section">
           <p class="already-reviewed">✓ You have already reviewed this movie.</p>
         </div>
       }
-
       @if (!isLoggedIn) {
         <div class="add-review-section">
-          <p><a routerLink="/login">Log in</a> to write a review.</p>
+          <p style="color:var(--text-muted)"><a routerLink="/login">Log in</a> to write a review.</p>
         </div>
       }
     </div>
   </div>
 }
 
-@if (loading) {
-  <div class="loading-spinner" style="margin-top:3rem;">
-    <div class="spinner"></div>
-    <span>Loading movie...</span>
-  </div>
-}
-
 @if (!loading && !movie) {
-  <div class="container py-4">
+  <div class="page-wrap">
     <div class="alert alert-error">Movie not found.</div>
-    <a routerLink="/movies" class="btn btn-secondary mt-3">← Back</a>
+    <a routerLink="/movies" class="btn btn-secondary" style="margin-top:1rem">← Back</a>
   </div>
 }

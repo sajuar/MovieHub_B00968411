@@ -1,68 +1,65 @@
-<div class="container py-4">
+<div class="page-wrap">
   <div class="page-header">
-    <h1>Browse Movies</h1>
-    <p>{{ totalLabel }}</p>
+    <h1 class="page-title">Browse Movies</h1>
+    <p class="page-sub">{{ totalLabel }}</p>
   </div>
 
-  <div class="row g-3 align-items-start">
+  <div class="browse-layout">
     <!-- Filters sidebar -->
-    <div class="col-lg-3">
-      <aside class="filters-panel card">
-        <h3>Filters</h3>
+    <aside class="filters-panel">
+      <h3 class="filters-heading">Filters</h3>
 
-        <div class="form-group">
-          <label>Title</label>
-          <input type="text" [(ngModel)]="filters.title" placeholder="Search by title..."
-            (keyup.enter)="applyFilters()" />
-        </div>
+      <div class="form-group">
+        <label>Title</label>
+        <input type="text" [(ngModel)]="filters.title" placeholder="Search by title..."
+          (keyup.enter)="applyFilters()" />
+      </div>
 
-        <div class="form-group">
-          <label>Genre</label>
-          <select [(ngModel)]="filters.genre" (change)="applyFilters()">
-            <option value="">All Genres</option>
-            @for (g of genres; track g) {
-              <option [value]="g">{{ g }}</option>
-            }
-          </select>
-        </div>
+      <div class="form-group">
+        <label>Genre</label>
+        <select [(ngModel)]="filters.genre" (change)="applyFilters()">
+          <option value="">All Genres</option>
+          @for (g of genres; track g) {
+            <option [value]="g">{{ g }}</option>
+          }
+        </select>
+      </div>
 
-        <div class="form-group">
-          <label>Min Rating (1–10)</label>
-          <input type="number" [(ngModel)]="filters.min_rating" min="0" max="10" step="0.5"
-            placeholder="e.g. 7" (change)="applyFilters()" />
-        </div>
+      <div class="form-group">
+        <label>Min Rating (0–10)</label>
+        <input type="number" [(ngModel)]="filters.min_rating" min="0" max="10" step="0.5"
+          placeholder="e.g. 7" (change)="applyFilters()" />
+      </div>
 
-        <div class="form-group">
-          <label>Language</label>
-          <input type="text" [(ngModel)]="filters.language" placeholder="e.g. English"
-            (keyup.enter)="applyFilters()" />
-        </div>
+      <div class="form-group">
+        <label>Language</label>
+        <input type="text" [(ngModel)]="filters.language" placeholder="e.g. English"
+          (keyup.enter)="applyFilters()" />
+      </div>
 
-        <div class="form-group">
-          <label>Director</label>
-          <input type="text" [(ngModel)]="filters.director" placeholder="Director name"
-            (keyup.enter)="applyFilters()" />
-        </div>
+      <div class="form-group">
+        <label>Director</label>
+        <input type="text" [(ngModel)]="filters.director" placeholder="Director name"
+          (keyup.enter)="applyFilters()" />
+      </div>
 
-        <div class="form-group">
-          <label>Release Year</label>
-          <input type="number" [(ngModel)]="filters.release_year" placeholder="e.g. 2022"
-            (keyup.enter)="applyFilters()" />
-        </div>
+      <div class="form-group">
+        <label>Release Year</label>
+        <input type="number" [(ngModel)]="filters.release_year" placeholder="e.g. 2022"
+          (keyup.enter)="applyFilters()" />
+      </div>
 
-        <button class="btn btn-primary w-100 mb-2" (click)="applyFilters()">Apply Filters</button>
-        <button class="btn btn-secondary w-100" (click)="clearFilters()">Clear</button>
-      </aside>
-    </div>
+      <button class="btn btn-primary filter-btn" (click)="applyFilters()">Apply Filters</button>
+      <button class="btn btn-secondary filter-btn" style="margin-top:8px" (click)="clearFilters()">Clear</button>
+    </aside>
 
     <!-- Main content -->
-    <div class="col-lg-9">
-      <!-- Sort bar -->
-      <div class="sort-bar card mb-3">
+    <div class="browse-main">
+      <div class="sort-bar">
         <div class="sort-controls">
-          <label>Sort by:</label>
+          <label>Sort by</label>
           <select [(ngModel)]="filters.sort_by" (change)="applyFilters()">
-            <option value="title">Title</option>
+            <option value="title">Title A-Z</option>
             <option value="release_year">Year</option>
             <option value="ratings.average">Rating</option>
             <option value="director">Director</option>
@@ -72,8 +69,8 @@
             <option value="desc">Descending</option>
           </select>
         </div>
-        <div class="page-size-control">
-          <label>Per page:</label>
+        <div class="sort-controls">
+          <label>Per page</label>
           <select [(ngModel)]="filters.ps" (change)="applyFilters()">
             <option [value]="5">5</option>
             <option [value]="10">10</option>
@@ -83,40 +80,35 @@
       </div>
 
       @if (loading) {
-        <div class="loading-spinner">
-          <div class="spinner"></div>
-          <span>Loading movies...</span>
-        </div>
+        <div class="loading-spinner"><div class="spinner"></div></div>
       }
-
       @if (error) {
         <div class="alert alert-error">{{ error }}</div>
       }
 
       @if (!loading && movies.length > 0) {
-        <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 g-3">
+        <div class="movies-grid-4">
           @for (movie of movies; track movie.movie_id) {
-            <div class="col">
-              <a [routerLink]="['/movies', movie.movie_id]" class="movie-card d-block text-decoration-none">
-                <div class="movie-card-poster">
-                  <img [src]="movie.image_url || 'https://picsum.photos/seed/' + movie.movie_id + '/300/450'"
-                       [alt]="movie.title" loading="lazy" />
+            <a [routerLink]="['/movies', movie.movie_id]" class="movie-card">
+              <div class="movie-card-poster">
+                <img [src]="movie.image_url || 'https://picsum.photos/seed/' + movie.movie_id + '/300/450'"
+                     [alt]="movie.title" loading="lazy" />
+                <div class="poster-overlay"></div>
+                <div class="poster-year">{{ movie.release_year }}</div>
+              </div>
+              <div class="movie-card-body">
+                <div class="movie-card-title" [title]="movie.title">{{ movie.title }}</div>
+                <div class="movie-card-meta">
+                  <span class="rating-badge">⭐ {{ movie.ratings.average | number:'1.1-1' }}</span>
                 </div>
-                <div class="movie-card-body">
-                  <div class="movie-card-title" [title]="movie.title">{{ movie.title }}</div>
-                  <div class="movie-card-meta">
-                    <span class="rating-badge">⭐ {{ movie.ratings.average | number:'1.1-1' }}</span>
-                    <span>{{ movie.release_year }}</span>
-                  </div>
-                  <div class="genre-tags mt-1">
-                    @for (g of movie.genres.slice(0,2); track g) {
-                      <span class="genre-tag">{{ g }}</span>
-                    }
-                  </div>
-                  <div class="movie-director">{{ movie.director }}</div>
+                <div class="genre-tags">
+                  @for (g of movie.genres.slice(0,2); track g) {
+                    <span class="genre-tag">{{ g }}</span>
+                  }
                 </div>
-              </a>
-            </div>
+                <div class="movie-director">{{ movie.director }}</div>
+              </div>
+            </a>
           }
         </div>
       }
@@ -129,14 +121,10 @@
       }
 
       @if (!loading && movies.length > 0) {
-        <div class="pagination mt-4">
-          <button class="btn btn-secondary btn-sm" [disabled]="currentPage === 1" (click)="prevPage()">
-            ← Prev
-          </button>
+        <div class="pagination">
+          <button class="btn btn-secondary btn-sm" [disabled]="currentPage === 1" (click)="prevPage()">← Prev</button>
           <span>Page {{ currentPage }}</span>
-          <button class="btn btn-secondary btn-sm" [disabled]="movies.length < (filters.ps || 5)" (click)="nextPage()">
-            Next →
-          </button>
+          <button class="btn btn-secondary btn-sm" [disabled]="movies.length < (filters.ps || 5)" (click)="nextPage()">Next →</button>
         </div>
       }
     </div>

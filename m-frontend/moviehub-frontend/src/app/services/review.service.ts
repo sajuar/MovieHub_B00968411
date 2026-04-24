@@ -4,24 +4,29 @@ import { Observable } from 'rxjs';
 import { Review } from '../models/models';
 import { AuthService } from './auth.service';
 
-@Injectable({
-  providedIn: 'root'
-})
+// ── ReviewService ────────────────────────────────────────────────────────────
+// Handles all review CRUD operations.
+// Adding, editing and deleting reviews requires a valid auth token because
+// the backend checks ownership (only the author or an admin can modify).
+// ─────────────────────────────────────────────────────────────────────────────
+@Injectable({ providedIn: 'root' })
 export class ReviewService {
   constructor(private http: HttpClient, private auth: AuthService) {}
 
+  // Paginated — used in the movie detail page to load reviews in batches
   getMovieReviews(movieId: string, pn: number = 1, ps: number = 5): Observable<Review[]> {
     const params = new HttpParams().set('pn', pn).set('ps', ps);
     return this.http.get<Review[]>(`http://127.0.0.1:5001/api/movies/${movieId}/reviews`, { params });
   }
 
+  // Used in the profile page to show all reviews written by the logged-in user
   getUserReviews(userId: string): Observable<Review[]> {
     return this.http.get<Review[]>(`http://127.0.0.1:5001/api/users/${userId}/reviews`);
   }
 
   addReview(movieId: string, rating: number, comment: string): Observable<any> {
     const formData = new FormData();
-    formData.append('rating', rating.toString());
+    formData.append('rating',  rating.toString());
     formData.append('comment', comment);
     return this.http.post(`http://127.0.0.1:5001/api/movies/${movieId}/reviews`, formData, {
       headers: this.auth.getAuthHeaders()
@@ -30,7 +35,7 @@ export class ReviewService {
 
   updateReview(reviewId: string, rating: number, comment: string): Observable<any> {
     const formData = new FormData();
-    formData.append('rating', rating.toString());
+    formData.append('rating',  rating.toString());
     formData.append('comment', comment);
     return this.http.put(`http://127.0.0.1:5001/api/reviews/${reviewId}`, formData, {
       headers: this.auth.getAuthHeaders()

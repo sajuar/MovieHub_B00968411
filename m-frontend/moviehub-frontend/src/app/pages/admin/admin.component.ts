@@ -149,4 +149,11 @@ export class AdminComponent implements OnInit {
     this.formAlertType = type;
     setTimeout(() => this.formAlert = '', 4000);
   }
+
+  // Allow only digit keys (0-9), plus control keys like Backspace, Delete, arrows
+  onlyDigits(e: KeyboardEvent) {
+    const allowed = ['Backspace','Delete','ArrowLeft','ArrowRight','Tab','Home','End'];
+    if (allowed.includes(e.key)) return;
+    if (!/^\d$/.test(e.key)) e.preventDefault();
+  }
 }

@@ -1,39 +1,59 @@
 <div class="auth-page">
-  <div class="auth-card card">
-    <div class="auth-logo">🎬 MovieHub</div>
+  <div class="auth-card">
+    <div class="auth-logo">
+      <div class="auth-logo-icon">🎬</div>
+      <span class="auth-logo-text">MOVIEHUB</span>
+    </div>
     <h1>Sign In</h1>
+    <p class="auth-sub">Welcome back. Enter your credentials to continue.</p>
 
-    @if (error) {
-      <div class="alert alert-error">{{ error }}</div>
-    }
+    @if (error) { <div class="alert alert-error">{{ error }}</div> }
 
-    <div class="form-group">
+    <!-- Username / Email -->
+    <div class="form-group" [class.has-error]="identifierError" [class.is-valid]="touched.identifier && !identifierError && identifier.trim()">
       <label>Username or Email</label>
-      <input
-        type="text"
-        [(ngModel)]="identifier"
-        placeholder="Enter username or email"
-        (keyup.enter)="login()"
-      />
+      <div class="input-wrap">
+        <input type="text" [(ngModel)]="identifier"
+               placeholder="Enter username or email"
+               (blur)="touch('identifier')"
+               (keyup.enter)="login()" />
+        @if (touched.identifier && !identifierError && identifier.trim()) {
+          <span class="input-icon valid">✓</span>
+        }
+        @if (identifierError) {
+          <span class="input-icon invalid">✕</span>
+        }
+      </div>
+      @if (identifierError) {
+        <span class="field-error">{{ identifierError }}</span>
+      }
     </div>
 
-    <div class="form-group">
+    <!-- Password -->
+    <div class="form-group" [class.has-error]="passwordError" [class.is-valid]="touched.password && !passwordError && password">
       <label>Password</label>
-      <input
-        type="password"
-        [(ngModel)]="password"
-        placeholder="Enter password"
-        (keyup.enter)="login()"
-      />
+      <div class="input-wrap">
+        <input [type]="showPassword ? 'text' : 'password'" [(ngModel)]="password"
+               placeholder="Enter password"
+               (blur)="touch('password')"
+               (keyup.enter)="login()" />
+        <button type="button" class="toggle-pw" (click)="showPassword = !showPassword" tabindex="-1" [title]="showPassword ? 'Hide password' : 'Show password'">
+          @if (showPassword) {
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.94 17.94A10.07 10.07 0 0112 20c-7 0-11-8-11-8a18.45 18.45 0 015.06-5.94M9.9 4.24A9.12 9.12 0 0112 4c7 0 11 8 11 8a18.5 18.5 0 01-2.16 3.19"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
+          } @else {
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          }
+        </button>
+      </div>
+      @if (passwordError) {
+        <span class="field-error">{{ passwordError }}</span>
+      }
     </div>
 
-    <button class="btn btn-primary w-100 py-2" (click)="login()" [disabled]="loading">
+    <button class="btn btn-primary auth-submit" (click)="login()" [disabled]="loading">
       {{ loading ? 'Signing in...' : 'Sign In' }}
     </button>
 
-    <p class="auth-switch">
-      Don't have an account? <a routerLink="/register">Register here</a>
-    </p>
-
+    <p class="auth-switch">Don't have an account? <a routerLink="/register">Register here</a></p>
   </div>
 </div>

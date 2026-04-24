@@ -1,64 +1,45 @@
-<div class="container py-4">
-  <div class="page-header">
-    <h1>Search Movies</h1>
-  </div>
+<div class="page-wrap">
+  <h1 class="page-title">Search Movies</h1>
 
-  <div class="search-box mb-4">
-    <input
-      type="text"
-      [(ngModel)]="query"
-      placeholder="Search by title..."
-      class="search-input"
-      (keyup.enter)="search()"
-      autofocus
-    />
+  <div class="search-box">
+    <input type="text" [(ngModel)]="query" placeholder="Search by title..."
+           class="search-input" (keyup.enter)="search()" autofocus />
     <button class="btn btn-primary" (click)="search()">Search</button>
   </div>
 
-  @if (loading) {
-    <div class="loading-spinner">
-      <div class="spinner"></div>
-      <span>Searching...</span>
-    </div>
-  }
-
-  @if (error) {
-    <div class="alert alert-error">{{ error }}</div>
-  }
+  @if (loading) { <div class="loading-spinner"><div class="spinner"></div></div> }
+  @if (error)   { <div class="alert alert-error">{{ error }}</div> }
 
   @if (searched && !loading) {
-    <p class="results-count">
-      Found <strong>{{ movies.length }}</strong> result(s) for "<em>{{ lastQuery }}</em>"
-    </p>
+    <p class="results-count">Found <strong>{{ movies.length }}</strong> result(s) for "<em>{{ lastQuery }}</em>"</p>
 
     @if (movies.length === 0) {
-      <div class="empty-state">
-        <h3>No results</h3>
-        <p>Try a different title</p>
-      </div>
+      <div class="empty-state"><h3>No results</h3><p>Try a different title</p></div>
     }
 
     @if (movies.length > 0) {
-      <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 g-3">
+      <div class="search-grid">
         @for (movie of movies; track movie.movie_id) {
-          <div class="col">
-            <a [routerLink]="['/movies', movie.movie_id]" class="movie-card d-block text-decoration-none">
-              <div class="movie-card-poster"><span>🎬</span></div>
-              <div class="movie-card-body">
-                <div class="movie-card-title" [title]="movie.title">{{ movie.title }}</div>
-                <div class="movie-card-meta">
-                  <span class="rating-badge">⭐ {{ movie.ratings.average | number:'1.1-1' }}</span>
-                  <span>{{ movie.release_year }}</span>
-                </div>
-                <div class="movie-director">{{ movie.director }}</div>
-                <div class="genre-tags mt-1">
-                  @for (g of movie.genres.slice(0,2); track g) {
-                    <span class="genre-tag">{{ g }}</span>
-                  }
-                </div>
+          <a [routerLink]="['/movies', movie.movie_id]" class="movie-card">
+            <div class="movie-card-poster">
+              <img [src]="movie.image_url || 'https://picsum.photos/seed/' + movie.movie_id + '/300/450'"
+                   [alt]="movie.title" loading="lazy" />
+              <div class="poster-overlay"></div>
+              <div class="poster-year">{{ movie.release_year }}</div>
+            </div>
+            <div class="movie-card-body">
+              <div class="movie-card-title" [title]="movie.title">{{ movie.title }}</div>
+              <div class="movie-card-meta">
+                <span class="rating-badge">⭐ {{ movie.ratings.average | number:'1.1-1' }}</span>
               </div>
-            </a>
-          </div>
+              <div class="movie-director">{{ movie.director }}</div>
+              <div class="genre-tags">
+                @for (g of movie.genres.slice(0,2); track g) {
+                  <span class="genre-tag">{{ g }}</span>
+                }
+              </div>
+            </div>
+          </a>
         }
       </div>
     }

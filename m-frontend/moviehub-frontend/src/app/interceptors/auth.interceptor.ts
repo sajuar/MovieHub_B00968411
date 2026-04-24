@@ -4,11 +4,19 @@ import { Router } from '@angular/router';
 import { catchError, tap, throwError } from 'rxjs';
 import { AuthService } from '../services/auth.service';
 
-// Slides the session cookie forward on every successful authenticated
-// request and tears the session down if the backend reports the token
-// is no longer valid.
+// ── authInterceptor ──────────────────────────────────────────────────────────
+// Runs on every outgoing HTTP request.
+//
+// On a successful response that carried the auth token:
+//   → calls refreshSession() to slide the cookie expiry forward so the browser
+//     cookie stays alive as long as the backend token does.
+//
+// On a 401 Unauthorized response:
+//   → the backend has rejected the token (expired or tampered); clear the
+//     local session and redirect to /login so the user can re-authenticate.
+// ─────────────────────────────────────────────────────────────────────────────
 export const authInterceptor: HttpInterceptorFn = (req, next) => {
-  const auth = inject(AuthService);
+  const auth   = inject(AuthService);
   const router = inject(Router);
 
   const sentWithToken = req.headers.has('x-access-token');

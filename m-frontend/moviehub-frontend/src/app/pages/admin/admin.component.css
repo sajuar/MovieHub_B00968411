@@ -1,94 +1,63 @@
-.form-panel {
-  padding: 1.2rem;
-  position: sticky;
-  top: 70px;
-}
+.page-wrap { max-width: 1400px; margin: 0 auto; padding: 5.5rem 2rem 4rem; }
+.page-title { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; font-weight: 700; margin-bottom: 4px; }
+.page-sub { color: var(--text-muted); font-family: 'DM Sans', sans-serif; font-size: 0.9rem; margin-bottom: 2rem; }
 
-.form-panel h2,
-.movies-panel h2 {
-  font-size: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  margin-bottom: 1.2rem;
+.admin-layout { display: grid; grid-template-columns: 340px 1fr; gap: 2rem; align-items: start; }
+
+.form-panel {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px;
+  padding: 1.75rem; position: sticky; top: 80px;
+}
+.panel-title {
+  font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 700;
+  margin-bottom: 1.5rem; color: var(--text-primary);
 }
 
 .movies-panel {
-  padding: 1.2rem;
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 1.75rem;
 }
-
 .movies-panel-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 0.8rem;
+  display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;
 }
-
-.movies-panel-header h2 { margin-bottom: 0; }
+.movies-panel-header .panel-title { margin-bottom: 0; }
 
 .admin-search-input {
-  width: 100%;
-  background: var(--bg-secondary);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  color: var(--text-primary);
-  font-size: 0.88rem;
-  padding: 7px 12px;
+  width: 100%; background: var(--input-bg); border: 1px solid var(--input-border);
+  border-radius: 8px; color: var(--text-primary);
+  font-family: 'DM Sans', sans-serif; font-size: 0.88rem; padding: 8px 14px;
+  margin-bottom: 1rem; outline: none;
 }
+.admin-search-input:focus { border-color: rgba(232,160,32,0.5); }
 
-.admin-search-input:focus { outline: none; border-color: var(--accent); }
-
-.admin-movie-list {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  max-height: 500px;
-  overflow-y: auto;
-}
+.admin-movie-list { display: flex; flex-direction: column; max-height: 560px; overflow-y: auto; }
 
 .admin-movie-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 0;
-  border-bottom: 1px solid var(--border);
-  gap: 10px;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 11px 4px; border-bottom: 1px solid var(--border); gap: 10px;
+  transition: background 0.15s;
 }
-
 .admin-movie-row:last-child { border-bottom: none; }
-
-.editing-row {
-  background: rgba(229,9,20,0.05);
-  padding-left: 8px;
-  border-left: 3px solid var(--accent);
-}
+.admin-movie-row:hover { background: var(--bg-hover); }
+.editing-row { background: rgba(232,160,32,0.04) !important; border-left: 3px solid var(--accent); padding-left: 10px; }
 
 .admin-movie-info { flex: 1; min-width: 0; }
-
 .admin-movie-title {
-  font-weight: 600;
-  font-size: 0.9rem;
-  color: var(--text-primary);
-  text-decoration: none;
-  display: block;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 0.9rem;
+  color: var(--text-primary); text-decoration: none; display: block;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
-
 .admin-movie-title:hover { color: var(--accent); }
-
 .admin-movie-meta {
-  font-size: 0.78rem;
-  color: var(--text-muted);
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  flex-wrap: wrap;
-  margin-top: 2px;
+  font-size: 0.75rem; color: var(--text-muted);
+  display: flex; align-items: center; gap: 4px; flex-wrap: wrap; margin-top: 2px;
 }
-
 .admin-movie-actions { display: flex; gap: 5px; flex-shrink: 0; }
 
-@media (max-width: 991px) {
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+.form-actions { display: flex; gap: 8px; margin-top: 0.5rem; }
+.form-actions .btn { flex: 1; justify-content: center; }
+
+@media (max-width: 1000px) {
+  .admin-layout { grid-template-columns: 1fr; }
   .form-panel { position: static; }
 }

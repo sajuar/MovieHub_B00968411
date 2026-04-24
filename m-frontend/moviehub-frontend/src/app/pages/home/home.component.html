@@ -1,101 +1,140 @@
+<!-- ── HERO SLIDESHOW ── -->
 <div class="hero">
-  <div class="hero-inner">
-    <h1>Your Movie Universe</h1>
-    <p>Browse 100+ movies, read reviews, and share your thoughts with the community.</p>
-    <div class="hero-actions">
-      <a routerLink="/movies" class="btn btn-primary">Browse Movies</a>
-      <a routerLink="/top-rated" class="btn btn-secondary">Top Rated</a>
+  @if (heroMovie) {
+    <div class="hero-backdrop" [class.visible]="slideVisible">
+      <img [src]="getPoster(heroMovie)" [alt]="heroMovie.title" />
     </div>
-  </div>
+    <div class="hero-overlay-right"></div>
+    <div class="hero-overlay-top"></div>
+    <div class="hero-overlay-bottom"></div>
+
+    <div class="hero-content" [class.visible]="slideVisible">
+      <div class="hero-label">
+        <span class="hero-line"></span>
+        <span>Featured Film</span>
+      </div>
+      <h1 class="hero-title">{{ heroMovie.title }}</h1>
+      <div class="hero-meta">
+        <span class="rating-badge">⭐ {{ heroMovie.ratings.average | number:'1.1-1' }}</span>
+        <span class="hero-meta-item">{{ heroMovie.release_year }}</span>
+        <span class="hero-meta-item">{{ heroMovie.duration_minutes }} min</span>
+        <span class="hero-meta-item">{{ heroMovie.language }}</span>
+      </div>
+      <div class="hero-genres">
+        @for (g of heroMovie.genres.slice(0,3); track g) {
+          <span class="genre-tag">{{ g }}</span>
+        }
+      </div>
+      <div class="hero-actions">
+        <a [routerLink]="['/movies', heroMovie.movie_id]" class="btn btn-primary">View Details</a>
+        <a routerLink="/movies" class="btn btn-ghost">Browse Movies</a>
+      </div>
+    </div>
+
+    <!-- Slide dots -->
+    @if (heroSlides.length > 1) {
+      <div class="slide-dots">
+        @for (m of heroSlides; track m.movie_id; let i = $index) {
+          <button class="slide-dot" [class.active]="i === slideIdx" (click)="goSlide(i)"></button>
+        }
+      </div>
+    }
+  }
 </div>
 
-<div class="container py-4">
-
-  <!-- Stats row -->
-  <div class="row g-3 mb-4">
-    <div class="col-6 col-md-3">
-      <div class="stat-card card text-center">
+<!-- ── STATS ── -->
+<section class="stats-section">
+  <div class="section-wrap">
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-top-bar"></div>
+        <div class="stat-icon">🎬</div>
         <div class="stat-num">100+</div>
         <div class="stat-label">Movies</div>
       </div>
-    </div>
-    <div class="col-6 col-md-3">
-      <div class="stat-card card text-center">
+      <div class="stat-card">
+        <div class="stat-top-bar"></div>
+        <div class="stat-icon">✍️</div>
         <div class="stat-num">300+</div>
         <div class="stat-label">Reviews</div>
       </div>
-    </div>
-    <div class="col-6 col-md-3">
-      <div class="stat-card card text-center">
+      <div class="stat-card">
+        <div class="stat-top-bar"></div>
+        <div class="stat-icon">👥</div>
         <div class="stat-num">30+</div>
         <div class="stat-label">Users</div>
       </div>
-    </div>
-    <div class="col-6 col-md-3">
-      <div class="stat-card card text-center">
+      <div class="stat-card">
+        <div class="stat-top-bar"></div>
+        <div class="stat-icon">🎭</div>
         <div class="stat-num">{{ genreStats.length }}</div>
         <div class="stat-label">Genres</div>
       </div>
     </div>
   </div>
+</section>
 
-  <!-- Genre stats -->
-  <section class="section mb-5">
-    <h2 class="section-title">Movies by Genre</h2>
+<!-- ── MOVIES BY GENRE ── -->
+<section class="home-section">
+  <div class="section-wrap">
+    <div class="section-heading-row">
+      <h2 class="section-title">Movies by Genre</h2>
+      <div class="heading-line"></div>
+    </div>
     @if (loadingGenres) {
       <div class="loading-spinner"><div class="spinner"></div></div>
     } @else {
-      <div class="genre-bars">
+      <div class="genre-grid">
         @for (stat of genreStats; track stat.genre) {
-          <div class="genre-bar-row">
-            <a [routerLink]="['/movies']" [queryParams]="{genre: stat.genre}" class="genre-bar-label">
-              {{ stat.genre }}
-            </a>
+          <a [routerLink]="['/movies']" [queryParams]="{genre: stat.genre}" class="genre-row">
+            <span class="genre-row-label">{{ stat.genre }}</span>
             <div class="genre-bar-track">
               <div class="genre-bar-fill" [style.width.%]="getBarWidth(stat.count)"></div>
             </div>
-            <span class="genre-bar-count">{{ stat.count }}</span>
-          </div>
+            <span class="genre-row-count">{{ stat.count }}</span>
+          </a>
         }
       </div>
     }
-  </section>
+  </div>
+</section>
 
-  <!-- Top rated preview -->
-  <section class="section mb-5">
-    <div class="section-header">
-      <h2 class="section-title">Top Rated Movies</h2>
-      <a routerLink="/top-rated" class="see-all">See all →</a>
+<!-- ── TOP RATED GRID ── -->
+<section class="home-section home-section-bottom">
+  <div class="section-wrap">
+    <div class="section-heading-row">
+      <div class="heading-left">
+        <h2 class="section-title">Top Rated</h2>
+        <div class="heading-line short"></div>
+      </div>
+      <a routerLink="/top-rated" class="see-all-btn">View All →</a>
     </div>
     @if (loadingTop) {
       <div class="loading-spinner"><div class="spinner"></div></div>
     } @else {
-      <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-xl-6 g-3">
-        @for (movie of topMovies; track movie.movie_id) {
-          <div class="col">
-            <a [routerLink]="['/movies', movie.movie_id]" class="movie-card d-block text-decoration-none">
-              <div class="movie-card-poster">
-                <img [src]="movie.image_url || 'https://picsum.photos/seed/' + movie.movie_id + '/300/450'"
-                     [alt]="movie.title" loading="lazy" />
-                <div class="poster-year">{{ movie.release_year }}</div>
+      <div class="top-rated-grid">
+        @for (movie of topMovies.slice(0,6); track movie.movie_id) {
+          <a [routerLink]="['/movies', movie.movie_id]" class="movie-card">
+            <div class="movie-card-poster">
+              <img [src]="movie.image_url || 'https://picsum.photos/seed/' + movie.movie_id + '/300/450'"
+                   [alt]="movie.title" loading="lazy" />
+              <div class="poster-overlay"></div>
+              <div class="poster-year">{{ movie.release_year }}</div>
+            </div>
+            <div class="movie-card-body">
+              <div class="movie-card-title" [title]="movie.title">{{ movie.title }}</div>
+              <div class="movie-card-meta">
+                <span class="rating-badge">⭐ {{ movie.ratings.average | number:'1.1-1' }}</span>
               </div>
-              <div class="movie-card-body">
-                <div class="movie-card-title" [title]="movie.title">{{ movie.title }}</div>
-                <div class="movie-card-meta">
-                  <span class="rating-badge">⭐ {{ movie.ratings.average | number:'1.1-1' }}</span>
-                  <span>{{ movie.release_year }}</span>
-                </div>
-                <div class="genre-tags">
-                  @for (g of movie.genres.slice(0,2); track g) {
-                    <span class="genre-tag">{{ g }}</span>
-                  }
-                </div>
+              <div class="genre-tags">
+                @for (g of movie.genres.slice(0,2); track g) {
+                  <span class="genre-tag">{{ g }}</span>
+                }
               </div>
-            </a>
-          </div>
+            </div>
+          </a>
         }
       </div>
     }
-  </section>
-
-</div>
+  </div>
+</section>

@@ -1,10 +1,10 @@
-<div class="container py-4">
+<div class="page-wrap">
   <div class="page-header">
-    <h1>Top Rated Movies</h1>
-    <p>The highest rated films in MovieHub</p>
+    <h1 class="page-title">Top Rated Movies</h1>
+    <p class="page-sub">The highest rated films in MovieHub</p>
   </div>
 
-  <div class="limit-control mb-4">
+  <div class="limit-bar">
     <label>Show top:</label>
     <select [(ngModel)]="limit" (change)="loadTopRated()">
       <option [value]="5">5</option>
@@ -14,21 +14,13 @@
     </select>
   </div>
 
-  @if (loading) {
-    <div class="loading-spinner">
-      <div class="spinner"></div>
-      <span>Loading...</span>
-    </div>
-  }
-
-  @if (error) {
-    <div class="alert alert-error">{{ error }}</div>
-  }
+  @if (loading) { <div class="loading-spinner"><div class="spinner"></div></div> }
+  @if (error)   { <div class="alert alert-error">{{ error }}</div> }
 
   @if (!loading) {
     <div class="ranked-list">
       @for (movie of movies; track movie.movie_id; let i = $index) {
-        <a [routerLink]="['/movies', movie.movie_id]" class="ranked-item text-decoration-none">
+        <a [routerLink]="['/movies', movie.movie_id]" class="ranked-item">
           <div class="rank-number" [class.top3]="i < 3">#{{ i + 1 }}</div>
           <div class="rank-poster">
             <img [src]="movie.image_url || 'https://picsum.photos/seed/' + movie.movie_id + '/80/120'"
