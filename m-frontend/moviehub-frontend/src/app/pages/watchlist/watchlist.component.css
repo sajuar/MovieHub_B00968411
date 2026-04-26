@@ -1,0 +1,73 @@
+.page-wrap { max-width: 1400px; margin: 0 auto; padding: 5.5rem 2rem 4rem; }
+.page-title { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; font-weight: 700; margin-bottom: 4px; }
+.page-sub   { color: var(--text-muted); font-family: 'DM Sans', sans-serif; font-size: 0.9rem; }
+
+.wl-header { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 2rem; }
+
+/* ── Grid ── */
+.wl-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.25rem;
+}
+
+/* ── Watchlist card ── */
+.wl-card {
+  display: flex; gap: 1rem;
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 12px; overflow: hidden; padding: 0.9rem;
+  transition: border-color 0.2s;
+}
+.wl-card:hover { border-color: rgba(232,160,32,0.3); }
+
+.wl-poster-link { flex-shrink: 0; }
+.wl-poster {
+  position: relative; width: 80px; height: 120px;
+  border-radius: 8px; overflow: hidden; background: var(--bg-card2);
+}
+.wl-poster img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.wl-poster-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(8,12,20,0.5) 0%, transparent 60%);
+}
+.poster-year {
+  position: absolute; bottom: 6px; right: 6px;
+  background: rgba(8,12,20,0.8); border-radius: 4px; padding: 2px 6px;
+  color: var(--accent); font-family: 'DM Sans', sans-serif; font-size: 0.68rem; font-weight: 700;
+}
+
+.wl-info { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 6px; }
+
+.wl-title {
+  font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600;
+  color: var(--text-primary); text-decoration: none; line-height: 1.3;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+.wl-title:hover { color: var(--accent); text-decoration: none; }
+
+.wl-meta { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.wl-year, .wl-duration { font-family: 'DM Sans', sans-serif; font-size: 0.8rem; color: var(--text-muted); }
+
+.wl-director { font-family: 'DM Sans', sans-serif; font-size: 0.78rem; color: var(--text-muted); margin-top: 2px; }
+
+.wl-remove-btn {
+  display: inline-flex; align-items: center; gap: 5px; margin-top: auto;
+  background: rgba(232,64,96,0.1); border: 1px solid rgba(232,64,96,0.3);
+  color: #E84060; border-radius: 6px; padding: 4px 10px;
+  font-family: 'DM Sans', sans-serif; font-size: 0.75rem; font-weight: 600;
+  cursor: pointer; transition: all 0.2s; width: fit-content;
+}
+.wl-remove-btn:hover { background: rgba(232,64,96,0.2); }
+
+/* ── Empty state ── */
+.empty-state {
+  text-align: center; padding: 5rem 2rem;
+  background: var(--bg-card); border: 1px dashed var(--border-mid);
+  border-radius: 16px; color: var(--text-muted);
+}
+.empty-icon { font-size: 3rem; margin-bottom: 1rem; }
+.empty-state h3 { color: var(--text-primary); font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; margin-bottom: 0.5rem; }
+
+@media (max-width: 600px) {
+  .wl-grid { grid-template-columns: 1fr; }
+}

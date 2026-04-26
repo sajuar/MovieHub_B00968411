@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterLink, ActivatedRoute } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { MovieService } from '../../services/movie.service';
+import { WatchlistService } from '../../services/watchlist.service';
 import { Movie, MovieFilters } from '../../models/models';
 
 @Component({
@@ -21,16 +22,12 @@ export class MoviesComponent implements OnInit {
   currentPage = 1;
   totalLabel = '';
 
-  filters: MovieFilters = {
-    pn: 1,
-    ps: 10,
-    sort_by: 'title',
-    order: 'asc'
-  };
+  filters: MovieFilters = { pn: 1, ps: 10, sort_by: 'title', order: 'asc' };
 
   constructor(
     private movieService: MovieService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    public watchlistService: WatchlistService
   ) {}
 
   ngOnInit() {
@@ -45,24 +42,17 @@ export class MoviesComponent implements OnInit {
     this.loading = true;
     this.error = '';
     this.filters.pn = this.currentPage;
-
     this.movieService.getMovies(this.filters).subscribe({
       next: (movies) => {
         this.movies = movies;
         this.loading = false;
         this.totalLabel = `Showing ${movies.length} movies (page ${this.currentPage})`;
       },
-      error: (err) => {
-        this.error = err.error?.Error || 'Failed to load movies.';
-        this.loading = false;
-      }
+      error: (err) => { this.error = err.error?.Error || 'Failed to load movies.'; this.loading = false; }
     });
   }
 
-  applyFilters() {
-    this.currentPage = 1;
-    this.loadMovies();
-  }
+  applyFilters() { this.currentPage = 1; this.loadMovies(); }
 
   clearFilters() {
     this.filters = { title: '', pn: 1, ps: 10, sort_by: 'title', order: 'asc' };
@@ -70,15 +60,12 @@ export class MoviesComponent implements OnInit {
     this.loadMovies();
   }
 
-  prevPage() {
-    if (this.currentPage > 1) {
-      this.currentPage--;
-      this.loadMovies();
-    }
-  }
+  prevPage() { if (this.currentPage > 1) { this.currentPage--; this.loadMovies(); } }
+  nextPage() { this.currentPage++; this.loadMovies(); }
 
-  nextPage() {
-    this.currentPage++;
-    this.loadMovies();
+  toggleWatchlist(event: Event, movie: Movie) {
+    event.preventDefault();
+    event.stopPropagation();
+    this.watchlistService.toggle(movie);
   }
 }

@@ -4,6 +4,17 @@
     <p class="page-sub">Manage movies and content</p>
   </div>
 
+  <!-- Tabs -->
+  <div class="admin-tabs">
+    <button class="admin-tab" [class.active]="activeTab === 'movies'"    (click)="activeTab = 'movies'">🎬 Movies</button>
+    <button class="admin-tab" [class.active]="activeTab === 'analytics'" (click)="activeTab = 'analytics'">📊 Analytics</button>
+  </div>
+
+  @if (activeTab === 'analytics') {
+    <app-admin-analytics />
+  }
+
+  @if (activeTab === 'movies') {
   <div class="admin-layout">
     <!-- Form panel -->
     <div class="form-panel">
@@ -129,4 +140,5 @@
       }
     </div>
   </div>
+  } <!-- end @if movies tab -->
 </div>

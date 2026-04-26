@@ -4,22 +4,18 @@ import { Observable } from 'rxjs';
 import { Review } from '../models/models';
 import { AuthService } from './auth.service';
 
-// ── ReviewService ────────────────────────────────────────────────────────────
-// Handles all review CRUD operations.
-// Adding, editing and deleting reviews requires a valid auth token because
-// the backend checks ownership (only the author or an admin can modify).
-// ─────────────────────────────────────────────────────────────────────────────
+// Handles review CRUD operations.
+// The backend checks that only the review owner or an admin can edit/delete.
 @Injectable({ providedIn: 'root' })
 export class ReviewService {
   constructor(private http: HttpClient, private auth: AuthService) {}
 
-  // Paginated — used in the movie detail page to load reviews in batches
+  // Paginated — loads reviews in batches on the movie detail page
   getMovieReviews(movieId: string, pn: number = 1, ps: number = 5): Observable<Review[]> {
     const params = new HttpParams().set('pn', pn).set('ps', ps);
     return this.http.get<Review[]>(`http://127.0.0.1:5001/api/movies/${movieId}/reviews`, { params });
   }
 
-  // Used in the profile page to show all reviews written by the logged-in user
   getUserReviews(userId: string): Observable<Review[]> {
     return this.http.get<Review[]>(`http://127.0.0.1:5001/api/users/${userId}/reviews`);
   }

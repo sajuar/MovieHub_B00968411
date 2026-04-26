@@ -16,7 +16,8 @@ import { Movie, Review } from '../../models/models';
 })
 export class MovieDetailComponent implements OnInit {
   movie: Movie | null = null;
-  reviews: Review[] = [];
+  allReviews: Review[] = [];   // all reviews for this movie
+  reviews: Review[] = [];      // current page slice shown in template
   loading = true;
   loadingReviews = false;
   submitting = false;
@@ -39,6 +40,8 @@ export class MovieDetailComponent implements OnInit {
     private reviewService: ReviewService,
     public authService: AuthService
   ) {}
+
+  readonly Math = Math;
 
   get isLoggedIn() { return this.authService.isLoggedIn(); }
   get isAdmin() { return this.authService.isAdmin(); }
@@ -64,21 +67,37 @@ export class MovieDetailComponent implements OnInit {
 
   loadReviews() {
     this.loadingReviews = true;
-    this.reviewService.getMovieReviews(this.movieId, this.reviewPage, this.reviewPageSize).subscribe({
+    // Load all reviews at once (large limit) so the total count is accurate,
+    // then paginate client-side
+    this.reviewService.getMovieReviews(this.movieId, 1, 1000).subscribe({
       next: (reviews) => {
-        this.reviews = reviews;
+        this.allReviews = reviews;
         this.loadingReviews = false;
         const userId = this.authService.getUserId();
         if (userId) {
           this.hasUserReviewed = reviews.some(r => r.user_id === userId);
         }
+        this.applyPage();
       },
       error: () => { this.loadingReviews = false; }
     });
   }
 
-  prevReviewPage() { if (this.reviewPage > 1) { this.reviewPage--; this.loadReviews(); } }
-  nextReviewPage() { this.reviewPage++; this.loadReviews(); }
+  private applyPage() {
+    const start = (this.reviewPage - 1) * this.reviewPageSize;
+    this.reviews = this.allReviews.slice(start, start + this.reviewPageSize);
+  }
+
+  prevReviewPage() {
+    if (this.reviewPage > 1) { this.reviewPage--; this.applyPage(); }
+  }
+
+  nextReviewPage() {
+    if (this.reviewPage * this.reviewPageSize < this.allReviews.length) {
+      this.reviewPage++;
+      this.applyPage();
+    }
+  }
 
   getStars(rating: number): string {
     return '★'.repeat(rating) + '☆'.repeat(5 - rating);
@@ -156,5 +175,20 @@ export class MovieDetailComponent implements OnInit {
     this.alert = msg;
     this.alertType = type;
     setTimeout(() => this.alert = '', 4000);
+  }
+
+  shareMovie() {
+    const url   = window.location.href;
+    const title = this.movie?.title || 'MovieHub';
+
+    // Use Web Share API on mobile/supported browsers, fall back to clipboard copy
+    if (navigator.share) {
+      navigator.share({ title, text: `Check out "${title}" on MovieHub!`, url })
+        .catch(() => {});
+    } else {
+      navigator.clipboard.writeText(url).then(() => {
+        this.showAlert('Link copied to clipboard!', 'success');
+      });
+    }
   }
 }

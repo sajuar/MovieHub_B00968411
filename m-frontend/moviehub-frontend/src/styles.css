@@ -315,6 +315,20 @@ select option { background: #0F1623; color: #F0EDE8; }
   font-size: 0.75rem; font-weight: 700;
 }
 
+/* ── Heart / Watchlist button on movie cards ── */
+.heart-btn {
+  position: absolute; top: 8px; left: 8px; z-index: 5;
+  width: 32px; height: 32px; border-radius: 50%;
+  background: rgba(8,12,20,0.7); backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.15);
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; transition: all 0.2s;
+  color: rgba(255,255,255,0.7);
+}
+.heart-btn:hover { background: rgba(232,64,96,0.25); border-color: rgba(232,64,96,0.5); color: #E84060; transform: scale(1.1); }
+.heart-btn.in-watchlist { background: rgba(232,64,96,0.2); border-color: rgba(232,64,96,0.5); color: #E84060; }
+.heart-btn.in-watchlist:hover { background: rgba(232,64,96,0.35); }
+
 .movie-card-body { padding: 0.9rem; }
 
 .movie-card-title {

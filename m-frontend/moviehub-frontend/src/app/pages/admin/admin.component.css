@@ -1,4 +1,17 @@
 .page-wrap { max-width: 1400px; margin: 0 auto; padding: 5.5rem 2rem 4rem; }
+
+.admin-tabs {
+  display: flex; gap: 0.5rem; margin-bottom: 2rem;
+  border-bottom: 1px solid var(--border); padding-bottom: 0;
+}
+.admin-tab {
+  background: none; border: none; border-bottom: 2px solid transparent;
+  color: var(--text-muted); font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem; font-weight: 600; padding: 0.6rem 1.25rem;
+  cursor: pointer; transition: all 0.2s; margin-bottom: -1px;
+}
+.admin-tab:hover  { color: var(--text-primary); }
+.admin-tab.active { color: var(--accent); border-bottom-color: var(--accent); }
 .page-title { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; font-weight: 700; margin-bottom: 4px; }
 .page-sub { color: var(--text-muted); font-family: 'DM Sans', sans-serif; font-size: 0.9rem; margin-bottom: 2rem; }
 

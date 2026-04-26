@@ -4,29 +4,25 @@ import { Observable } from 'rxjs';
 import { Movie, MovieFilters, GenreStat } from '../models/models';
 import { AuthService } from './auth.service';
 
-// ── MovieService ─────────────────────────────────────────────────────────────
-// Handles all HTTP communication with the Flask movie endpoints.
-// Read operations (GET) are public — no auth header required.
-// Write operations (POST / PUT / DELETE) require an admin token which is
-// attached via AuthService.getAuthHeaders().
-// ─────────────────────────────────────────────────────────────────────────────
+// Handles all API calls related to movies.
+// Read endpoints (GET) are public — no token needed.
+// Write endpoints (POST/PUT/DELETE) attach the admin token via getAuthHeaders().
 @Injectable({ providedIn: 'root' })
 export class MovieService {
   constructor(private http: HttpClient, private auth: AuthService) {}
 
-  // Build query params from any combination of filter/sort/pagination values
   getMovies(filters: MovieFilters = {}): Observable<Movie[]> {
     let params = new HttpParams();
-    if (filters.title)      params = params.set('title',        filters.title);
-    if (filters.pn)         params = params.set('pn',           filters.pn);
-    if (filters.ps)         params = params.set('ps',           filters.ps);
-    if (filters.genre)      params = params.set('genre',        filters.genre);
+    if (filters.title)        params = params.set('title',        filters.title);
+    if (filters.pn)           params = params.set('pn',           filters.pn);
+    if (filters.ps)           params = params.set('ps',           filters.ps);
+    if (filters.genre)        params = params.set('genre',        filters.genre);
     if (filters.min_rating != null) params = params.set('min_rating', filters.min_rating);
-    if (filters.language)   params = params.set('language',     filters.language);
-    if (filters.director)   params = params.set('director',     filters.director);
+    if (filters.language)     params = params.set('language',     filters.language);
+    if (filters.director)     params = params.set('director',     filters.director);
     if (filters.release_year) params = params.set('release_year', filters.release_year);
-    if (filters.sort_by)    params = params.set('sort_by',      filters.sort_by);
-    if (filters.order)      params = params.set('order',        filters.order);
+    if (filters.sort_by)      params = params.set('sort_by',      filters.sort_by);
+    if (filters.order)        params = params.set('order',        filters.order);
     return this.http.get<Movie[]>('http://127.0.0.1:5001/api/movies', { params });
   }
 
@@ -50,13 +46,11 @@ export class MovieService {
     return this.http.get<Movie>(`http://127.0.0.1:5001/api/movies/${movieId}`);
   }
 
-  // Admin-only: serialize form object to FormData before sending
   addMovie(data: any): Observable<any> {
     const formData = new FormData();
     Object.keys(data).forEach(key => {
-      if (data[key] !== null && data[key] !== undefined && data[key] !== '') {
+      if (data[key] !== null && data[key] !== undefined && data[key] !== '')
         formData.append(key, data[key]);
-      }
     });
     return this.http.post('http://127.0.0.1:5001/api/movies', formData, {
       headers: this.auth.getAuthHeaders()
@@ -66,9 +60,8 @@ export class MovieService {
   updateMovie(movieId: string, data: any): Observable<any> {
     const formData = new FormData();
     Object.keys(data).forEach(key => {
-      if (data[key] !== null && data[key] !== undefined && data[key] !== '') {
+      if (data[key] !== null && data[key] !== undefined && data[key] !== '')
         formData.append(key, data[key]);
-      }
     });
     return this.http.put(`http://127.0.0.1:5001/api/movies/${movieId}`, formData, {
       headers: this.auth.getAuthHeaders()

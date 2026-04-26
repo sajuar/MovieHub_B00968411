@@ -4,15 +4,18 @@ import { RouterLink, ActivatedRoute } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { MovieService } from '../../services/movie.service';
 import { Movie } from '../../models/models';
+import { AdminAnalyticsComponent } from './analytics/admin-analytics.component';
 
 @Component({
   selector: 'app-admin',
   standalone: true,
-  imports: [CommonModule, RouterLink, FormsModule],
+  imports: [CommonModule, RouterLink, FormsModule, AdminAnalyticsComponent],
   templateUrl: './admin.component.html',
   styleUrl: './admin.component.css'
 })
 export class AdminComponent implements OnInit {
+  activeTab: 'movies' | 'analytics' = 'movies';
+
   movies: Movie[] = [];
   listLoading = false;
   submitting = false;

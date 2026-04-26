@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { MovieService } from '../../services/movie.service';
+import { WatchlistService } from '../../services/watchlist.service';
 import { Movie } from '../../models/models';
 
 @Component({
@@ -18,7 +19,10 @@ export class TopRatedComponent implements OnInit {
   error = '';
   limit = 10;
 
-  constructor(private movieService: MovieService) {}
+  constructor(
+    private movieService: MovieService,
+    public watchlistService: WatchlistService
+  ) {}
 
   ngOnInit() { this.loadTopRated(); }
 
@@ -28,5 +32,11 @@ export class TopRatedComponent implements OnInit {
       next: (movies) => { this.movies = movies; this.loading = false; },
       error: (err) => { this.error = err.error?.Error || 'Failed to load.'; this.loading = false; }
     });
+  }
+
+  toggleWatchlist(event: Event, movie: Movie) {
+    event.preventDefault();
+    event.stopPropagation();
+    this.watchlistService.toggle(movie);
   }
 }

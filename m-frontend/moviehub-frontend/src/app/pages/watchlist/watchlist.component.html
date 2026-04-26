@@ -1,0 +1,55 @@
+<div class="page-wrap">
+  <div class="wl-header">
+    <div>
+      <h1 class="page-title">My Watchlist</h1>
+      <p class="page-sub">{{ movies.length }} {{ movies.length === 1 ? 'movie' : 'movies' }} saved</p>
+    </div>
+  </div>
+
+  @if (loading) {
+    <div class="loading-spinner"><div class="spinner"></div></div>
+  }
+
+  @if (!loading && movies.length === 0) {
+    <div class="empty-state">
+      <div class="empty-icon">🎬</div>
+      <h3>Your watchlist is empty</h3>
+      <p>Browse movies and tap the ❤ to save them here.</p>
+      <a routerLink="/movies" class="btn btn-primary" style="margin-top:1.25rem">Browse Movies</a>
+    </div>
+  }
+
+  @if (!loading && movies.length > 0) {
+    <div class="wl-grid">
+      @for (movie of movies; track movie.movie_id) {
+        <div class="wl-card">
+          <a [routerLink]="['/movies', movie.movie_id]" class="wl-poster-link">
+            <div class="wl-poster">
+              <img [src]="movie.image_url || 'https://picsum.photos/seed/' + movie.movie_id + '/300/450'"
+                   [alt]="movie.title" loading="lazy" />
+              <div class="wl-poster-overlay"></div>
+            </div>
+          </a>
+          <div class="wl-info">
+            <a [routerLink]="['/movies', movie.movie_id]" class="wl-title">{{ movie.title }}</a>
+            <div class="wl-meta">
+              <span class="rating-badge">⭐ {{ movie.ratings.average | number:'1.1-1' }}</span>
+              <span class="wl-year">{{ movie.release_year }}</span>
+              <span class="wl-duration">{{ movie.duration_minutes }} min</span>
+            </div>
+            <div class="genre-tags">
+              @for (g of movie.genres.slice(0,3); track g) {
+                <span class="genre-tag">{{ g }}</span>
+              }
+            </div>
+            <div class="wl-director">{{ movie.director }}</div>
+            <button class="wl-remove-btn" (click)="remove(movie)" title="Remove from watchlist">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              Remove
+            </button>
+          </div>
+        </div>
+      }
+    </div>
+  }
+</div>

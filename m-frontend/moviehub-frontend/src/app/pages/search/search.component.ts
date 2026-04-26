@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterLink, ActivatedRoute } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { MovieService } from '../../services/movie.service';
+import { WatchlistService } from '../../services/watchlist.service';
 import { Movie } from '../../models/models';
 
 @Component({
@@ -22,15 +23,13 @@ export class SearchComponent implements OnInit {
 
   constructor(
     private movieService: MovieService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    public watchlistService: WatchlistService
   ) {}
 
   ngOnInit() {
     this.route.queryParams.subscribe(params => {
-      if (params['title']) {
-        this.query = params['title'];
-        this.search();
-      }
+      if (params['title']) { this.query = params['title']; this.search(); }
     });
   }
 
@@ -39,18 +38,15 @@ export class SearchComponent implements OnInit {
     this.loading = true;
     this.error = '';
     this.lastQuery = this.query.trim();
-
     this.movieService.searchMovies(this.lastQuery).subscribe({
-      next: (movies) => {
-        this.movies = movies;
-        this.loading = false;
-        this.searched = true;
-      },
-      error: (err) => {
-        this.error = err.error?.Error || 'Search failed.';
-        this.loading = false;
-        this.searched = true;
-      }
+      next: (movies) => { this.movies = movies; this.loading = false; this.searched = true; },
+      error: (err) => { this.error = err.error?.Error || 'Search failed.'; this.loading = false; this.searched = true; }
     });
+  }
+
+  toggleWatchlist(event: Event, movie: Movie) {
+    event.preventDefault();
+    event.stopPropagation();
+    this.watchlistService.toggle(movie);
   }
 }

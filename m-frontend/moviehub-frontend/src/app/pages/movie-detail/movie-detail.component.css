@@ -43,7 +43,8 @@
   font-size: 0.72rem; color: var(--text-muted); letter-spacing: 0.05em;
 }
 
-.admin-actions { display: flex; gap: 8px; margin-top: 1rem; }
+.detail-actions { display: flex; gap: 8px; margin-top: 1rem; flex-wrap: wrap; }
+.admin-actions  { display: flex; gap: 8px; margin-top: 1rem; }
 
 /* ── Reviews ── */
 .reviews-section { margin-top: 2.5rem; }

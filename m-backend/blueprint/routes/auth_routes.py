@@ -4,15 +4,14 @@ import bcrypt
 import re
 from datetime import date, datetime, timedelta, timezone
 from config import users, tokens
+from extensions import limiter
 
-# Short-lived token lifetime — keeps sessions secure while
-# the frontend's silent refresh keeps active users signed in
+# Tokens expire after 5 minutes — the frontend silently refreshes them before they run out
 TOKEN_LIFETIME_MINUTES = 5
 
 auth_bp = Blueprint('auth_bp', __name__)
 
 
-# ── ID generator ────────────────────────────────────────────────────────────
 def get_next_user_id():
     last_user = users.find_one(sort=[("user_id", -1)])
     if last_user is None:
@@ -24,16 +23,12 @@ def get_next_user_id():
     return f"U{number:03d}"
 
 
-# ── Register ─────────────────────────────────────────────────────────────────
-# Validates all fields, hashes the password with bcrypt (never stored in
-# plain text), then inserts the new user document.
-# ─────────────────────────────────────────────────────────────────────────────
 @auth_bp.route('/api/auth/register', methods=['POST'])
+@limiter.limit("3 per minute")
 def register_user():
     data = request.form
 
     if data and "username" in data and "email" in data and "password" in data:
-
         username = data.get("username").strip()
         email    = data.get("email").strip().lower()
         password = data.get("password")
@@ -55,10 +50,9 @@ def register_user():
         if users.find_one({"email": email}) is not None:
             return make_response(jsonify({"Error": "email already exists"}), 400)
 
-        # Hash the password before storing — bcrypt salts automatically
+        # Hash password with bcrypt before storing — never store plain text passwords
         hashed_password = bcrypt.hashpw(
-            password.encode("utf-8"),
-            bcrypt.gensalt()
+            password.encode("utf-8"), bcrypt.gensalt()
         ).decode("utf-8")
 
         new_user = {
@@ -77,27 +71,18 @@ def register_user():
         return make_response(jsonify({"Error": "missing data"}), 400)
 
 
-# ── Login ────────────────────────────────────────────────────────────────────
-# Accepts either username or email + password.
-# On success:
-#   1. Deletes any existing tokens for this user (token rotation — a new token
-#      is issued on every login, old ones are invalidated immediately).
-#   2. Creates a fresh token with a short expiry stored in MongoDB.
-#   3. Returns the token and user details to the frontend.
-# ─────────────────────────────────────────────────────────────────────────────
 @auth_bp.route('/api/auth/login', methods=['POST'])
+@limiter.limit("3 per minute")
 def login_user():
     data = request.form
 
     if data and "password" in data and ("username" in data or "email" in data):
-
         password = data.get("password")
 
         if password.strip() == "":
             return make_response(jsonify({"Error": "password cannot be empty"}), 400)
 
         user = None
-
         if data.get("username") and data.get("username").strip() != "":
             user = users.find_one({"username": data.get("username").strip()})
         elif data.get("email") and data.get("email").strip() != "":
@@ -108,11 +93,10 @@ def login_user():
         if user is None:
             return make_response(jsonify({"Error": "Invalid username/email or password"}), 401)
 
-        # Verify password against the stored bcrypt hash
         if not bcrypt.checkpw(password.encode("utf-8"), user["password"].encode("utf-8")):
             return make_response(jsonify({"Error": "Invalid username/email or password"}), 401)
 
-        # Token rotation: remove old tokens so only one active session exists
+        # Delete old tokens so only one active session exists per user (token rotation)
         tokens.delete_many({"user_id": user["user_id"]})
 
         token      = str(uuid.uuid4())
@@ -137,11 +121,8 @@ def login_user():
         return make_response(jsonify({"Error": "missing data"}), 400)
 
 
-# ── Refresh token ────────────────────────────────────────────────────────────
-# Called automatically by the Angular frontend ~60 seconds before the current
-# token expires.  Issues a brand-new token and deletes the old one so the user
-# stays signed in without interruption while short-lived tokens remain secure.
-# ─────────────────────────────────────────────────────────────────────────────
+# Called by the Angular frontend about 60 seconds before the token expires.
+# Issues a new token so the user stays logged in without noticing.
 @auth_bp.route('/api/auth/refresh', methods=['POST'])
 def refresh_token():
     token = request.headers.get("x-access-token")
@@ -150,17 +131,14 @@ def refresh_token():
         return make_response(jsonify({"Error": "Token missing"}), 401)
 
     saved_token = tokens.find_one({"token": token})
-
     if saved_token is None:
         return make_response(jsonify({"Error": "Invalid token"}), 401)
 
-    # Reject if already expired
     expires_at = saved_token.get("expires_at")
     if expires_at and expires_at <= datetime.utcnow():
         tokens.delete_one({"token": token})
         return make_response(jsonify({"Error": "Token expired"}), 401)
 
-    # Rotate: delete old token and issue a fresh one
     user_id = saved_token["user_id"]
     tokens.delete_one({"token": token})
 
@@ -179,10 +157,6 @@ def refresh_token():
     }), 200)
 
 
-# ── Logout ───────────────────────────────────────────────────────────────────
-# Deletes the token from the database immediately, invalidating the session.
-# The frontend also clears all session cookies on its side.
-# ─────────────────────────────────────────────────────────────────────────────
 @auth_bp.route('/api/auth/logout', methods=['POST'])
 def logout_user():
     token = request.headers.get("x-access-token")

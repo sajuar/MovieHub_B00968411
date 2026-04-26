@@ -9,6 +9,7 @@
     <div class="nav-links">
       <a routerLink="/movies"    routerLinkActive="active" class="nav-link">Browse</a>
       <a routerLink="/top-rated" routerLinkActive="active" class="nav-link">Top Rated</a>
+      <a routerLink="/watchlist" routerLinkActive="active" class="nav-link">Watchlist</a>
       @if (isAdmin) {
         <a routerLink="/users" routerLinkActive="active" class="nav-link">Users</a>
         <a routerLink="/admin" routerLinkActive="active" class="nav-link nav-link-admin">Admin</a>
@@ -48,6 +49,7 @@
     <div class="mobile-menu">
       <a routerLink="/movies"    (click)="mobileOpen=false" class="mobile-link">Browse</a>
       <a routerLink="/top-rated" (click)="mobileOpen=false" class="mobile-link">Top Rated</a>
+      <a routerLink="/watchlist" (click)="mobileOpen=false" class="mobile-link">Watchlist</a>
       @if (isAdmin) {
         <a routerLink="/users" (click)="mobileOpen=false" class="mobile-link">Users</a>
         <a routerLink="/admin" (click)="mobileOpen=false" class="mobile-link">Admin</a>

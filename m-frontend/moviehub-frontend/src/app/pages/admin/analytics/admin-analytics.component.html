@@ -1,0 +1,40 @@
+@if (loading) {
+  <div class="loading-spinner"><div class="spinner"></div></div>
+}
+
+@if (!loading) {
+  <!-- Summary stat cards -->
+  <div class="stat-row">
+    <div class="stat-card">
+      <div class="stat-icon">🎬</div>
+      <div class="stat-num">{{ totals.movies }}</div>
+      <div class="stat-label">Total Movies</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon">👥</div>
+      <div class="stat-num">{{ totals.users }}</div>
+      <div class="stat-label">Total Users</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon">✍️</div>
+      <div class="stat-num">{{ totals.reviews }}</div>
+      <div class="stat-label">Total Reviews</div>
+    </div>
+  </div>
+
+  <!-- Charts grid -->
+  <div class="charts-grid">
+    <div class="chart-card">
+      <canvas #chartTopReviewed></canvas>
+    </div>
+    <div class="chart-card">
+      <canvas #chartRatingGenre></canvas>
+    </div>
+    <div class="chart-card">
+      <canvas #chartReviewsMonth></canvas>
+    </div>
+    <div class="chart-card">
+      <canvas #chartGenreCount></canvas>
+    </div>
+  </div>
+}
