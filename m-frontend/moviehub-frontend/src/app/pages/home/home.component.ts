@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { MovieService } from '../../services/movie.service';
 import { WatchlistService } from '../../services/watchlist.service';
+import { AuthService } from '../../services/auth.service';
 import { Movie, GenreStat } from '../../models/models';
 
 // heroSlides is stored as a plain array (not a getter) so Angular sees the same
@@ -28,7 +29,8 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   constructor(
     private movieService: MovieService,
-    public watchlistService: WatchlistService
+    public watchlistService: WatchlistService,
+    public authService: AuthService
   ) {}
 
   ngOnInit() {

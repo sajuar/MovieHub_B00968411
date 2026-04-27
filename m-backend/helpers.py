@@ -14,11 +14,16 @@ def get_logged_in_user():
     if saved_token is None:
         return None
 
-    # Double-check expiry in case the MongoDB TTL cleanup hasn't run yet
+    # Double-check expiry in case the MongoDB TTL cleanup hasn't run yet.
+    # Use timezone-aware comparison to match how expires_at is stored (UTC).
     expires_at = saved_token.get("expires_at")
-    if expires_at is not None and expires_at <= datetime.utcnow():
-        tokens.delete_one({"token": token})
-        return None
+    if expires_at is not None:
+        # Make expires_at timezone-aware if MongoDB returned a naive datetime
+        if expires_at.tzinfo is None:
+            expires_at = expires_at.replace(tzinfo=timezone.utc)
+        if expires_at <= datetime.now(timezone.utc):
+            tokens.delete_one({"token": token})
+            return None
 
     user = users.find_one({"user_id": saved_token["user_id"]})
     if user is None:

@@ -31,7 +31,6 @@
       </div>
     </div>
 
-    <!-- Slide dots -->
     @if (heroSlides.length > 1) {
       <div class="slide-dots">
         @for (m of heroSlides; track m.movie_id; let i = $index) {
@@ -42,37 +41,65 @@
   }
 </div>
 
-<!-- ── STATS ── -->
-<section class="stats-section">
+<!-- ── WELCOME BANNER (logged-in users only) ── -->
+@if (authService.isLoggedIn()) {
+  <div class="welcome-banner">
+    <div class="section-wrap">
+      <div class="wb-inner">
+        <div class="wb-avatar">{{ (authService.getUsername() || 'U')[0].toUpperCase() }}</div>
+        <div>
+          <div class="wb-greeting">Welcome back, <strong>{{ authService.getUsername() }}</strong> 👋</div>
+          <div class="wb-sub">Pick up where you left off — your watchlist and reviews are waiting.</div>
+        </div>
+        <div class="wb-actions">
+          <a routerLink="/watchlist" class="btn btn-primary btn-sm">My Watchlist</a>
+          <a routerLink="/profile"   class="btn btn-secondary btn-sm">My Profile</a>
+        </div>
+      </div>
+    </div>
+  </div>
+}
+
+<!-- ── FEATURE CARDS ── -->
+<section class="features-section">
   <div class="section-wrap">
-    <div class="stats-grid">
-      <div class="stat-card">
-        <div class="stat-top-bar"></div>
-        <div class="stat-icon">🎬</div>
-        <div class="stat-num">100+</div>
-        <div class="stat-label">Movies</div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="fc-icon-wrap fc-gold">🎬</div>
+        <h3>100+ Movies</h3>
+        <p>A curated catalogue spanning every genre — from timeless classics to the latest releases. New titles added regularly.</p>
       </div>
-      <div class="stat-card">
-        <div class="stat-top-bar"></div>
-        <div class="stat-icon">✍️</div>
-        <div class="stat-num">300+</div>
-        <div class="stat-label">Reviews</div>
+      <div class="feature-card">
+        <div class="fc-icon-wrap fc-teal">⭐</div>
+        <h3>Real Reviews</h3>
+        <p>Every review is written by a real registered member. Rate out of 10, leave a comment, and vote the reviews you find most helpful.</p>
       </div>
-      <div class="stat-card">
-        <div class="stat-top-bar"></div>
-        <div class="stat-icon">👥</div>
-        <div class="stat-num">30+</div>
-        <div class="stat-label">Users</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-top-bar"></div>
-        <div class="stat-icon">🎭</div>
-        <div class="stat-num">{{ genreStats.length }}</div>
-        <div class="stat-label">Genres</div>
+      <div class="feature-card">
+        <div class="fc-icon-wrap fc-rose">❤️</div>
+        <h3>Your Watchlist</h3>
+        <p>Save any movie with a single tap. Your personal watchlist follows you across every device — never forget a film again.</p>
       </div>
     </div>
   </div>
 </section>
+
+<!-- ── CTA BANNER (guests only) ── -->
+@if (!authService.isLoggedIn()) {
+  <section class="cta-section">
+    <div class="section-wrap">
+      <div class="cta-inner">
+        <div class="cta-text">
+          <h2>Join the MovieHub Community</h2>
+          <p>Create a free account to leave reviews, build your watchlist and connect with fellow film lovers.</p>
+        </div>
+        <div class="cta-actions">
+          <a routerLink="/register" class="btn btn-primary cta-btn">Create Free Account</a>
+          <a routerLink="/movies"   class="btn btn-ghost   cta-btn">Browse First</a>
+        </div>
+      </div>
+    </div>
+  </section>
+}
 
 <!-- ── MOVIES BY GENRE ── -->
 <section class="home-section">

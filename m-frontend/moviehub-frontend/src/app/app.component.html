@@ -101,10 +101,8 @@
       <div class="footer-col">
         <h4 class="footer-col-title">About</h4>
         <ul class="footer-links">
-          <li><a href="#" class="footer-link">About MovieHub</a></li>
-          <li><a href="#" class="footer-link">How It Works</a></li>
-          <li><a href="#" class="footer-link">Our Team</a></li>
-          <li><a href="#" class="footer-link">Careers</a></li>
+          <li><a routerLink="/about" class="footer-link">About MovieHub</a></li>
+          <li><a routerLink="/about" fragment="how-it-works" class="footer-link">How It Works</a></li>
         </ul>
       </div>
 
@@ -112,10 +110,9 @@
       <div class="footer-col">
         <h4 class="footer-col-title">Contact</h4>
         <ul class="footer-links">
-          <li><a href="#" class="footer-link">Help Centre</a></li>
-          <li><a href="#" class="footer-link">Contact Us</a></li>
-          <li><a href="#" class="footer-link">Report an Issue</a></li>
-          <li><a href="#" class="footer-link">Privacy Policy</a></li>
+          <li><a routerLink="/contact" class="footer-link">Contact Us</a></li>
+          <li><a routerLink="/contact" [queryParams]="{type:'report'}" class="footer-link">Report an Issue</a></li>
+          <li><a routerLink="/privacy" class="footer-link">Privacy Policy</a></li>
         </ul>
       </div>
 
@@ -125,8 +122,13 @@
         <ul class="footer-links">
           <li><a routerLink="/movies"    class="footer-link">Browse Movies</a></li>
           <li><a routerLink="/top-rated" class="footer-link">Top Rated</a></li>
-          <li><a routerLink="/register"  class="footer-link">Create Account</a></li>
-          <li><a routerLink="/login"     class="footer-link">Sign In</a></li>
+          @if (isLoggedIn) {
+            <li><a routerLink="/watchlist" class="footer-link">My Watchlist</a></li>
+            <li><a routerLink="/profile"   class="footer-link">My Profile</a></li>
+          } @else {
+            <li><a routerLink="/register"  class="footer-link">Create Account</a></li>
+            <li><a routerLink="/login"     class="footer-link">Sign In</a></li>
+          }
         </ul>
       </div>
     </div>
