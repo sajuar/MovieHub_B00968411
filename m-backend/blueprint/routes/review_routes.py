@@ -37,15 +37,12 @@ def update_movie_rating(movie_id):
     movie_reviews = list(reviews.find({"movie_id": movie_id}))
 
     if len(movie_reviews) > 0:
-        # Reviews are stored on a 1–5 scale
-        average_5 = sum(review["rating"] for review in movie_reviews) / len(movie_reviews)
-
-        # Convert to a 1–10 scale for the movie document
-        average_10 = round(average_5 * 2, 1)
+        # Reviews are on a 1–10 scale, same as the movie rating
+        average = round(sum(review["rating"] for review in movie_reviews) / len(movie_reviews), 1)
 
         movies.update_one(
             {"movie_id": movie_id},
-            {"$set": {"ratings.average": average_10}}
+            {"$set": {"ratings.average": average}}
         )
     else:
         # If no reviews remain, reset average rating to 0
@@ -108,13 +105,15 @@ def get_reviews_by_user(user_id):
 # --------------------------------------------------
 @review_bp.route('/api/movies/<string:movie_id>/reviews', methods=['POST'])
 def add_review(movie_id):
-    # User must be logged in to add a review
     user = get_logged_in_user()
 
     if user is None:
         return make_response(jsonify({"Error": "Authentication required"}), 401)
 
-    # Movie must exist before review can be added
+    # Admins manage the platform — they moderate reviews but do not write them
+    if user["role"] == "admin":
+        return make_response(jsonify({"Error": "Admins cannot write reviews"}), 403)
+
     if valid_movie_id(movie_id) is None:
         return make_response(jsonify({"Error": "Movie not found"}), 404)
 
@@ -140,8 +139,8 @@ def add_review(movie_id):
         return make_response(jsonify({"Error": "rating must be an integer"}), 400)
 
     # Validate rating range
-    if rating < 1 or rating > 5:
-        return make_response(jsonify({"Error": "rating must be between 1 and 5"}), 400)
+    if rating < 1 or rating > 10:
+        return make_response(jsonify({"Error": "rating must be between 1 and 10"}), 400)
 
     # Validate helpful_votes type
     try:
@@ -173,7 +172,7 @@ def add_review(movie_id):
 
 # --------------------------------------------------
 # Update an existing review
-# Only the review owner or an admin may update it
+# Only the review owner can edit — admins can delete but not edit
 # --------------------------------------------------
 @review_bp.route('/api/reviews/<string:review_id>', methods=['PUT'])
 def update_review(review_id):
@@ -182,13 +181,17 @@ def update_review(review_id):
     if user is None:
         return make_response(jsonify({"Error": "Authentication required"}), 401)
 
+    # Admins can delete reviews for moderation but cannot edit them
+    if user["role"] == "admin":
+        return make_response(jsonify({"Error": "Admins cannot edit reviews"}), 403)
+
     review = reviews.find_one({"review_id": review_id})
 
     if review is None:
         return make_response(jsonify({"Error": "Review not found"}), 404)
 
-    # Check ownership/admin permissions
-    if review["user_id"] != user["user_id"] and user["role"] != "admin":
+    # Only the review owner can edit their own review
+    if review["user_id"] != user["user_id"]:
         return make_response(jsonify({"Error": "Not allowed"}), 403)
 
     data = request.form
@@ -201,8 +204,8 @@ def update_review(review_id):
         except:
             return make_response(jsonify({"Error": "rating must be an integer"}), 400)
 
-        if rating < 1 or rating > 5:
-            return make_response(jsonify({"Error": "rating must be between 1 and 5"}), 400)
+        if rating < 1 or rating > 10:
+            return make_response(jsonify({"Error": "rating must be between 1 and 10"}), 400)
 
         update_fields["rating"] = rating
 
@@ -266,3 +269,71 @@ def delete_review(review_id):
 
     else:
         return make_response(jsonify({"Error": "Review not found"}), 404)
+
+
+# --------------------------------------------------
+# Toggle helpful / not-helpful vote on a review
+# vote_type must be "helpful" or "not_helpful"
+# One vote per type per user — clicking again removes it
+# Admins and the review author cannot vote
+# --------------------------------------------------
+@review_bp.route('/api/reviews/<string:review_id>/vote/<string:vote_type>', methods=['POST'])
+def toggle_vote(review_id, vote_type):
+    if vote_type not in ("helpful", "not_helpful"):
+        return make_response(jsonify({"Error": "vote_type must be helpful or not_helpful"}), 400)
+
+    user = get_logged_in_user()
+    if user is None:
+        return make_response(jsonify({"Error": "Authentication required"}), 401)
+
+    if user["role"] == "admin":
+        return make_response(jsonify({"Error": "Admins cannot vote on reviews"}), 403)
+
+    review = reviews.find_one({"review_id": review_id})
+    if review is None:
+        return make_response(jsonify({"Error": "Review not found"}), 404)
+
+    if review["user_id"] == user["user_id"]:
+        return make_response(jsonify({"Error": "You cannot vote on your own review"}), 400)
+
+    user_id        = user["user_id"]
+    opposite_type  = "not_helpful" if vote_type == "helpful" else "helpful"
+    field_count    = f"{vote_type}_votes"
+    field_users    = f"{vote_type}_votes_users"
+    opp_count      = f"{opposite_type}_votes"
+    opp_users      = f"{opposite_type}_votes_users"
+
+    voters        = review.get(field_users, [])
+    already_voted = user_id in voters
+
+    if already_voted:
+        # Clicking the same button again removes the vote
+        reviews.update_one(
+            {"review_id": review_id},
+            {"$pull": {field_users: user_id}, "$inc": {field_count: -1}}
+        )
+        new_count = max(0, review.get(field_count, 0) - 1)
+        return make_response(jsonify({
+            field_count: new_count,
+            opp_count:   review.get(opp_count, 0),
+            "user_voted": False
+        }), 200)
+    else:
+        update_op = {
+            "$addToSet": {field_users: user_id},
+            "$inc":      {field_count: 1}
+        }
+        # If the user had the opposite vote, remove it at the same time
+        opp_new_count = review.get(opp_count, 0)
+        if user_id in review.get(opp_users, []):
+            update_op["$pull"] = {opp_users: user_id}
+            update_op["$inc"][opp_count] = -1
+            opp_new_count = max(0, opp_new_count - 1)
+
+        reviews.update_one({"review_id": review_id}, update_op)
+        new_count = review.get(field_count, 0) + 1
+        return make_response(jsonify({
+            field_count:  new_count,
+            opp_count:    opp_new_count,
+            "user_voted": True
+        }), 200)
