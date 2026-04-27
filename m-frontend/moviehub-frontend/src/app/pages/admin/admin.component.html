@@ -78,18 +78,7 @@
         <label>Tags (comma-separated)</label>
         <input type="text" [(ngModel)]="form.tags" placeholder="epic, adventure" />
       </div>
-      @if (!editMode) {
-        <div class="form-row">
-          <div class="form-group">
-            <label>Avg Rating (0–10)</label>
-            <input type="number" [(ngModel)]="form.average_rating" min="0" max="10" step="0.1" />
-          </div>
-          <div class="form-group">
-            <label>Votes</label>
-            <input type="number" [(ngModel)]="form.votes" min="0" />
-          </div>
-        </div>
-      }
+      <!-- Rating and votes are calculated automatically from user reviews — not set manually -->
       <div class="form-actions">
         <button class="btn btn-primary" (click)="submitForm()" [disabled]="submitting">
           {{ submitting ? 'Saving...' : (editMode ? 'Update Movie' : 'Add Movie') }}

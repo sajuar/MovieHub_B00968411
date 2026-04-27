@@ -14,7 +14,9 @@
           <tbody>
             <tr><td>User ID</td><td>{{ user.user_id }}</td></tr>
             <tr><td>Joined</td><td>{{ user.joined_date }}</td></tr>
-            <tr><td>Reviews</td><td>{{ reviews.length }}</td></tr>
+            @if (user.role !== 'admin') {
+              <tr><td>Reviews</td><td>{{ reviews.length }}</td></tr>
+            }
           </tbody>
         </table>
         @if (user.role === 'admin') {
@@ -24,40 +26,63 @@
         }
       </div>
 
-      <!-- Reviews -->
+      <!-- Right panel: admin sees quick links, users see their reviews -->
       <div>
-        <h2 class="reviews-heading">My Reviews ({{ reviews.length }})</h2>
-
-        @if (loadingReviews) { <div class="loading-spinner"><div class="spinner"></div></div> }
-
-        @if (!loadingReviews && reviews.length === 0) {
-          <div class="empty-state">
-            <h3>No reviews yet</h3>
-            <p>Browse movies and leave your first review!</p>
-            <a routerLink="/movies" class="btn btn-primary" style="margin-top:1rem">Browse Movies</a>
+        @if (user.role === 'admin') {
+          <div class="admin-panel">
+            <h2 class="reviews-heading">Admin Quick Access</h2>
+            <div class="admin-links">
+              <a routerLink="/admin" class="admin-link-card">
+                <span class="al-icon">🎬</span>
+                <span class="al-label">Manage Movies</span>
+                <span class="al-sub">Add, edit or delete movies</span>
+              </a>
+              <a routerLink="/admin" [queryParams]="{tab:'analytics'}" class="admin-link-card">
+                <span class="al-icon">📊</span>
+                <span class="al-label">Analytics</span>
+                <span class="al-sub">Charts and stats</span>
+              </a>
+              <a routerLink="/users" class="admin-link-card">
+                <span class="al-icon">👥</span>
+                <span class="al-label">Manage Users</span>
+                <span class="al-sub">View, promote or remove users</span>
+              </a>
+            </div>
           </div>
-        }
+        } @else {
+          <h2 class="reviews-heading">My Reviews ({{ reviews.length }})</h2>
 
-        <div class="reviews-list">
-          @for (review of reviews; track review.review_id) {
-            <div class="review-card">
-              <div class="review-top">
-                <a [routerLink]="['/movies', review.movie_id]" class="movie-link">🎬 {{ review.movie_id }}</a>
-                <span class="review-stars">{{ getStars(review.rating) }}</span>
-                <span class="review-rating">{{ review.rating }}/5</span>
-                <span class="review-date">{{ review.review_date }}</span>
-              </div>
-              @if (review.comment) {
-                <p class="review-comment">{{ review.comment }}</p>
-              } @else {
-                <p class="no-comment">No comment</p>
-              }
-              @if (review.helpful_votes > 0) {
-                <div class="helpful">👍 {{ review.helpful_votes }} found helpful</div>
-              }
+          @if (loadingReviews) { <div class="loading-spinner"><div class="spinner"></div></div> }
+
+          @if (!loadingReviews && reviews.length === 0) {
+            <div class="empty-state">
+              <h3>No reviews yet</h3>
+              <p>Browse movies and leave your first review!</p>
+              <a routerLink="/movies" class="btn btn-primary" style="margin-top:1rem">Browse Movies</a>
             </div>
           }
-        </div>
+
+          <div class="reviews-list">
+            @for (review of reviews; track review.review_id) {
+              <div class="review-card">
+                <div class="review-top">
+                  <a [routerLink]="['/movies', review.movie_id]" class="movie-link">🎬 {{ review.movie_id }}</a>
+                  <span class="review-stars">{{ getStars(review.rating) }}</span>
+                  <span class="review-rating">{{ review.rating }}/10</span>
+                  <span class="review-date">{{ review.review_date }}</span>
+                </div>
+                @if (review.comment) {
+                  <p class="review-comment">{{ review.comment }}</p>
+                } @else {
+                  <p class="no-comment">No comment</p>
+                }
+                @if (review.helpful_votes > 0) {
+                  <div class="helpful">👍 {{ review.helpful_votes }} found helpful</div>
+                }
+              </div>
+            }
+          </div>
+        }
       </div>
     </div>
   }

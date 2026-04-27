@@ -95,7 +95,7 @@
                     <a [routerLink]="['/users']" [queryParams]="{userId: review.user_id}">{{ review.user_id }}</a>
                   </span>
                   <span class="review-stars">{{ getStars(review.rating) }}</span>
-                  <span class="review-rating">{{ review.rating }}/5</span>
+                  <span class="review-rating">{{ review.rating }}/10</span>
                 </div>
                 <div class="review-meta">
                   <span>{{ review.review_date }}</span>
@@ -107,21 +107,50 @@
               } @else {
                 <p class="review-comment no-comment">No comment left.</p>
               }
-              @if (canModifyReview(review)) {
-                <div class="review-actions">
-                  <button class="btn btn-secondary btn-sm" (click)="startEditReview(review)">Edit</button>
-                  <button class="btn btn-danger btn-sm" (click)="deleteReview(review)">Delete</button>
-                </div>
-              }
+              <div class="review-footer">
+                <!-- Vote buttons — shown to logged-in non-admin users who didn't write the review -->
+                @if (isLoggedIn && !isAdmin && review.user_id !== authService.getUserId()) {
+                  <div class="vote-btns">
+                    <button class="helpful-btn up" [class.voted]="hasVoted(review, 'helpful')"
+                            (click)="vote(review, 'helpful')" title="Helpful">
+                      👍 {{ review.helpful_votes || 0 }}
+                    </button>
+                    <button class="helpful-btn down" [class.voted]="hasVoted(review, 'not_helpful')"
+                            (click)="vote(review, 'not_helpful')" title="Not helpful">
+                      👎 {{ review.not_helpful_votes || 0 }}
+                    </button>
+                  </div>
+                } @else {
+                  <div class="vote-counts">
+                    @if ((review.helpful_votes || 0) > 0) {
+                      <span class="helpful-count">👍 {{ review.helpful_votes }}</span>
+                    }
+                    @if ((review.not_helpful_votes || 0) > 0) {
+                      <span class="helpful-count">👎 {{ review.not_helpful_votes }}</span>
+                    }
+                  </div>
+                }
+
+                @if (canModifyReview(review)) {
+                  <div class="review-actions">
+                    @if (!isAdmin) {
+                      <button class="btn btn-secondary btn-sm" (click)="startEditReview(review)">Edit</button>
+                    }
+                    <button class="btn btn-danger btn-sm" (click)="deleteReview(review)">Delete</button>
+                  </div>
+                }
+              </div>
             } @else {
               <div class="edit-review-form">
                 <h4>Edit Review</h4>
                 <div class="form-group">
-                  <label>Rating (1–5)</label>
+                  <label>Rating (1–10)</label>
                   <select [(ngModel)]="editRating">
-                    <option [value]="1">1 ⭐</option><option [value]="2">2 ⭐⭐</option>
-                    <option [value]="3">3 ⭐⭐⭐</option><option [value]="4">4 ⭐⭐⭐⭐</option>
-                    <option [value]="5">5 ⭐⭐⭐⭐⭐</option>
+                    <option [value]="1">1</option><option [value]="2">2</option>
+                    <option [value]="3">3</option><option [value]="4">4</option>
+                    <option [value]="5">5</option><option [value]="6">6</option>
+                    <option [value]="7">7</option><option [value]="8">8</option>
+                    <option [value]="9">9</option><option [value]="10">10</option>
                   </select>
                 </div>
                 <div class="form-group">
@@ -138,16 +167,18 @@
         }
       </div>
 
-      <!-- Add review -->
-      @if (isLoggedIn && !hasUserReviewed) {
+      <!-- Add review — admins can delete reviews for moderation but cannot write them -->
+      @if (isLoggedIn && !hasUserReviewed && !isAdmin) {
         <div class="add-review-section">
           <h3>Write a Review</h3>
           <div class="form-group">
-            <label>Rating (1–5)</label>
+            <label>Rating (1–10)</label>
             <select [(ngModel)]="newRating">
-              <option [value]="1">1 ⭐</option><option [value]="2">2 ⭐⭐</option>
-              <option [value]="3">3 ⭐⭐⭐</option><option [value]="4">4 ⭐⭐⭐⭐</option>
-              <option [value]="5">5 ⭐⭐⭐⭐⭐</option>
+              <option [value]="1">1</option><option [value]="2">2</option>
+              <option [value]="3">3</option><option [value]="4">4</option>
+              <option [value]="5">5</option><option [value]="6">6</option>
+              <option [value]="7">7</option><option [value]="8">8</option>
+              <option [value]="9">9</option><option [value]="10">10</option>
             </select>
           </div>
           <div class="form-group">
@@ -159,7 +190,7 @@
           </button>
         </div>
       }
-      @if (isLoggedIn && hasUserReviewed) {
+      @if (isLoggedIn && hasUserReviewed && !isAdmin) {
         <div class="add-review-section">
           <p class="already-reviewed">✓ You have already reviewed this movie.</p>
         </div>

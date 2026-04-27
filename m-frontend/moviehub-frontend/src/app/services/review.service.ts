@@ -43,4 +43,11 @@ export class ReviewService {
       headers: this.auth.getAuthHeaders()
     });
   }
+
+  vote(reviewId: string, type: 'helpful' | 'not_helpful'): Observable<any> {
+    return this.http.post(
+      `http://127.0.0.1:5001/api/reviews/${reviewId}/vote/${type}`, {},
+      { headers: this.auth.getAuthHeaders() }
+    );
+  }
 }

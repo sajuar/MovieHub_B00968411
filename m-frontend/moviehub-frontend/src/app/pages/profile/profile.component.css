@@ -70,6 +70,21 @@
 }
 .empty-state h3 { color: var(--text-primary); margin-bottom: 0.5rem; }
 
+/* Admin quick-access cards */
+.admin-links {
+  display: flex; flex-direction: column; gap: 0.9rem;
+}
+.admin-link-card {
+  display: flex; align-items: center; gap: 1rem;
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 12px; padding: 1.1rem 1.3rem;
+  text-decoration: none; transition: border-color 0.2s;
+}
+.admin-link-card:hover { border-color: var(--accent); text-decoration: none; }
+.al-icon  { font-size: 1.6rem; flex-shrink: 0; }
+.al-label { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; font-weight: 700; color: var(--text-primary); display: block; }
+.al-sub   { font-family: 'DM Sans', sans-serif; font-size: 0.8rem; color: var(--text-muted); display: block; }
+
 @media (max-width: 900px) {
   .profile-layout { grid-template-columns: 1fr; }
   .profile-card { position: static; }

@@ -41,6 +41,9 @@ export interface Review {
   comment: string;
   review_date: string;
   helpful_votes: number;
+  helpful_votes_users?: string[];
+  not_helpful_votes?: number;
+  not_helpful_votes_users?: string[];
 }
 
 export interface User {

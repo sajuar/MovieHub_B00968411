@@ -114,6 +114,7 @@ export class UsersComponent implements OnInit {
   }
 
   getStars(rating: number): string {
-    return '★'.repeat(rating) + '☆'.repeat(5 - rating);
+    const filled = Math.round(rating / 2);
+    return '★'.repeat(filled) + '☆'.repeat(5 - filled);
   }
 }
