@@ -34,10 +34,10 @@
                 <div class="action-btns">
                   <button class="btn-action btn-view" (click)="openReviews(user)">Reviews</button>
                   @if (user.role !== 'admin') {
-                    <button class="btn-action btn-promote" (click)="promoteUser(user)">Promote</button>
+                    <button class="btn-action btn-promote" (click)="requestPromote(user)">Promote</button>
                   }
                   @if (user.user_id !== currentUserId && user.role !== 'admin') {
-                    <button class="btn-action btn-delete" (click)="deleteUser(user)">Delete</button>
+                    <button class="btn-action btn-delete" (click)="requestDeleteUser(user)">Delete</button>
                   }
                 </div>
               </td>
@@ -88,3 +88,39 @@
     </div>
   }
 </div>
+
+<!-- Promote User Modal -->
+@if (showPromoteModal && userToAct) {
+  <div class="modal-backdrop" (click)="cancelModal()">
+    <div class="modal-box" (click)="$event.stopPropagation()">
+      <div class="modal-icon">⬆️</div>
+      <h3 class="modal-title">Promote to Admin</h3>
+      <p class="modal-body">
+        Are you sure you want to promote <strong>{{ userToAct.username }}</strong> to admin?
+        <br>They will gain full access to manage movies and users.
+      </p>
+      <div class="modal-actions">
+        <button class="btn btn-secondary" (click)="cancelModal()">Cancel</button>
+        <button class="btn btn-primary"   (click)="confirmPromote()">Promote</button>
+      </div>
+    </div>
+  </div>
+}
+
+<!-- Delete User Modal -->
+@if (showDeleteModal && userToAct) {
+  <div class="modal-backdrop" (click)="cancelModal()">
+    <div class="modal-box" (click)="$event.stopPropagation()">
+      <div class="modal-icon">🗑️</div>
+      <h3 class="modal-title">Delete User</h3>
+      <p class="modal-body">
+        Are you sure you want to delete <strong>{{ userToAct.username }}</strong>?
+        <br>This action cannot be undone.
+      </p>
+      <div class="modal-actions">
+        <button class="btn btn-secondary" (click)="cancelModal()">Cancel</button>
+        <button class="btn btn-danger"    (click)="confirmDeleteUser()">Delete</button>
+      </div>
+    </div>
+  </div>
+}

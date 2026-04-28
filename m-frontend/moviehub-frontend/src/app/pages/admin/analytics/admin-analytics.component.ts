@@ -22,6 +22,7 @@ export class AdminAnalyticsComponent implements OnInit, AfterViewInit, OnDestroy
   loading  = true;
   private analyticsData: any = null;
   private charts: Chart[] = [];
+  private pollTimer: any = null;
 
   constructor(private http: HttpClient, private auth: AuthService) {}
 
@@ -39,16 +40,17 @@ export class AdminAnalyticsComponent implements OnInit, AfterViewInit, OnDestroy
   }
 
   ngAfterViewInit() {
-    // Charts are drawn after data arrives — poll until both canvas and data are ready
-    const interval = setInterval(() => {
+    this.pollTimer = setInterval(() => {
       if (!this.loading && this.analyticsData) {
-        clearInterval(interval);
+        clearInterval(this.pollTimer);
+        this.pollTimer = null;
         this.drawCharts();
       }
     }, 100);
   }
 
   ngOnDestroy() {
+    if (this.pollTimer) { clearInterval(this.pollTimer); this.pollTimer = null; }
     this.charts.forEach(c => c.destroy());
   }
 

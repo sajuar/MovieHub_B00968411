@@ -18,6 +18,9 @@ export class UsersComponent implements OnInit {
   error = '';
   alert = '';
   alertType = 'success';
+  showPromoteModal  = false;
+  showDeleteModal   = false;
+  userToAct: User | null = null;
 
   currentUserId: string | null = null;
 
@@ -84,24 +87,44 @@ export class UsersComponent implements OnInit {
     this.userReviews = [];
   }
 
-  promoteUser(user: User) {
-    if (!confirm(`Promote "${user.username}" to admin?`)) return;
+  requestPromote(user: User) {
+    this.userToAct = user;
+    this.showPromoteModal = true;
+  }
+
+  requestDeleteUser(user: User) {
+    this.userToAct = user;
+    this.showDeleteModal = true;
+  }
+
+  cancelModal() {
+    this.showPromoteModal = false;
+    this.showDeleteModal  = false;
+    this.userToAct = null;
+  }
+
+  confirmPromote() {
+    if (!this.userToAct) return;
+    const user = this.userToAct;
+    this.cancelModal();
     this.userService.promoteUser(user.user_id).subscribe({
       next: (res) => {
         user.role = 'admin';
-        this.showAlert(res.message || `${user.username} promoted to admin.`, 'success');
+        this.showAlert(res.message || `${user.username} promoted to admin successfully.`, 'success');
       },
       error: (err) => this.showAlert(err.error?.error || 'Promote failed.', 'error')
     });
   }
 
-  deleteUser(user: User) {
-    if (!confirm(`Delete user "${user.username}"? This cannot be undone.`)) return;
+  confirmDeleteUser() {
+    if (!this.userToAct) return;
+    const user = this.userToAct;
+    this.cancelModal();
     this.userService.deleteUser(user.user_id).subscribe({
       next: () => {
         this.users = this.users.filter(u => u.user_id !== user.user_id);
         if (this.expandedUserId === user.user_id) this.collapse();
-        this.showAlert(`User "${user.username}" deleted.`, 'success');
+        this.showAlert(`User "${user.username}" deleted successfully.`, 'success');
       },
       error: (err) => this.showAlert(err.error?.error || 'Delete failed.', 'error')
     });

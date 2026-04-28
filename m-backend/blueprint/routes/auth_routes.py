@@ -135,9 +135,12 @@ def refresh_token():
         return make_response(jsonify({"Error": "Invalid token"}), 401)
 
     expires_at = saved_token.get("expires_at")
-    if expires_at and expires_at <= datetime.utcnow():
-        tokens.delete_one({"token": token})
-        return make_response(jsonify({"Error": "Token expired"}), 401)
+    if expires_at is not None:
+        if expires_at.tzinfo is None:
+            expires_at = expires_at.replace(tzinfo=timezone.utc)
+        if expires_at <= datetime.now(timezone.utc):
+            tokens.delete_one({"token": token})
+            return make_response(jsonify({"Error": "Token expired"}), 401)
 
     user_id = saved_token["user_id"]
     tokens.delete_one({"token": token})

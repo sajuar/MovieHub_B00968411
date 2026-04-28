@@ -21,8 +21,12 @@ export class AdminComponent implements OnInit {
   submitting = false;
   editMode = false;
   editingMovieId = '';
-  formAlert = '';
+  formAlert     = '';
   formAlertType = 'success';
+  deleteAlert     = '';
+  deleteAlertType = 'success';
+  showDeleteModal = false;
+  movieToDelete: Movie | null = null;
   searchText = '';
   listPage = 1;
   listPageSize = 20;
@@ -134,15 +138,29 @@ export class AdminComponent implements OnInit {
     });
   }
 
-  deleteMovie(movie: Movie) {
-    if (!confirm(`Delete "${movie.title}"? This will also delete all its reviews.`)) return;
+  requestDelete(movie: Movie) {
+    this.movieToDelete = movie;
+    this.showDeleteModal = true;
+  }
+
+  cancelDelete() {
+    this.showDeleteModal = false;
+    this.movieToDelete = null;
+  }
+
+  confirmDelete() {
+    if (!this.movieToDelete) return;
+    const movie = this.movieToDelete;
+    this.showDeleteModal = false;
+    this.movieToDelete = null;
+
     this.movieService.deleteMovie(movie.movie_id).subscribe({
       next: () => {
-        this.showFormAlert(`"${movie.title}" deleted.`, 'success');
+        this.showDeleteAlert(`"${movie.title}" deleted successfully.`, 'success');
         this.loadMovies();
       },
       error: (err) => {
-        this.showFormAlert(err.error?.Error || 'Delete failed.', 'error');
+        this.showDeleteAlert(err.error?.Error || 'Delete failed.', 'error');
       }
     });
   }
@@ -151,6 +169,12 @@ export class AdminComponent implements OnInit {
     this.formAlert = msg;
     this.formAlertType = type;
     setTimeout(() => this.formAlert = '', 4000);
+  }
+
+  showDeleteAlert(msg: string, type: string) {
+    this.deleteAlert = msg;
+    this.deleteAlertType = type;
+    setTimeout(() => this.deleteAlert = '', 4000);
   }
 
   // Allow only digit keys (0-9), plus control keys like Backspace, Delete, arrows

@@ -225,6 +225,9 @@ def update_review(review_id):
 
         update_fields["helpful_votes"] = helpful_votes
 
+    if not update_fields:
+        return make_response(jsonify({"Error": "No fields provided to update"}), 400)
+
     # Apply update to database
     result = reviews.update_one(
         {"review_id": review_id},

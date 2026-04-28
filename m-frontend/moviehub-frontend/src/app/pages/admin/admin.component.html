@@ -20,12 +20,6 @@
     <div class="form-panel">
       <h2 class="panel-title">{{ editMode ? 'Edit Movie' : 'Add New Movie' }}</h2>
 
-      @if (formAlert) {
-        <div class="alert" [class.alert-success]="formAlertType==='success'" [class.alert-error]="formAlertType==='error'">
-          {{ formAlert }}
-        </div>
-      }
-
       <div class="form-group">
         <label>Title *</label>
         <input type="text" [(ngModel)]="form.title" placeholder="Movie title" />
@@ -86,6 +80,11 @@
         @if (editMode) {
           <button class="btn btn-secondary" (click)="cancelEdit()">Cancel</button>
         }
+        @if (formAlert) {
+          <span class="inline-alert" [class.inline-alert-success]="formAlertType==='success'" [class.inline-alert-error]="formAlertType==='error'">
+            {{ formAlert }}
+          </span>
+        }
       </div>
     </div>
 
@@ -93,7 +92,14 @@
     <div class="movies-panel">
       <div class="movies-panel-header">
         <h2 class="panel-title">All Movies ({{ movies.length }})</h2>
-        <button class="btn btn-secondary btn-sm" (click)="loadMovies()">↻ Refresh</button>
+        <div class="panel-header-right">
+          @if (deleteAlert) {
+            <span class="inline-alert" [class.inline-alert-success]="deleteAlertType==='success'" [class.inline-alert-error]="deleteAlertType==='error'">
+              {{ deleteAlert }}
+            </span>
+          }
+          <button class="btn btn-secondary btn-sm" (click)="loadMovies()">↻ Refresh</button>
+        </div>
       </div>
       @if (listLoading) { <div class="loading-spinner"><div class="spinner"></div></div> }
       <input type="text" [(ngModel)]="searchText" placeholder="Filter movies..."
@@ -112,7 +118,7 @@
             </div>
             <div class="admin-movie-actions">
               <button class="btn btn-secondary btn-sm" (click)="startEdit(movie)">Edit</button>
-              <button class="btn btn-danger btn-sm" (click)="deleteMovie(movie)">Delete</button>
+              <button class="btn btn-danger btn-sm" (click)="requestDelete(movie)">Delete</button>
             </div>
           </div>
         }
@@ -131,3 +137,21 @@
   </div>
   } <!-- end @if movies tab -->
 </div>
+
+<!-- Delete Confirmation Modal -->
+@if (showDeleteModal && movieToDelete) {
+  <div class="modal-backdrop" (click)="cancelDelete()">
+    <div class="modal-box" (click)="$event.stopPropagation()">
+      <div class="modal-icon">🗑️</div>
+      <h3 class="modal-title">Delete Movie</h3>
+      <p class="modal-body">
+        Are you sure you want to delete <strong>{{ movieToDelete.title }}</strong>?
+        <br>This will permanently remove the movie and all its reviews.
+      </p>
+      <div class="modal-actions">
+        <button class="btn btn-secondary" (click)="cancelDelete()">Cancel</button>
+        <button class="btn btn-danger" (click)="confirmDelete()">Delete</button>
+      </div>
+    </div>
+  </div>
+}

@@ -387,6 +387,9 @@ def update_movie(movie_id):
             return make_response(jsonify({"Error": "villain_name cannot be empty"}), 400)
         update_fields["cast.1.actor_name"] = villain_name
 
+    if not update_fields:
+        return make_response(jsonify({"Error": "No fields provided to update"}), 400)
+
     # Apply update to database
     result = movies.update_one(
         {"movie_id": movie_id},

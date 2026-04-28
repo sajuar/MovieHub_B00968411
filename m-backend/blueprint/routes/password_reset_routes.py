@@ -72,7 +72,7 @@ def forgot_password():
 def reset_password():
     data     = request.form
     token    = data.get('token', '').strip()
-    password = data.get('password', '')
+    password = data.get('password', '').strip()
 
     if not token or not password:
         return make_response(jsonify({"Error": "Token and new password are required"}), 400)

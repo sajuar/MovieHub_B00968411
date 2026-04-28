@@ -40,7 +40,7 @@ export interface Review {
   rating: number;
   comment: string;
   review_date: string;
-  helpful_votes: number;
+  helpful_votes?: number;
   helpful_votes_users?: string[];
   not_helpful_votes?: number;
   not_helpful_votes_users?: string[];

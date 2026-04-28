@@ -28,6 +28,9 @@ export class MovieDetailComponent implements OnInit {
   editComment = '';
   alert = '';
   alertType = 'success';
+  showDeleteReviewModal = false;
+  showDeleteMovieModal  = false;
+  reviewToDelete: Review | null = null;
   hasUserReviewed = false;
   reviewPage = 1;
   reviewPageSize = 5;
@@ -151,11 +154,24 @@ export class MovieDetailComponent implements OnInit {
     });
   }
 
-  deleteReview(review: Review) {
-    if (!confirm('Delete this review?')) return;
+  requestDeleteReview(review: Review) {
+    this.reviewToDelete = review;
+    this.showDeleteReviewModal = true;
+  }
+
+  cancelDeleteReview() {
+    this.showDeleteReviewModal = false;
+    this.reviewToDelete = null;
+  }
+
+  confirmDeleteReview() {
+    if (!this.reviewToDelete) return;
+    const review = this.reviewToDelete;
+    this.showDeleteReviewModal = false;
+    this.reviewToDelete = null;
     this.reviewService.deleteReview(review.review_id).subscribe({
       next: () => {
-        this.showAlert('Review deleted.', 'success');
+        this.showAlert('Review deleted successfully.', 'success');
         this.loadReviews();
         this.loadMovie();
       },
@@ -165,8 +181,16 @@ export class MovieDetailComponent implements OnInit {
     });
   }
 
+  requestDeleteMovie() {
+    this.showDeleteMovieModal = true;
+  }
+
+  cancelDeleteMovie() {
+    this.showDeleteMovieModal = false;
+  }
+
   confirmDeleteMovie() {
-    if (!confirm(`Delete "${this.movie?.title}"? This will also remove all its reviews.`)) return;
+    this.showDeleteMovieModal = false;
     this.movieService.deleteMovie(this.movieId).subscribe({
       next: () => this.router.navigate(['/movies']),
       error: (err) => this.showAlert(err.error?.Error || 'Failed to delete movie.', 'error')

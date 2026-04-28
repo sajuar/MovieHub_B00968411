@@ -362,3 +362,29 @@ select option { background: #0F1623; color: #F0EDE8; }
 @media (max-width: 600px) {
   .movies-grid { grid-template-columns: repeat(2, 1fr); }
 }
+
+/* ── Confirmation Modal (shared across admin, movie-detail, users) ── */
+.modal-backdrop {
+  position: fixed; inset: 0; z-index: 1000;
+  background: rgba(0,0,0,0.65);
+  display: flex; align-items: center; justify-content: center;
+  backdrop-filter: blur(4px);
+}
+.modal-box {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 20px; padding: 2.5rem 2rem; width: 100%; max-width: 420px;
+  text-align: center; box-shadow: 0 24px 60px rgba(0,0,0,0.4);
+  margin: 1rem;
+}
+.modal-icon  { font-size: 2.5rem; margin-bottom: 1rem; }
+.modal-title {
+  font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 700;
+  color: var(--text-primary); margin-bottom: 0.75rem;
+}
+.modal-body {
+  font-family: 'DM Sans', sans-serif; font-size: 0.9rem;
+  color: var(--text-muted); line-height: 1.7; margin-bottom: 2rem;
+}
+.modal-body strong { color: var(--text-primary); }
+.modal-actions { display: flex; gap: 0.75rem; justify-content: center; }
+.modal-actions .btn { min-width: 120px; justify-content: center; }

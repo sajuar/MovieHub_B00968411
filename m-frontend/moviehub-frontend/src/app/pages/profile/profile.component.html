@@ -76,7 +76,7 @@
                 } @else {
                   <p class="no-comment">No comment</p>
                 }
-                @if (review.helpful_votes > 0) {
+                @if ((review.helpful_votes ?? 0) > 0) {
                   <div class="helpful">👍 {{ review.helpful_votes }} found helpful</div>
                 }
               </div>
