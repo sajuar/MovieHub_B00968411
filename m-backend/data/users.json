@@ -1,0 +1,274 @@
+[
+  {
+    "user_id": "U001",
+    "username": "parkeranderson",
+    "role": "admin",
+    "joined_date": "2023-09-14",
+    "email": "parkeranderson@moviehub.com",
+    "password": "$2b$12$yDUIbG1Xfc0dbvuWacTPd.bsraRZlByxrSV.Q6Ab8LW9P9CBH7jli"
+  },
+  {
+    "user_id": "U002",
+    "username": "haydenlee",
+    "role": "user",
+    "joined_date": "2026-04-09",
+    "email": "haydenlee@moviehub.com",
+    "password": "$2b$12$AE9fL7gOP5csJz.NpO9aT.yRN9HxLZnVWk.dxUFMJ6oZL0otKVYiC"
+  },
+  {
+    "user_id": "U004",
+    "username": "emersonjackson",
+    "role": "user",
+    "joined_date": "2025-07-22",
+    "email": "emersonjackson@moviehub.com",
+    "password": "$2b$12$q/yrjdsrnbewhHcqkE7oauIXVVGnXMPDyttVO3NFqm0tN70/tnE06"
+  },
+  {
+    "user_id": "U006",
+    "username": "finleylee",
+    "role": "user",
+    "joined_date": "2026-04-28",
+    "email": "finleylee@moviehub.com",
+    "password": "$2b$12$mYhQOCkHE/lHqCd0CAknFOyhyxE1C4tdvCz.2Fjk/nxowSD81Dwc2"
+  },
+  {
+    "user_id": "U007",
+    "username": "quinnmartin",
+    "role": "user",
+    "joined_date": "2024-04-24",
+    "email": "quinnmartin@moviehub.com",
+    "password": "$2b$12$0.muapg300PvAUeojjuUMewmoIzwaFBcZJxpsNqTvwMWIj324hph."
+  },
+  {
+    "user_id": "U008",
+    "username": "taylorrodriguez",
+    "role": "user",
+    "joined_date": "2024-07-08",
+    "email": "taylorrodriguez@moviehub.com",
+    "password": "$2b$12$CruB22g/jBMO8gJAKdwOFe3d/JlxiqH0xAhLJTJDaXhkAn3kGX5RW"
+  },
+  {
+    "user_id": "U009",
+    "username": "emersonthompson",
+    "role": "user",
+    "joined_date": "2026-08-18",
+    "email": "emersonthompson@moviehub.com",
+    "password": "$2b$12$vDfDBFhnPWBF7aOgtrJ8E.qTIsoWXT2/GWde/bDbL4YLJYssghC8y"
+  },
+  {
+    "user_id": "U010",
+    "username": "cameronmartin",
+    "role": "user",
+    "joined_date": "2025-09-16",
+    "email": "cameronmartin@moviehub.com",
+    "password": "$2b$12$ojgdlzOlXiPoLVTVcfZyvuVv7SInxKeDyKZZZFDQknXYrFzUVp5Am"
+  },
+  {
+    "user_id": "U011",
+    "username": "reesetaylor",
+    "role": "user",
+    "joined_date": "2025-04-12",
+    "email": "reesetaylor@moviehub.com",
+    "password": "$2b$12$8DY3M2PeaBmoFFEJ0egodeXyH5WmDv71arp4m.nGbGC7Uxmv38fYe"
+  },
+  {
+    "user_id": "U012",
+    "username": "quinnrobinson",
+    "role": "user",
+    "joined_date": "2024-12-05",
+    "email": "quinnrobinson@moviehub.com",
+    "password": "$2b$12$VAXKZVBcYO1IysLeNUIXA.YJjGGtsroU.Ncn5K0h3vjtEBysZnJpK"
+  },
+  {
+    "user_id": "U013",
+    "username": "alexharris",
+    "role": "user",
+    "joined_date": "2025-03-07",
+    "email": "alexharris@moviehub.com",
+    "password": "$2b$12$v79X3/bJK3uZ707WcKW60.S29/BRVrI7T0QTtMK6ICnQWrL6zhZPW"
+  },
+  {
+    "user_id": "U014",
+    "username": "quinnwhite",
+    "role": "user",
+    "joined_date": "2024-08-18",
+    "email": "quinnwhite@moviehub.com",
+    "password": "$2b$12$wu.2yqj/YHQpHO/Or/3bxuKMcAAP94MO.TtLZ7M1XW7gvVFiau0W."
+  },
+  {
+    "user_id": "U016",
+    "username": "cameronthomas",
+    "role": "user",
+    "joined_date": "2026-03-18",
+    "email": "cameronthomas@moviehub.com",
+    "password": "$2b$12$xeGcg4DZWumo1TmZFltOnOtNYRcuLPUrG3e2o1leIKqadps6.4lNW"
+  },
+  {
+    "user_id": "U017",
+    "username": "samlewis",
+    "role": "user",
+    "joined_date": "2023-11-02",
+    "email": "samlewis@moviehub.com",
+    "password": "$2b$12$drY37tJ73aZT1.gj8gXWje/GuDErR4Bo35zm65VcuNre0JzOqtXce"
+  },
+  {
+    "user_id": "U018",
+    "username": "alexrobinson",
+    "role": "user",
+    "joined_date": "2024-02-23",
+    "email": "alexrobinson@moviehub.com",
+    "password": "$2b$12$/Y1V0dQvpCO7OxQdxmlaBulKnTwvV8wDn7CFXqhYkoxIhaH3BlsWq"
+  },
+  {
+    "user_id": "U020",
+    "username": "kendallhall_u020",
+    "role": "user",
+    "joined_date": "2026-01-01",
+    "email": "kendallhall_u020@moviehub.com",
+    "password": "$2b$12$0Ex9zQZVv6D6gQedM/IjSePtwZ8i6I3C9nOqdxMfJv0A2Y9vtwKPa"
+  },
+  {
+    "user_id": "U021",
+    "username": "emersonlee",
+    "role": "user",
+    "joined_date": "2023-01-17",
+    "email": "emersonlee@moviehub.com",
+    "password": "$2b$12$hVwUKmFFLwYJIohl5fgS3eheeIDaNla40kBMSrpM8qX87N5NQtyWm"
+  },
+  {
+    "user_id": "U022",
+    "username": "averylee",
+    "role": "user",
+    "joined_date": "2023-09-27",
+    "email": "averylee@moviehub.com",
+    "password": "$2b$12$jpODfRO8ZXdiUzw1xXnr6udq0OGqyQkfTWNHtAh7vFWbAssUIoai6"
+  },
+  {
+    "user_id": "U024",
+    "username": "jamiejackson",
+    "role": "user",
+    "joined_date": "2025-05-26",
+    "email": "jamiejackson@moviehub.com",
+    "password": "$2b$12$You52jKSszpyrExKBnGptOxJAM3Iwaw3eK5O//imtvI21pCvhOwS."
+  },
+  {
+    "user_id": "U025",
+    "username": "drewbrown",
+    "role": "user",
+    "joined_date": "2026-08-19",
+    "email": "drewbrown@moviehub.com",
+    "password": "$2b$12$JXfdCRXXtoRSNO4dfMCHqe14Os0gCneE1za./Znt414zIAl3F2Mly"
+  },
+  {
+    "user_id": "U026",
+    "username": "jamiewhite",
+    "role": "user",
+    "joined_date": "2023-11-28",
+    "email": "jamiewhite@moviehub.com",
+    "password": "$2b$12$axTIHbS5rvY5Rnj.ajwvKOD4ehRKu0g6cunKJsvhzOBL27RFk0UcS"
+  },
+  {
+    "user_id": "U027",
+    "username": "sambrown",
+    "role": "user",
+    "joined_date": "2026-07-18",
+    "email": "sambrown@moviehub.com",
+    "password": "$2b$12$XoLmLkj1l4E2HVht9WHXueaJwG0cKC6k13taNtHsRs63IbJH0E.jm"
+  },
+  {
+    "user_id": "U028",
+    "username": "rowanjohnson",
+    "role": "user",
+    "joined_date": "2024-02-16",
+    "email": "rowanjohnson@moviehub.com",
+    "password": "$2b$12$dL2elWy/vl6CEtAnwZBxo.Q/kBolOHTz9KezzbQ/yA5lH60s7qZba"
+  },
+  {
+    "user_id": "U029",
+    "username": "haydenthompson",
+    "role": "user",
+    "joined_date": "2023-04-07",
+    "email": "haydenthompson@moviehub.com",
+    "password": "$2b$12$xbyllP8EvfX9sOVJksDzDeoWk.KG60N0JbyBCK0ySKFn/qllVNAH2"
+  },
+  {
+    "user_id": "U030",
+    "username": "finleyrodriguez",
+    "role": "user",
+    "joined_date": "2023-02-22",
+    "email": "finleyrodriguez@moviehub.com",
+    "password": "$2b$12$swKq2zFzH1UDNH.GX1QvH.b2nTXA1iTbnT4Y.SBAqsBDccdEvPesi"
+  },
+  {
+    "user_id": "U032",
+    "username": "testuser1",
+    "email": "testuser1@gmail.com",
+    "password": "$2b$12$pO0gXkGcaDhQp0dq01X0h.I63OFLB.qUZ2gxMkZ2W6XQwqbm1Dv9u",
+    "role": "user",
+    "joined_date": "2026-03-11"
+  },
+  {
+    "user_id": "U033",
+    "username": "testuser2",
+    "email": "testuser2@gmail.com",
+    "password": "$2b$12$R0YPDeQ0AoPQgYx81/6LmeN9N.RNGozqVyIu625d9eRQxDMHLhgwK",
+    "role": "user",
+    "joined_date": "2026-03-11"
+  },
+  {
+    "user_id": "U034",
+    "username": "sabbir",
+    "email": "testuser7@gmail.com",
+    "password": "$2b$12$brzlv4ysV6l5lvhwr3Ib8.AgDN/6BUzaSJ.4mylNqFukOxB8lVXxW",
+    "role": "user",
+    "joined_date": "2026-03-11"
+  },
+  {
+    "user_id": "U035",
+    "username": "sabbir1",
+    "email": "testuser00@gmail.com",
+    "password": "$2b$12$HbADycTIgLx4lGriMm94Ous4jtyuyXFgiBTvp0cYSkC6CT8buHt8y",
+    "role": "user",
+    "joined_date": "2026-03-11"
+  },
+  {
+    "user_id": "U036",
+    "username": "sabbir5",
+    "email": "testuser005@gmail.com",
+    "password": "$2b$12$4jXnDZ1AQMtHopWzqPXPT.b2E9P0I4LvR3FDI83JYh.2j4gKgK1Yq",
+    "role": "user",
+    "joined_date": "2026-03-11"
+  },
+  {
+    "user_id": "U037",
+    "username": "ayan",
+    "email": "ayan@gmail.com",
+    "password": "$2b$12$w1wJlio2rWmt1uVvu6p5BedTZ3vYj/PyATrXrLCltBr9SqfRtR4ca",
+    "role": "user",
+    "joined_date": "2026-03-11"
+  },
+  {
+    "user_id": "U038",
+    "username": "sh",
+    "email": "sh@gmail.com",
+    "password": "$2b$12$q3KeuJvCsqb2UZLk69Ioautc2elnOaTMGG78XKbsxqNHKT/MvauVW",
+    "role": "admin",
+    "joined_date": "2026-04-14"
+  },
+  {
+    "user_id": "U039",
+    "username": "naeem",
+    "email": "shnaeem610@gmail.com",
+    "password": "$2b$12$Fi0Og9yKav1ntt3lZrFF8OD5qdHQxoP7sbWTNEBB5H4R4ASRmIgVa",
+    "role": "user",
+    "joined_date": "2026-04-27"
+  },
+  {
+    "user_id": "U040",
+    "username": "wakib",
+    "email": "wakib3432@gmail.com",
+    "password": "$2b$12$s1VUOAxnFtB31ieLl1245.OXXCQrleBvU3H/VnM.5/5OZBL5Gnz5.",
+    "role": "user",
+    "joined_date": "2026-04-29"
+  }
+]

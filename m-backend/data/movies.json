@@ -1,0 +1,3821 @@
+[
+  {
+    "movie_id": "M001",
+    "title": "Tiger",
+    "release_year": 2007,
+    "genres": [
+      "Crime"
+    ],
+    "duration_minutes": 111,
+    "director": "Taylor Lee",
+    "language": "ja",
+    "release": {
+      "country": "USA",
+      "date": "2007-01-03"
+    },
+    "cast": [
+      {
+        "actor_name": "Riley White",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Skyler Hall",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 6.0,
+      "votes": 140
+    },
+    "tags": [
+      "sports",
+      "biopic",
+      "dystopia"
+    ],
+    "created_at": "2026-02-16T17:26:14Z"
+  },
+  {
+    "movie_id": "M003",
+    "title": "Frost Signal",
+    "release_year": 2025,
+    "genres": [
+      "Music",
+      "Drama",
+      "Animation"
+    ],
+    "duration_minutes": 117,
+    "director": "Sam White",
+    "language": "es",
+    "release": {
+      "country": "India",
+      "date": "2025-02-13"
+    },
+    "cast": [
+      {
+        "actor_name": "Avery Clark",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Cameron Thomas",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 10.0,
+      "votes": 1552851
+    },
+    "tags": [
+      "revenge",
+      "biopic",
+      "time-travel",
+      "supernatural"
+    ],
+    "created_at": "2026-02-16T20:04:38Z"
+  },
+  {
+    "movie_id": "M004",
+    "title": "Fading Cipher",
+    "release_year": 2005,
+    "genres": [
+      "Mystery",
+      "Fantasy"
+    ],
+    "duration_minutes": 100,
+    "director": "Emerson White",
+    "language": "en",
+    "release": {
+      "country": "India",
+      "date": "2005-01-26"
+    },
+    "cast": [
+      {
+        "actor_name": "Quinn Martinez",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Avery Brown",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 6.7,
+      "votes": 885126
+    },
+    "tags": [
+      "revenge",
+      "biopic",
+      "survival",
+      "coming-of-age"
+    ],
+    "created_at": "2026-02-16T20:29:09Z"
+  },
+  {
+    "movie_id": "M006",
+    "title": "Lost Cipher",
+    "release_year": 1990,
+    "genres": [
+      "Comedy",
+      "Fantasy",
+      "Horror"
+    ],
+    "duration_minutes": 167,
+    "director": "Taylor Martin",
+    "language": "ko",
+    "release": {
+      "country": "USA",
+      "date": "1990-12-24"
+    },
+    "cast": [
+      {
+        "actor_name": "Avery Lewis",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Casey Lewis",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 5.3,
+      "votes": 446519
+    },
+    "tags": [
+      "dystopia",
+      "biopic",
+      "mystery",
+      "romantic"
+    ],
+    "created_at": "2026-02-16T06:09:23Z"
+  },
+  {
+    "movie_id": "M008",
+    "title": "Iron Mirage",
+    "release_year": 2017,
+    "genres": [
+      "Drama",
+      "History",
+      "Mystery"
+    ],
+    "duration_minutes": 107,
+    "director": "Cameron Clark",
+    "language": "ko",
+    "release": {
+      "country": "UK",
+      "date": "2017-04-08"
+    },
+    "cast": [
+      {
+        "actor_name": "Jordan Thompson",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Alex Walker",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 4.0,
+      "votes": 2323515
+    },
+    "tags": [
+      "romantic",
+      "revenge",
+      "space"
+    ],
+    "created_at": "2026-02-16T02:45:40Z"
+  },
+  {
+    "movie_id": "M009",
+    "title": "Crimson Storm",
+    "release_year": 1994,
+    "genres": [
+      "Animation",
+      "War"
+    ],
+    "duration_minutes": 84,
+    "director": "Jamie Harris",
+    "language": "de",
+    "release": {
+      "country": "Japan",
+      "date": "1994-03-24"
+    },
+    "cast": [
+      {
+        "actor_name": "Finley Walker",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Rowan White",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 5.0,
+      "votes": 1983992
+    },
+    "tags": [
+      "revenge",
+      "detective",
+      "supernatural",
+      "biopic",
+      "coming-of-age"
+    ],
+    "created_at": "2026-02-16T11:27:26Z"
+  },
+  {
+    "movie_id": "M010",
+    "title": "Ancient Empire",
+    "release_year": 1996,
+    "genres": [
+      "Horror",
+      "Comedy"
+    ],
+    "duration_minutes": 87,
+    "director": "Jamie Jackson",
+    "language": "ko",
+    "release": {
+      "country": "Canada",
+      "date": "1996-07-06"
+    },
+    "cast": [
+      {
+        "actor_name": "Avery Clark",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Jamie Brown",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 6.0,
+      "votes": 1858825
+    },
+    "tags": [
+      "space",
+      "biopic"
+    ],
+    "created_at": "2026-02-16T17:53:00Z"
+  },
+  {
+    "movie_id": "M011",
+    "title": "Hidden Storm",
+    "release_year": 2000,
+    "genres": [
+      "Thriller",
+      "Drama"
+    ],
+    "duration_minutes": 132,
+    "director": "Drew Johnson",
+    "language": "en",
+    "release": {
+      "country": "Spain",
+      "date": "2000-05-26"
+    },
+    "cast": [
+      {
+        "actor_name": "Reese Martin",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Hayden Lee",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 6.7,
+      "votes": 2041447
+    },
+    "tags": [
+      "revenge",
+      "time-travel",
+      "dystopia"
+    ],
+    "created_at": "2026-02-16T01:37:47Z"
+  },
+  {
+    "movie_id": "M012",
+    "title": "Velvet Empire",
+    "release_year": 2010,
+    "genres": [
+      "Thriller"
+    ],
+    "duration_minutes": 87,
+    "director": "Skyler Lewis",
+    "language": "es",
+    "release": {
+      "country": "Canada",
+      "date": "2010-02-20"
+    },
+    "cast": [
+      {
+        "actor_name": "Jordan White",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Drew Taylor",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 9.0,
+      "votes": 2389591
+    },
+    "tags": [
+      "romantic",
+      "dystopia",
+      "space"
+    ],
+    "created_at": "2026-02-16T19:05:26Z"
+  },
+  {
+    "movie_id": "M013",
+    "title": "Wild Reckoning",
+    "release_year": 2023,
+    "genres": [
+      "Drama",
+      "Horror"
+    ],
+    "duration_minutes": 120,
+    "director": "Jamie Harris",
+    "language": "it",
+    "release": {
+      "country": "Italy",
+      "date": "2023-06-25"
+    },
+    "cast": [
+      {
+        "actor_name": "Jordan Smith",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Reese Hall",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 5.0,
+      "votes": 2361566
+    },
+    "tags": [
+      "detective",
+      "mystery"
+    ],
+    "created_at": "2026-02-16T06:32:16Z"
+  },
+  {
+    "movie_id": "M014",
+    "title": "Golden Harbor",
+    "release_year": 1994,
+    "genres": [
+      "History",
+      "Documentary"
+    ],
+    "duration_minutes": 111,
+    "director": "Reese Lee",
+    "language": "en",
+    "release": {
+      "country": "Japan",
+      "date": "1994-05-22"
+    },
+    "cast": [
+      {
+        "actor_name": "Taylor Anderson",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Avery Taylor",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 8.0,
+      "votes": 449141
+    },
+    "tags": [
+      "time-travel",
+      "dystopia",
+      "romantic"
+    ],
+    "created_at": "2026-02-16T06:45:21Z"
+  },
+  {
+    "movie_id": "M015",
+    "title": "Electric Legacy",
+    "release_year": 2022,
+    "genres": [
+      "Adventure",
+      "Animation"
+    ],
+    "duration_minutes": 142,
+    "director": "Hayden Harris",
+    "language": "hi",
+    "release": {
+      "country": "Canada",
+      "date": "2022-11-09"
+    },
+    "cast": [
+      {
+        "actor_name": "Casey Clark",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Emerson Robinson",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 8.0,
+      "votes": 2352813
+    },
+    "tags": [
+      "detective",
+      "dystopia"
+    ],
+    "created_at": "2026-02-16T22:57:09Z"
+  },
+  {
+    "movie_id": "M016",
+    "title": "Velvet Empire",
+    "release_year": 2013,
+    "genres": [
+      "Crime",
+      "Romance",
+      "Western"
+    ],
+    "duration_minutes": 154,
+    "director": "Sam Martin",
+    "language": "en",
+    "release": {
+      "country": "Germany",
+      "date": "2013-04-22"
+    },
+    "cast": [
+      {
+        "actor_name": "Jamie Taylor",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Cameron Lee",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 5.0,
+      "votes": 1704670
+    },
+    "tags": [
+      "revenge",
+      "friendship",
+      "supernatural"
+    ],
+    "created_at": "2026-02-16T13:01:11Z"
+  },
+  {
+    "movie_id": "M017",
+    "title": "Broken Gambit",
+    "release_year": 2005,
+    "genres": [
+      "Comedy"
+    ],
+    "duration_minutes": 114,
+    "director": "Drew Johnson",
+    "language": "de",
+    "release": {
+      "country": "India",
+      "date": "2005-08-12"
+    },
+    "cast": [
+      {
+        "actor_name": "Parker White",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Jamie Smith",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 5.0,
+      "votes": 810245
+    },
+    "tags": [
+      "heist",
+      "time-travel",
+      "detective",
+      "supernatural",
+      "dystopia"
+    ],
+    "created_at": "2026-02-16T20:32:25Z"
+  },
+  {
+    "movie_id": "M018",
+    "title": "Velvet Maze",
+    "release_year": 1991,
+    "genres": [
+      "Documentary",
+      "Fantasy"
+    ],
+    "duration_minutes": 94,
+    "director": "Sam Taylor",
+    "language": "hi",
+    "release": {
+      "country": "Germany",
+      "date": "1991-07-20"
+    },
+    "cast": [
+      {
+        "actor_name": "Skyler Taylor",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Drew Walker",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 5.0,
+      "votes": 797448
+    },
+    "tags": [
+      "space",
+      "sports",
+      "coming-of-age",
+      "dystopia"
+    ],
+    "created_at": "2026-02-16T16:59:51Z"
+  },
+  {
+    "movie_id": "M019",
+    "title": "Velvet Forest",
+    "release_year": 2013,
+    "genres": [
+      "Horror"
+    ],
+    "duration_minutes": 135,
+    "director": "Kendall Thompson",
+    "language": "es",
+    "release": {
+      "country": "France",
+      "date": "2013-09-10"
+    },
+    "cast": [
+      {
+        "actor_name": "Hayden Thompson",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Drew Martin",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 4.7,
+      "votes": 2325574
+    },
+    "tags": [
+      "revenge",
+      "coming-of-age",
+      "biopic"
+    ],
+    "created_at": "2026-02-16T12:43:47Z"
+  },
+  {
+    "movie_id": "M021",
+    "title": "Midnight Code",
+    "release_year": 2004,
+    "genres": [
+      "Crime"
+    ],
+    "duration_minutes": 183,
+    "director": "Alex Johnson",
+    "language": "ko",
+    "release": {
+      "country": "South Korea",
+      "date": "2004-02-15"
+    },
+    "cast": [
+      {
+        "actor_name": "Hayden Walker",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Riley Martinez",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 7.0,
+      "votes": 2073768
+    },
+    "tags": [
+      "revenge",
+      "friendship",
+      "biopic",
+      "space",
+      "detective"
+    ],
+    "created_at": "2026-02-16T13:14:11Z"
+  },
+  {
+    "movie_id": "M022",
+    "title": "Iron Orbit",
+    "release_year": 1993,
+    "genres": [
+      "Comedy"
+    ],
+    "duration_minutes": 151,
+    "director": "Reese Anderson",
+    "language": "hi",
+    "release": {
+      "country": "Italy",
+      "date": "1993-10-27"
+    },
+    "cast": [
+      {
+        "actor_name": "Skyler Robinson",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Emerson Clark",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 6.7,
+      "votes": 667756
+    },
+    "tags": [
+      "survival",
+      "time-travel",
+      "revenge",
+      "biopic",
+      "supernatural"
+    ],
+    "created_at": "2026-02-16T16:31:40Z"
+  },
+  {
+    "movie_id": "M023",
+    "title": "Midnight Legacy",
+    "release_year": 2018,
+    "genres": [
+      "History",
+      "Family",
+      "Fantasy"
+    ],
+    "duration_minutes": 89,
+    "director": "Quinn Thompson",
+    "language": "es",
+    "release": {
+      "country": "Canada",
+      "date": "2018-03-08"
+    },
+    "cast": [
+      {
+        "actor_name": "Drew Anderson",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Riley Brown",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 2.0,
+      "votes": 1740282
+    },
+    "tags": [
+      "heist",
+      "mystery",
+      "survival",
+      "coming-of-age",
+      "space"
+    ],
+    "created_at": "2026-02-16T06:53:26Z"
+  },
+  {
+    "movie_id": "M024",
+    "title": "Frost Reckoning",
+    "release_year": 1991,
+    "genres": [
+      "Mystery",
+      "Thriller",
+      "Action"
+    ],
+    "duration_minutes": 189,
+    "director": "Cameron Martin",
+    "language": "ja",
+    "release": {
+      "country": "Japan",
+      "date": "1991-12-24"
+    },
+    "cast": [
+      {
+        "actor_name": "Emerson Hall",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Jamie Rodriguez",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 8.0,
+      "votes": 920521
+    },
+    "tags": [
+      "coming-of-age",
+      "survival",
+      "space",
+      "dystopia"
+    ],
+    "created_at": "2026-02-16T10:42:43Z"
+  },
+  {
+    "movie_id": "M025",
+    "title": "Frost City",
+    "release_year": 2019,
+    "genres": [
+      "Western",
+      "Action",
+      "Mystery"
+    ],
+    "duration_minutes": 96,
+    "director": "Finley Walker",
+    "language": "es",
+    "release": {
+      "country": "Spain",
+      "date": "2019-03-28"
+    },
+    "cast": [
+      {
+        "actor_name": "Reese Thomas",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Sam Harris",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 4.7,
+      "votes": 1590276
+    },
+    "tags": [
+      "revenge",
+      "survival",
+      "heist",
+      "sports"
+    ],
+    "created_at": "2026-02-16T12:17:48Z"
+  },
+  {
+    "movie_id": "M026",
+    "title": "Shadow Legacy",
+    "release_year": 1995,
+    "genres": [
+      "Western"
+    ],
+    "duration_minutes": 140,
+    "director": "Sam Garcia",
+    "language": "es",
+    "release": {
+      "country": "USA",
+      "date": "1995-01-08"
+    },
+    "cast": [
+      {
+        "actor_name": "Riley Smith",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Kendall Anderson",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 6.0,
+      "votes": 1000730
+    },
+    "tags": [
+      "survival",
+      "biopic",
+      "detective"
+    ],
+    "created_at": "2026-02-16T18:13:29Z"
+  },
+  {
+    "movie_id": "M027",
+    "title": "Lost Harbor",
+    "release_year": 2000,
+    "genres": [
+      "Comedy",
+      "Documentary",
+      "History"
+    ],
+    "duration_minutes": 157,
+    "director": "Taylor Walker",
+    "language": "it",
+    "release": {
+      "country": "South Korea",
+      "date": "2000-11-13"
+    },
+    "cast": [
+      {
+        "actor_name": "Drew Jackson",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Jordan Walker",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 8.0,
+      "votes": 1018784
+    },
+    "tags": [
+      "sports",
+      "supernatural"
+    ],
+    "created_at": "2026-02-16T09:54:43Z"
+  },
+  {
+    "movie_id": "M029",
+    "title": "Iron Legacy",
+    "release_year": 2024,
+    "genres": [
+      "Sci-Fi",
+      "Romance"
+    ],
+    "duration_minutes": 179,
+    "director": "Finley Harris",
+    "language": "de",
+    "release": {
+      "country": "UK",
+      "date": "2024-05-15"
+    },
+    "cast": [
+      {
+        "actor_name": "Jamie Clark",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Finley Hall",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 9.0,
+      "votes": 1589796
+    },
+    "tags": [
+      "space",
+      "survival",
+      "heist",
+      "friendship"
+    ],
+    "created_at": "2026-02-16T15:13:22Z"
+  },
+  {
+    "movie_id": "M030",
+    "title": "Lost Maze",
+    "release_year": 2007,
+    "genres": [
+      "Fantasy",
+      "Action",
+      "Drama"
+    ],
+    "duration_minutes": 156,
+    "director": "Jordan White",
+    "language": "ko",
+    "release": {
+      "country": "Japan",
+      "date": "2007-04-23"
+    },
+    "cast": [
+      {
+        "actor_name": "Rowan Rodriguez",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Reese Smith",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 6.0,
+      "votes": 390494
+    },
+    "tags": [
+      "revenge",
+      "coming-of-age",
+      "sports",
+      "dystopia"
+    ],
+    "created_at": "2026-02-16T09:42:37Z"
+  },
+  {
+    "movie_id": "M031",
+    "title": "Rising Vow",
+    "release_year": 2025,
+    "genres": [
+      "Romance",
+      "Horror"
+    ],
+    "duration_minutes": 147,
+    "director": "Cameron Clark",
+    "language": "it",
+    "release": {
+      "country": "India",
+      "date": "2025-02-24"
+    },
+    "cast": [
+      {
+        "actor_name": "Riley Thompson",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Taylor Lee",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 7.0,
+      "votes": 776774
+    },
+    "tags": [
+      "revenge",
+      "sports",
+      "survival"
+    ],
+    "created_at": "2026-02-16T08:46:37Z"
+  },
+  {
+    "movie_id": "M032",
+    "title": "Iron Mirage",
+    "release_year": 2008,
+    "genres": [
+      "History"
+    ],
+    "duration_minutes": 92,
+    "director": "Jamie Garcia",
+    "language": "en",
+    "release": {
+      "country": "Japan",
+      "date": "2008-03-09"
+    },
+    "cast": [
+      {
+        "actor_name": "Sam Johnson",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Emerson Martin",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 8.0,
+      "votes": 529854
+    },
+    "tags": [
+      "detective",
+      "space",
+      "romantic",
+      "time-travel",
+      "survival"
+    ],
+    "created_at": "2026-02-16T15:28:21Z"
+  },
+  {
+    "movie_id": "M033",
+    "title": "Fading Empire",
+    "release_year": 2006,
+    "genres": [
+      "Comedy",
+      "Animation"
+    ],
+    "duration_minutes": 190,
+    "director": "Drew Rodriguez",
+    "language": "en",
+    "release": {
+      "country": "Canada",
+      "date": "2006-03-26"
+    },
+    "cast": [
+      {
+        "actor_name": "Finley Martin",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Jordan White",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 3.0,
+      "votes": 497021
+    },
+    "tags": [
+      "romantic",
+      "dystopia",
+      "supernatural",
+      "revenge",
+      "mystery"
+    ],
+    "created_at": "2026-02-16T12:28:58Z"
+  },
+  {
+    "movie_id": "M034",
+    "title": "Ancient Code",
+    "release_year": 2017,
+    "genres": [
+      "Adventure",
+      "Comedy",
+      "Drama"
+    ],
+    "duration_minutes": 119,
+    "director": "Riley Harris",
+    "language": "fr",
+    "release": {
+      "country": "India",
+      "date": "2017-03-18"
+    },
+    "cast": [
+      {
+        "actor_name": "Jordan Thomas",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Alex Robinson",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 4.4,
+      "votes": 1889749
+    },
+    "tags": [
+      "time-travel",
+      "space",
+      "revenge",
+      "dystopia",
+      "biopic"
+    ],
+    "created_at": "2026-02-16T22:55:29Z"
+  },
+  {
+    "movie_id": "M035",
+    "title": "Hidden Storm",
+    "release_year": 2006,
+    "genres": [
+      "Drama",
+      "Romance",
+      "Comedy"
+    ],
+    "duration_minutes": 180,
+    "director": "Emerson White",
+    "language": "it",
+    "release": {
+      "country": "Canada",
+      "date": "2006-02-02"
+    },
+    "cast": [
+      {
+        "actor_name": "Casey Martin",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Kendall Walker",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 3.0,
+      "votes": 1210720
+    },
+    "tags": [
+      "detective",
+      "survival",
+      "sports",
+      "time-travel",
+      "coming-of-age"
+    ],
+    "created_at": "2026-02-16T08:32:34Z"
+  },
+  {
+    "movie_id": "M036",
+    "title": "Neon Orbit",
+    "release_year": 1995,
+    "genres": [
+      "Romance"
+    ],
+    "duration_minutes": 156,
+    "director": "Quinn Hall",
+    "language": "es",
+    "release": {
+      "country": "India",
+      "date": "1995-11-27"
+    },
+    "cast": [
+      {
+        "actor_name": "Finley Walker",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Alex Harris",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 4.3,
+      "votes": 2417155
+    },
+    "tags": [
+      "supernatural",
+      "dystopia"
+    ],
+    "created_at": "2026-02-16T05:30:33Z"
+  },
+  {
+    "movie_id": "M037",
+    "title": "Ancient Legacy",
+    "release_year": 2001,
+    "genres": [
+      "Thriller",
+      "Animation"
+    ],
+    "duration_minutes": 154,
+    "director": "Rowan Garcia",
+    "language": "hi",
+    "release": {
+      "country": "UK",
+      "date": "2001-03-11"
+    },
+    "cast": [
+      {
+        "actor_name": "Hayden Rodriguez",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Parker Martinez",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 3.0,
+      "votes": 2307472
+    },
+    "tags": [
+      "survival",
+      "detective"
+    ],
+    "created_at": "2026-02-16T10:16:20Z"
+  },
+  {
+    "movie_id": "M038",
+    "title": "Last Promise",
+    "release_year": 2022,
+    "genres": [
+      "Western"
+    ],
+    "duration_minutes": 185,
+    "director": "Reese Robinson",
+    "language": "hi",
+    "release": {
+      "country": "South Korea",
+      "date": "2022-08-21"
+    },
+    "cast": [
+      {
+        "actor_name": "Reese Johnson",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Riley Harris",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 6.0,
+      "votes": 2303794
+    },
+    "tags": [
+      "time-travel",
+      "survival",
+      "sports"
+    ],
+    "created_at": "2026-02-16T15:07:01Z"
+  },
+  {
+    "movie_id": "M039",
+    "title": "Final Storm",
+    "release_year": 2000,
+    "genres": [
+      "Action",
+      "Romance",
+      "Animation"
+    ],
+    "duration_minutes": 119,
+    "director": "Jamie Taylor",
+    "language": "es",
+    "release": {
+      "country": "Canada",
+      "date": "2000-08-23"
+    },
+    "cast": [
+      {
+        "actor_name": "Parker Lewis",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Avery Robinson",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 7.3,
+      "votes": 2023949
+    },
+    "tags": [
+      "revenge",
+      "survival",
+      "mystery",
+      "friendship",
+      "coming-of-age"
+    ],
+    "created_at": "2026-02-16T06:58:38Z"
+  },
+  {
+    "movie_id": "M040",
+    "title": "Iron Echo",
+    "release_year": 1994,
+    "genres": [
+      "Horror",
+      "War"
+    ],
+    "duration_minutes": 115,
+    "director": "Avery Smith",
+    "language": "it",
+    "release": {
+      "country": "South Korea",
+      "date": "1994-10-22"
+    },
+    "cast": [
+      {
+        "actor_name": "Rowan Anderson",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Reese Lee",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 5.0,
+      "votes": 2031675
+    },
+    "tags": [
+      "heist",
+      "mystery",
+      "supernatural",
+      "coming-of-age"
+    ],
+    "created_at": "2026-02-16T14:59:20Z"
+  },
+  {
+    "movie_id": "M041",
+    "title": "Electric Storm",
+    "release_year": 2026,
+    "genres": [
+      "Romance"
+    ],
+    "duration_minutes": 129,
+    "director": "Sam Thompson",
+    "language": "ja",
+    "release": {
+      "country": "Spain",
+      "date": "2026-11-26"
+    },
+    "cast": [
+      {
+        "actor_name": "Morgan Rodriguez",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Sam Anderson",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 4.0,
+      "votes": 2106961
+    },
+    "tags": [
+      "dystopia",
+      "detective",
+      "survival",
+      "supernatural"
+    ],
+    "created_at": "2026-02-16T16:58:29Z"
+  },
+  {
+    "movie_id": "M042",
+    "title": "Silent Echo",
+    "release_year": 2016,
+    "genres": [
+      "Animation"
+    ],
+    "duration_minutes": 163,
+    "director": "Rowan Harris",
+    "language": "ja",
+    "release": {
+      "country": "UK",
+      "date": "2016-06-28"
+    },
+    "cast": [
+      {
+        "actor_name": "Emerson Martinez",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Quinn Rodriguez",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 6.7,
+      "votes": 2269385
+    },
+    "tags": [
+      "romantic",
+      "detective"
+    ],
+    "created_at": "2026-02-16T07:40:43Z"
+  },
+  {
+    "movie_id": "M043",
+    "title": "Bright Storm",
+    "release_year": 1995,
+    "genres": [
+      "Comedy"
+    ],
+    "duration_minutes": 135,
+    "director": "Reese Thomas",
+    "language": "en",
+    "release": {
+      "country": "USA",
+      "date": "1995-06-26"
+    },
+    "cast": [
+      {
+        "actor_name": "Sam Martin",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Cameron Garcia",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 5.0,
+      "votes": 1806631
+    },
+    "tags": [
+      "revenge",
+      "mystery",
+      "coming-of-age"
+    ],
+    "created_at": "2026-02-16T18:43:50Z"
+  },
+  {
+    "movie_id": "M044",
+    "title": "Fading City",
+    "release_year": 2001,
+    "genres": [
+      "Mystery",
+      "Family",
+      "Thriller"
+    ],
+    "duration_minutes": 90,
+    "director": "Finley Anderson",
+    "language": "it",
+    "release": {
+      "country": "Italy",
+      "date": "2001-05-22"
+    },
+    "cast": [
+      {
+        "actor_name": "Alex Clark",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Parker Lee",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 6.0,
+      "votes": 662797
+    },
+    "tags": [
+      "survival",
+      "heist"
+    ],
+    "created_at": "2026-02-16T18:19:40Z"
+  },
+  {
+    "movie_id": "M045",
+    "title": "Shadow Legacy",
+    "release_year": 2019,
+    "genres": [
+      "Drama",
+      "Mystery"
+    ],
+    "duration_minutes": 188,
+    "director": "Rowan Taylor",
+    "language": "hi",
+    "release": {
+      "country": "South Korea",
+      "date": "2019-05-23"
+    },
+    "cast": [
+      {
+        "actor_name": "Parker Smith",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Drew Harris",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 5.0,
+      "votes": 34165
+    },
+    "tags": [
+      "romantic",
+      "sports"
+    ],
+    "created_at": "2026-02-16T15:53:57Z"
+  },
+  {
+    "movie_id": "M046",
+    "title": "Bright Storm",
+    "release_year": 2012,
+    "genres": [
+      "Drama",
+      "Fantasy",
+      "Crime"
+    ],
+    "duration_minutes": 108,
+    "director": "Taylor Johnson",
+    "language": "ko",
+    "release": {
+      "country": "USA",
+      "date": "2012-10-12"
+    },
+    "cast": [
+      {
+        "actor_name": "Morgan Brown",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Parker Thompson",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 7.0,
+      "votes": 1742946
+    },
+    "tags": [
+      "revenge",
+      "friendship",
+      "mystery"
+    ],
+    "created_at": "2026-02-16T11:33:32Z"
+  },
+  {
+    "movie_id": "M047",
+    "title": "Lost City",
+    "release_year": 2006,
+    "genres": [
+      "History",
+      "Horror"
+    ],
+    "duration_minutes": 185,
+    "director": "Taylor Clark",
+    "language": "fr",
+    "release": {
+      "country": "India",
+      "date": "2006-11-24"
+    },
+    "cast": [
+      {
+        "actor_name": "Drew Lee",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Cameron Brown",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 9.3,
+      "votes": 1655165
+    },
+    "tags": [
+      "time-travel",
+      "mystery"
+    ],
+    "created_at": "2026-02-16T03:29:23Z"
+  },
+  {
+    "movie_id": "M048",
+    "title": "Lost Reckoning",
+    "release_year": 2014,
+    "genres": [
+      "Music",
+      "Comedy",
+      "Family"
+    ],
+    "duration_minutes": 185,
+    "director": "Rowan Smith",
+    "language": "hi",
+    "release": {
+      "country": "South Korea",
+      "date": "2014-04-21"
+    },
+    "cast": [
+      {
+        "actor_name": "Jordan Clark",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Parker Robinson",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 9.0,
+      "votes": 489574
+    },
+    "tags": [
+      "space",
+      "dystopia",
+      "time-travel"
+    ],
+    "created_at": "2026-02-16T15:07:06Z"
+  },
+  {
+    "movie_id": "M049",
+    "title": "Midnight Cipher",
+    "release_year": 1998,
+    "genres": [
+      "Music",
+      "Romance"
+    ],
+    "duration_minutes": 129,
+    "director": "Finley Anderson",
+    "language": "es",
+    "release": {
+      "country": "Italy",
+      "date": "1998-10-14"
+    },
+    "cast": [
+      {
+        "actor_name": "Avery Johnson",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Cameron Jackson",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 7.5,
+      "votes": 1859883
+    },
+    "tags": [
+      "revenge",
+      "heist",
+      "detective",
+      "biopic",
+      "supernatural"
+    ],
+    "created_at": "2026-02-16T17:57:41Z"
+  },
+  {
+    "movie_id": "M050",
+    "title": "Rising Empire",
+    "release_year": 2015,
+    "genres": [
+      "Comedy"
+    ],
+    "duration_minutes": 115,
+    "director": "Reese Brown",
+    "language": "en",
+    "release": {
+      "country": "USA",
+      "date": "2015-06-08"
+    },
+    "cast": [
+      {
+        "actor_name": "Morgan Walker",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Riley Brown",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 8.0,
+      "votes": 2324715
+    },
+    "tags": [
+      "romantic",
+      "revenge",
+      "supernatural"
+    ],
+    "created_at": "2026-02-16T10:49:09Z"
+  },
+  {
+    "movie_id": "M051",
+    "title": "Final Journey",
+    "release_year": 2007,
+    "genres": [
+      "Crime"
+    ],
+    "duration_minutes": 189,
+    "director": "Emerson Harris",
+    "language": "es",
+    "release": {
+      "country": "USA",
+      "date": "2007-03-01"
+    },
+    "cast": [
+      {
+        "actor_name": "Cameron White",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Finley Thompson",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 4.4,
+      "votes": 66390
+    },
+    "tags": [
+      "time-travel",
+      "space",
+      "friendship"
+    ],
+    "created_at": "2026-02-16T23:26:33Z"
+  },
+  {
+    "movie_id": "M052",
+    "title": "Last Signal",
+    "release_year": 2020,
+    "genres": [
+      "War",
+      "Comedy"
+    ],
+    "duration_minutes": 137,
+    "director": "Reese Lewis",
+    "language": "en",
+    "release": {
+      "country": "Japan",
+      "date": "2020-05-15"
+    },
+    "cast": [
+      {
+        "actor_name": "Alex Johnson",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Rowan Martinez",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 8.5,
+      "votes": 1788121
+    },
+    "tags": [
+      "survival",
+      "sports"
+    ],
+    "created_at": "2026-02-16T14:04:57Z"
+  },
+  {
+    "movie_id": "M053",
+    "title": "Hidden Maze",
+    "release_year": 1999,
+    "genres": [
+      "Fantasy"
+    ],
+    "duration_minutes": 88,
+    "director": "Kendall Walker",
+    "language": "hi",
+    "release": {
+      "country": "Spain",
+      "date": "1999-10-17"
+    },
+    "cast": [
+      {
+        "actor_name": "Parker Clark",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Skyler Hall",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 8.0,
+      "votes": 1804586
+    },
+    "tags": [
+      "supernatural",
+      "sports"
+    ],
+    "created_at": "2026-02-16T03:54:41Z"
+  },
+  {
+    "movie_id": "M054",
+    "title": "Velvet Forest",
+    "release_year": 2017,
+    "genres": [
+      "Romance"
+    ],
+    "duration_minutes": 137,
+    "director": "Quinn Clark",
+    "language": "es",
+    "release": {
+      "country": "Germany",
+      "date": "2017-07-11"
+    },
+    "cast": [
+      {
+        "actor_name": "Avery Garcia",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Morgan Rodriguez",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 7.0,
+      "votes": 281777
+    },
+    "tags": [
+      "dystopia",
+      "detective"
+    ],
+    "created_at": "2026-02-16T02:27:06Z"
+  },
+  {
+    "movie_id": "M055",
+    "title": "Rising Echo",
+    "release_year": 2025,
+    "genres": [
+      "Western",
+      "Horror",
+      "Comedy"
+    ],
+    "duration_minutes": 87,
+    "director": "Hayden Garcia",
+    "language": "ja",
+    "release": {
+      "country": "USA",
+      "date": "2025-05-20"
+    },
+    "cast": [
+      {
+        "actor_name": "Parker Garcia",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Taylor Walker",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 7.0,
+      "votes": 2128442
+    },
+    "tags": [
+      "friendship",
+      "biopic",
+      "survival"
+    ],
+    "created_at": "2026-02-16T07:54:06Z"
+  },
+  {
+    "movie_id": "M056",
+    "title": "Rising Cipher",
+    "release_year": 2013,
+    "genres": [
+      "Family",
+      "Romance"
+    ],
+    "duration_minutes": 94,
+    "director": "Emerson Hall",
+    "language": "en",
+    "release": {
+      "country": "South Korea",
+      "date": "2013-11-27"
+    },
+    "cast": [
+      {
+        "actor_name": "Avery Smith",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Casey Harris",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 3.0,
+      "votes": 1296175
+    },
+    "tags": [
+      "heist",
+      "space",
+      "friendship",
+      "sports"
+    ],
+    "created_at": "2026-02-16T18:42:25Z"
+  },
+  {
+    "movie_id": "M057",
+    "title": "Hidden Echo",
+    "release_year": 1991,
+    "genres": [
+      "War",
+      "Drama",
+      "Mystery"
+    ],
+    "duration_minutes": 91,
+    "director": "Hayden Clark",
+    "language": "hi",
+    "release": {
+      "country": "France",
+      "date": "1991-12-11"
+    },
+    "cast": [
+      {
+        "actor_name": "Finley Hall",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Jordan Johnson",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 6.0,
+      "votes": 652749
+    },
+    "tags": [
+      "supernatural",
+      "romantic",
+      "space"
+    ],
+    "created_at": "2026-02-16T21:05:17Z"
+  },
+  {
+    "movie_id": "M058",
+    "title": "Gambit",
+    "release_year": 2021,
+    "genres": [
+      "Romance",
+      "Fantasy"
+    ],
+    "duration_minutes": 157,
+    "director": "Riley Lewis",
+    "language": "ja",
+    "release": {
+      "country": "UK",
+      "date": "2021-05-22"
+    },
+    "cast": [
+      {
+        "actor_name": "Finley Rodriguez",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Skyler Martin",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 4.4,
+      "votes": 190694
+    },
+    "tags": [
+      "coming-of-age",
+      "romantic",
+      "space"
+    ],
+    "created_at": "2026-02-16T00:13:19Z"
+  },
+  {
+    "movie_id": "M059",
+    "title": "Electric Echo",
+    "release_year": 2006,
+    "genres": [
+      "Comedy",
+      "Action"
+    ],
+    "duration_minutes": 117,
+    "director": "Rowan Robinson",
+    "language": "ja",
+    "release": {
+      "country": "Japan",
+      "date": "2006-12-08"
+    },
+    "cast": [
+      {
+        "actor_name": "Skyler Lee",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Cameron Brown",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 5.3,
+      "votes": 1665637
+    },
+    "tags": [
+      "coming-of-age",
+      "space"
+    ],
+    "created_at": "2026-02-16T14:58:04Z"
+  },
+  {
+    "movie_id": "M060",
+    "title": "Broken Reckoning",
+    "release_year": 2017,
+    "genres": [
+      "Romance",
+      "History"
+    ],
+    "duration_minutes": 153,
+    "director": "Taylor Martinez",
+    "language": "hi",
+    "release": {
+      "country": "Canada",
+      "date": "2017-10-15"
+    },
+    "cast": [
+      {
+        "actor_name": "Cameron Brown",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Hayden Taylor",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 8.0,
+      "votes": 1020743
+    },
+    "tags": [
+      "romantic",
+      "coming-of-age",
+      "mystery",
+      "detective",
+      "supernatural"
+    ],
+    "created_at": "2026-02-16T09:47:21Z"
+  },
+  {
+    "movie_id": "M061",
+    "title": "Midnight Maze",
+    "release_year": 2000,
+    "genres": [
+      "Comedy",
+      "War",
+      "Drama"
+    ],
+    "duration_minutes": 89,
+    "director": "Cameron Garcia",
+    "language": "fr",
+    "release": {
+      "country": "India",
+      "date": "2000-02-05"
+    },
+    "cast": [
+      {
+        "actor_name": "Avery Jackson",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Casey Hall",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 4.7,
+      "votes": 641382
+    },
+    "tags": [
+      "friendship",
+      "supernatural"
+    ],
+    "created_at": "2026-02-16T20:31:29Z"
+  },
+  {
+    "movie_id": "M062",
+    "title": "Wild Reckoning",
+    "release_year": 2018,
+    "genres": [
+      "Horror",
+      "Western",
+      "Crime"
+    ],
+    "duration_minutes": 167,
+    "director": "Reese Brown",
+    "language": "it",
+    "release": {
+      "country": "France",
+      "date": "2018-10-02"
+    },
+    "cast": [
+      {
+        "actor_name": "Cameron Lewis",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Jordan Martin",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 6.0,
+      "votes": 1936888
+    },
+    "tags": [
+      "space",
+      "dystopia",
+      "heist",
+      "time-travel",
+      "detective"
+    ],
+    "created_at": "2026-02-16T20:55:54Z"
+  },
+  {
+    "movie_id": "M063",
+    "title": "Hidden Mirage",
+    "release_year": 2022,
+    "genres": [
+      "Western",
+      "Adventure"
+    ],
+    "duration_minutes": 129,
+    "director": "Reese Walker",
+    "language": "hi",
+    "release": {
+      "country": "South Korea",
+      "date": "2022-08-17"
+    },
+    "cast": [
+      {
+        "actor_name": "Morgan Johnson",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Reese Taylor",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 4.7,
+      "votes": 1440682
+    },
+    "tags": [
+      "mystery",
+      "biopic"
+    ],
+    "created_at": "2026-02-16T05:02:15Z"
+  },
+  {
+    "movie_id": "M064",
+    "title": "Orbit",
+    "release_year": 2023,
+    "genres": [
+      "Documentary",
+      "Music",
+      "War"
+    ],
+    "duration_minutes": 146,
+    "director": "Parker Martinez",
+    "language": "hi",
+    "release": {
+      "country": "South Korea",
+      "date": "2023-01-26"
+    },
+    "cast": [
+      {
+        "actor_name": "Quinn Brown",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Quinn Taylor",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 7.0,
+      "votes": 2340467
+    },
+    "tags": [
+      "time-travel",
+      "dystopia",
+      "sports",
+      "biopic",
+      "romantic"
+    ],
+    "created_at": "2026-02-16T04:21:05Z"
+  },
+  {
+    "movie_id": "M065",
+    "title": "Wild Echo",
+    "release_year": 2012,
+    "genres": [
+      "Mystery",
+      "Crime",
+      "Animation"
+    ],
+    "duration_minutes": 119,
+    "director": "Parker Lee",
+    "language": "hi",
+    "release": {
+      "country": "Canada",
+      "date": "2012-11-23"
+    },
+    "cast": [
+      {
+        "actor_name": "Skyler Brown",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Hayden Lewis",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 6.7,
+      "votes": 1517817
+    },
+    "tags": [
+      "heist",
+      "time-travel"
+    ],
+    "created_at": "2026-02-16T05:13:21Z"
+  },
+  {
+    "movie_id": "M066",
+    "title": "Neon Forest",
+    "release_year": 2004,
+    "genres": [
+      "Animation"
+    ],
+    "duration_minutes": 97,
+    "director": "Parker Taylor",
+    "language": "en",
+    "release": {
+      "country": "Germany",
+      "date": "2004-10-05"
+    },
+    "cast": [
+      {
+        "actor_name": "Kendall Martinez",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Morgan Thomas",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 6.5,
+      "votes": 758722
+    },
+    "tags": [
+      "sports",
+      "survival",
+      "space"
+    ],
+    "created_at": "2026-02-16T13:23:43Z"
+  },
+  {
+    "movie_id": "M067",
+    "title": "Midnight Orbit",
+    "release_year": 2008,
+    "genres": [
+      "Sci-Fi",
+      "Family",
+      "War"
+    ],
+    "duration_minutes": 176,
+    "director": "Parker Rodriguez",
+    "language": "de",
+    "release": {
+      "country": "Germany",
+      "date": "2008-11-19"
+    },
+    "cast": [
+      {
+        "actor_name": "Reese Clark",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Parker Martinez",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 6.0,
+      "votes": 2109543
+    },
+    "tags": [
+      "friendship",
+      "revenge",
+      "romantic",
+      "dystopia",
+      "time-travel"
+    ],
+    "created_at": "2026-02-16T01:41:30Z"
+  },
+  {
+    "movie_id": "M068",
+    "title": "Rising Cipher",
+    "release_year": 1996,
+    "genres": [
+      "Comedy",
+      "History",
+      "Animation"
+    ],
+    "duration_minutes": 171,
+    "director": "Casey Harris",
+    "language": "fr",
+    "release": {
+      "country": "Spain",
+      "date": "1996-02-08"
+    },
+    "cast": [
+      {
+        "actor_name": "Reese Garcia",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Alex Robinson",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 7.0,
+      "votes": 223575
+    },
+    "tags": [
+      "mystery",
+      "heist",
+      "revenge",
+      "coming-of-age",
+      "detective"
+    ],
+    "created_at": "2026-02-16T11:14:01Z"
+  },
+  {
+    "movie_id": "M069",
+    "title": "Broken Horizon",
+    "release_year": 2011,
+    "genres": [
+      "Crime"
+    ],
+    "duration_minutes": 181,
+    "director": "Sam Martin",
+    "language": "ko",
+    "release": {
+      "country": "Canada",
+      "date": "2011-12-16"
+    },
+    "cast": [
+      {
+        "actor_name": "Reese Hall",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Alex Brown",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 6.7,
+      "votes": 79908
+    },
+    "tags": [
+      "revenge",
+      "friendship",
+      "mystery",
+      "romantic"
+    ],
+    "created_at": "2026-02-16T16:27:07Z"
+  },
+  {
+    "movie_id": "M070",
+    "title": "Bright Storm",
+    "release_year": 2009,
+    "genres": [
+      "Family"
+    ],
+    "duration_minutes": 95,
+    "director": "Hayden Hall",
+    "language": "es",
+    "release": {
+      "country": "Italy",
+      "date": "2009-10-18"
+    },
+    "cast": [
+      {
+        "actor_name": "Alex Lewis",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Finley White",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 4.0,
+      "votes": 602404
+    },
+    "tags": [
+      "coming-of-age",
+      "space",
+      "romantic",
+      "heist"
+    ],
+    "created_at": "2026-02-16T07:36:26Z"
+  },
+  {
+    "movie_id": "M071",
+    "title": "Fading Signal",
+    "release_year": 2023,
+    "genres": [
+      "War"
+    ],
+    "duration_minutes": 126,
+    "director": "Emerson Lewis",
+    "language": "en",
+    "release": {
+      "country": "Spain",
+      "date": "2023-08-02"
+    },
+    "cast": [
+      {
+        "actor_name": "Drew Garcia",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Avery Smith",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 4.0,
+      "votes": 1497960
+    },
+    "tags": [
+      "heist",
+      "revenge"
+    ],
+    "created_at": "2026-02-16T23:42:40Z"
+  },
+  {
+    "movie_id": "M072",
+    "title": "Last Reckoning",
+    "release_year": 2011,
+    "genres": [
+      "Music"
+    ],
+    "duration_minutes": 97,
+    "director": "Emerson Thompson",
+    "language": "fr",
+    "release": {
+      "country": "Italy",
+      "date": "2011-12-16"
+    },
+    "cast": [
+      {
+        "actor_name": "Casey Anderson",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Jordan Clark",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 8.7,
+      "votes": 155321
+    },
+    "tags": [
+      "revenge",
+      "space",
+      "dystopia",
+      "supernatural"
+    ],
+    "created_at": "2026-02-16T10:59:19Z"
+  },
+  {
+    "movie_id": "M073",
+    "title": "Iron Promise",
+    "release_year": 2024,
+    "genres": [
+      "Adventure",
+      "Drama"
+    ],
+    "duration_minutes": 140,
+    "director": "Parker Garcia",
+    "language": "en",
+    "release": {
+      "country": "Germany",
+      "date": "2024-05-04"
+    },
+    "cast": [
+      {
+        "actor_name": "Cameron Robinson",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Drew Clark",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 7.2,
+      "votes": 1621905
+    },
+    "tags": [
+      "friendship",
+      "survival",
+      "sports",
+      "supernatural"
+    ],
+    "created_at": "2026-02-16T11:59:51Z"
+  },
+  {
+    "movie_id": "M074",
+    "title": "Iron Legacy",
+    "release_year": 1995,
+    "genres": [
+      "Animation",
+      "Romance"
+    ],
+    "duration_minutes": 173,
+    "director": "Kendall Thomas",
+    "language": "hi",
+    "release": {
+      "country": "UK",
+      "date": "1995-02-11"
+    },
+    "cast": [
+      {
+        "actor_name": "Parker Martin",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Reese Hall",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 9.0,
+      "votes": 1787460
+    },
+    "tags": [
+      "sports",
+      "survival",
+      "heist"
+    ],
+    "created_at": "2026-02-16T14:02:46Z"
+  },
+  {
+    "movie_id": "M075",
+    "title": "Rising Mirage",
+    "release_year": 2017,
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Mystery"
+    ],
+    "duration_minutes": 115,
+    "director": "Cameron Lewis",
+    "language": "fr",
+    "release": {
+      "country": "USA",
+      "date": "2017-03-28"
+    },
+    "cast": [
+      {
+        "actor_name": "Kendall Clark",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Sam Anderson",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 8.6,
+      "votes": 282197
+    },
+    "tags": [
+      "supernatural",
+      "biopic",
+      "heist"
+    ],
+    "created_at": "2026-02-16T11:24:36Z"
+  },
+  {
+    "movie_id": "M076",
+    "title": "Crimson Mirage",
+    "release_year": 1999,
+    "genres": [
+      "Music",
+      "Western"
+    ],
+    "duration_minutes": 166,
+    "director": "Reese Brown",
+    "language": "hi",
+    "release": {
+      "country": "Spain",
+      "date": "1999-06-21"
+    },
+    "cast": [
+      {
+        "actor_name": "Avery White",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Taylor Smith",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 4.0,
+      "votes": 780542
+    },
+    "tags": [
+      "mystery",
+      "coming-of-age",
+      "dystopia",
+      "detective",
+      "time-travel"
+    ],
+    "created_at": "2026-02-16T08:45:28Z"
+  },
+  {
+    "movie_id": "M077",
+    "title": "Electric Mirage",
+    "release_year": 2008,
+    "genres": [
+      "Drama",
+      "Comedy"
+    ],
+    "duration_minutes": 168,
+    "director": "Morgan Brown",
+    "language": "ko",
+    "release": {
+      "country": "UK",
+      "date": "2008-11-28"
+    },
+    "cast": [
+      {
+        "actor_name": "Quinn Garcia",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Jordan Lee",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 5.0,
+      "votes": 2274231
+    },
+    "tags": [
+      "time-travel",
+      "friendship",
+      "sports",
+      "biopic"
+    ],
+    "created_at": "2026-02-16T05:50:23Z"
+  },
+  {
+    "movie_id": "M078",
+    "title": "Iron Storm",
+    "release_year": 1997,
+    "genres": [
+      "Family"
+    ],
+    "duration_minutes": 105,
+    "director": "Rowan Smith",
+    "language": "hi",
+    "release": {
+      "country": "Italy",
+      "date": "1997-09-05"
+    },
+    "cast": [
+      {
+        "actor_name": "Kendall Brown",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Jordan Martin",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 2.0,
+      "votes": 1670203
+    },
+    "tags": [
+      "mystery",
+      "coming-of-age",
+      "supernatural",
+      "romantic",
+      "detective"
+    ],
+    "created_at": "2026-02-16T04:20:41Z"
+  },
+  {
+    "movie_id": "M079",
+    "title": "Hidden Orbit",
+    "release_year": 2019,
+    "genres": [
+      "Music",
+      "Crime",
+      "Documentary"
+    ],
+    "duration_minutes": 167,
+    "director": "Morgan Robinson",
+    "language": "en",
+    "release": {
+      "country": "UK",
+      "date": "2019-09-05"
+    },
+    "cast": [
+      {
+        "actor_name": "Parker Thomas",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Casey Thompson",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 6.4,
+      "votes": 945890
+    },
+    "tags": [
+      "mystery",
+      "time-travel",
+      "detective",
+      "supernatural"
+    ],
+    "created_at": "2026-02-16T06:40:35Z"
+  },
+  {
+    "movie_id": "M080",
+    "title": "Lost Echo",
+    "release_year": 2009,
+    "genres": [
+      "Animation",
+      "War",
+      "Documentary"
+    ],
+    "duration_minutes": 158,
+    "director": "Finley Walker",
+    "language": "hi",
+    "release": {
+      "country": "South Korea",
+      "date": "2009-01-27"
+    },
+    "cast": [
+      {
+        "actor_name": "Alex Brown",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Sam Walker",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 5.7,
+      "votes": 1110247
+    },
+    "tags": [
+      "supernatural",
+      "romantic",
+      "coming-of-age"
+    ],
+    "created_at": "2026-02-16T19:40:01Z"
+  },
+  {
+    "movie_id": "M081",
+    "title": "Neon Cipher",
+    "release_year": 2008,
+    "genres": [
+      "Thriller",
+      "Family"
+    ],
+    "duration_minutes": 162,
+    "director": "Drew Martin",
+    "language": "en",
+    "release": {
+      "country": "Canada",
+      "date": "2008-08-14"
+    },
+    "cast": [
+      {
+        "actor_name": "Rowan Clark",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Riley Thompson",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 6.0,
+      "votes": 602790
+    },
+    "tags": [
+      "dystopia",
+      "sports",
+      "heist",
+      "supernatural"
+    ],
+    "created_at": "2026-02-16T12:08:48Z"
+  },
+  {
+    "movie_id": "M082",
+    "title": "Rising Frontier",
+    "release_year": 2025,
+    "genres": [
+      "Family",
+      "Sci-Fi"
+    ],
+    "duration_minutes": 93,
+    "director": "Taylor Harris",
+    "language": "fr",
+    "release": {
+      "country": "UK",
+      "date": "2025-01-10"
+    },
+    "cast": [
+      {
+        "actor_name": "Drew Hall",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Hayden White",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 5.3,
+      "votes": 670028
+    },
+    "tags": [
+      "romantic",
+      "sports",
+      "heist",
+      "revenge"
+    ],
+    "created_at": "2026-02-16T05:31:32Z"
+  },
+  {
+    "movie_id": "M083",
+    "title": "Ancient Vow",
+    "release_year": 2009,
+    "genres": [
+      "Animation"
+    ],
+    "duration_minutes": 143,
+    "director": "Drew Lewis",
+    "language": "de",
+    "release": {
+      "country": "India",
+      "date": "2009-10-12"
+    },
+    "cast": [
+      {
+        "actor_name": "Sam Johnson",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Parker Rodriguez",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 4.0,
+      "votes": 1973984
+    },
+    "tags": [
+      "mystery",
+      "space",
+      "detective",
+      "coming-of-age"
+    ],
+    "created_at": "2026-02-16T04:56:16Z"
+  },
+  {
+    "movie_id": "M084",
+    "title": "Rising Promise",
+    "release_year": 2013,
+    "genres": [
+      "Adventure",
+      "Drama"
+    ],
+    "duration_minutes": 85,
+    "director": "Cameron Lee",
+    "language": "ja",
+    "release": {
+      "country": "Japan",
+      "date": "2013-08-25"
+    },
+    "cast": [
+      {
+        "actor_name": "Emerson Harris",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Kendall Hall",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 9.0,
+      "votes": 498529
+    },
+    "tags": [
+      "detective",
+      "coming-of-age",
+      "heist"
+    ],
+    "created_at": "2026-02-16T10:35:23Z"
+  },
+  {
+    "movie_id": "M085",
+    "title": "Golden Forest",
+    "release_year": 2022,
+    "genres": [
+      "Adventure",
+      "Western",
+      "War"
+    ],
+    "duration_minutes": 131,
+    "director": "Morgan Thompson",
+    "language": "ko",
+    "release": {
+      "country": "Canada",
+      "date": "2022-10-17"
+    },
+    "cast": [
+      {
+        "actor_name": "Morgan Thompson",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Kendall Thompson",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 6.0,
+      "votes": 681782
+    },
+    "tags": [
+      "romantic",
+      "sports",
+      "time-travel",
+      "dystopia",
+      "heist"
+    ],
+    "created_at": "2026-02-16T16:53:32Z"
+  },
+  {
+    "movie_id": "M086",
+    "title": "Velvet Vow",
+    "release_year": 2026,
+    "genres": [
+      "Action",
+      "Music"
+    ],
+    "duration_minutes": 118,
+    "director": "Quinn Taylor",
+    "language": "it",
+    "release": {
+      "country": "USA",
+      "date": "2026-10-16"
+    },
+    "cast": [
+      {
+        "actor_name": "Avery Walker",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Finley White",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 6.0,
+      "votes": 215599
+    },
+    "tags": [
+      "friendship",
+      "mystery",
+      "biopic",
+      "romantic",
+      "coming-of-age"
+    ],
+    "created_at": "2026-02-16T04:52:43Z"
+  },
+  {
+    "movie_id": "M087",
+    "title": "Midnight Empire",
+    "release_year": 2026,
+    "genres": [
+      "Drama"
+    ],
+    "duration_minutes": 169,
+    "director": "Alex Clark",
+    "language": "fr",
+    "release": {
+      "country": "Spain",
+      "date": "2026-12-07"
+    },
+    "cast": [
+      {
+        "actor_name": "Hayden Lewis",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Kendall Rodriguez",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 6.0,
+      "votes": 261426
+    },
+    "tags": [
+      "mystery",
+      "revenge",
+      "dystopia"
+    ],
+    "created_at": "2026-02-16T10:42:30Z"
+  },
+  {
+    "movie_id": "M088",
+    "title": "Iron Promise",
+    "release_year": 2010,
+    "genres": [
+      "Western",
+      "Horror"
+    ],
+    "duration_minutes": 102,
+    "director": "Emerson Garcia",
+    "language": "it",
+    "release": {
+      "country": "South Korea",
+      "date": "2010-08-07"
+    },
+    "cast": [
+      {
+        "actor_name": "Jamie Harris",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Emerson Martin",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 8.0,
+      "votes": 943360
+    },
+    "tags": [
+      "supernatural",
+      "time-travel",
+      "sports",
+      "revenge"
+    ],
+    "created_at": "2026-02-16T22:45:31Z"
+  },
+  {
+    "movie_id": "M089",
+    "title": "Broken Vow",
+    "release_year": 2012,
+    "genres": [
+      "Fantasy",
+      "History",
+      "Comedy"
+    ],
+    "duration_minutes": 151,
+    "director": "Finley Lee",
+    "language": "ja",
+    "release": {
+      "country": "Germany",
+      "date": "2012-03-10"
+    },
+    "cast": [
+      {
+        "actor_name": "Sam Martin",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Jordan Garcia",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 3.0,
+      "votes": 1855659
+    },
+    "tags": [
+      "sports",
+      "survival",
+      "revenge",
+      "dystopia"
+    ],
+    "created_at": "2026-02-16T17:17:59Z"
+  },
+  {
+    "movie_id": "M090",
+    "title": "Velvet Legacy",
+    "release_year": 1998,
+    "genres": [
+      "Family",
+      "Western",
+      "Adventure"
+    ],
+    "duration_minutes": 93,
+    "director": "Skyler White",
+    "language": "en",
+    "release": {
+      "country": "UK",
+      "date": "1998-07-11"
+    },
+    "cast": [
+      {
+        "actor_name": "Rowan Taylor",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Morgan Smith",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 6.0,
+      "votes": 2308545
+    },
+    "tags": [
+      "coming-of-age",
+      "biopic",
+      "survival"
+    ],
+    "created_at": "2026-02-16T15:41:12Z"
+  },
+  {
+    "movie_id": "M091",
+    "title": "Bright Maze",
+    "release_year": 2008,
+    "genres": [
+      "Animation"
+    ],
+    "duration_minutes": 162,
+    "director": "Finley White",
+    "language": "en",
+    "release": {
+      "country": "Canada",
+      "date": "2008-07-27"
+    },
+    "cast": [
+      {
+        "actor_name": "Casey Johnson",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Drew Rodriguez",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 7.0,
+      "votes": 781647
+    },
+    "tags": [
+      "space",
+      "dystopia",
+      "time-travel",
+      "romantic"
+    ],
+    "created_at": "2026-02-16T19:06:59Z"
+  },
+  {
+    "movie_id": "M092",
+    "title": "Broken Code",
+    "release_year": 2019,
+    "genres": [
+      "War",
+      "Thriller",
+      "Crime"
+    ],
+    "duration_minutes": 162,
+    "director": "Skyler Clark",
+    "language": "es",
+    "release": {
+      "country": "Germany",
+      "date": "2019-03-24"
+    },
+    "cast": [
+      {
+        "actor_name": "Reese Harris",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Casey Smith",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 7.0,
+      "votes": 1414150
+    },
+    "tags": [
+      "romantic",
+      "biopic",
+      "revenge",
+      "friendship"
+    ],
+    "created_at": "2026-02-16T19:54:40Z"
+  },
+  {
+    "movie_id": "M093",
+    "title": "Frost Gambit",
+    "release_year": 2022,
+    "genres": [
+      "Mystery"
+    ],
+    "duration_minutes": 121,
+    "director": "Taylor Thomas",
+    "language": "ko",
+    "release": {
+      "country": "Germany",
+      "date": "2022-04-01"
+    },
+    "cast": [
+      {
+        "actor_name": "Avery Martinez",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Jamie Clark",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 8.0,
+      "votes": 1120055
+    },
+    "tags": [
+      "time-travel",
+      "romantic",
+      "sports",
+      "supernatural"
+    ],
+    "created_at": "2026-02-16T00:16:41Z"
+  },
+  {
+    "movie_id": "M094",
+    "title": "Rising Storm",
+    "release_year": 1993,
+    "genres": [
+      "Sci-Fi"
+    ],
+    "duration_minutes": 165,
+    "director": "Parker Thomas",
+    "language": "it",
+    "release": {
+      "country": "UK",
+      "date": "1993-11-10"
+    },
+    "cast": [
+      {
+        "actor_name": "Cameron Hall",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Jamie White",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 4.5,
+      "votes": 560428
+    },
+    "tags": [
+      "friendship",
+      "survival",
+      "sports",
+      "romantic",
+      "heist"
+    ],
+    "created_at": "2026-02-16T13:44:35Z"
+  },
+  {
+    "movie_id": "M095",
+    "title": "Neon Cipher",
+    "release_year": 2003,
+    "genres": [
+      "Animation"
+    ],
+    "duration_minutes": 177,
+    "director": "Skyler Clark",
+    "language": "hi",
+    "release": {
+      "country": "UK",
+      "date": "2003-10-04"
+    },
+    "cast": [
+      {
+        "actor_name": "Sam Lee",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Skyler Jackson",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 5.3,
+      "votes": 2402284
+    },
+    "tags": [
+      "friendship",
+      "heist",
+      "mystery"
+    ],
+    "created_at": "2026-02-16T14:07:43Z"
+  },
+  {
+    "movie_id": "M096",
+    "title": "Electric Reckoning",
+    "release_year": 2021,
+    "genres": [
+      "Sci-Fi",
+      "Adventure",
+      "Western"
+    ],
+    "duration_minutes": 91,
+    "director": "Morgan Lewis",
+    "language": "en",
+    "release": {
+      "country": "Japan",
+      "date": "2021-08-22"
+    },
+    "cast": [
+      {
+        "actor_name": "Parker Smith",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Drew Harris",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 4.7,
+      "votes": 12847
+    },
+    "tags": [
+      "romantic",
+      "detective",
+      "space"
+    ],
+    "created_at": "2026-02-16T13:22:44Z"
+  },
+  {
+    "movie_id": "M097",
+    "title": "Hidden Cipher",
+    "release_year": 1993,
+    "genres": [
+      "Adventure",
+      "History"
+    ],
+    "duration_minutes": 88,
+    "director": "Hayden Thomas",
+    "language": "ja",
+    "release": {
+      "country": "Germany",
+      "date": "1993-07-15"
+    },
+    "cast": [
+      {
+        "actor_name": "Drew Martinez",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Jordan Lee",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 9.5,
+      "votes": 557999
+    },
+    "tags": [
+      "detective",
+      "friendship",
+      "mystery",
+      "coming-of-age"
+    ],
+    "created_at": "2026-02-16T16:08:46Z"
+  },
+  {
+    "movie_id": "M098",
+    "title": "Midnight Journey",
+    "release_year": 1991,
+    "genres": [
+      "Western",
+      "Romance"
+    ],
+    "duration_minutes": 118,
+    "director": "Emerson Martinez",
+    "language": "de",
+    "release": {
+      "country": "Italy",
+      "date": "1991-06-05"
+    },
+    "cast": [
+      {
+        "actor_name": "Avery Jackson",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Taylor Johnson",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 2.7,
+      "votes": 1758622
+    },
+    "tags": [
+      "revenge",
+      "dystopia"
+    ],
+    "created_at": "2026-02-16T02:06:38Z"
+  },
+  {
+    "movie_id": "M099",
+    "title": "Crimson Orbit",
+    "release_year": 1993,
+    "genres": [
+      "Adventure",
+      "Mystery",
+      "Sci-Fi"
+    ],
+    "duration_minutes": 111,
+    "director": "Jamie Lee",
+    "language": "en",
+    "release": {
+      "country": "Canada",
+      "date": "1993-09-10"
+    },
+    "cast": [
+      {
+        "actor_name": "Jamie Walker",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Quinn Walker",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 5.3,
+      "votes": 1345166
+    },
+    "tags": [
+      "time-travel",
+      "friendship",
+      "biopic"
+    ],
+    "created_at": "2026-02-16T16:14:26Z"
+  },
+  {
+    "movie_id": "M100",
+    "title": "Bright Legacy",
+    "release_year": 1993,
+    "genres": [
+      "Documentary",
+      "Romance",
+      "Thriller"
+    ],
+    "duration_minutes": 151,
+    "director": "Sam Garcia",
+    "language": "ja",
+    "release": {
+      "country": "Japan",
+      "date": "1993-06-23"
+    },
+    "cast": [
+      {
+        "actor_name": "Hayden Robinson",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Morgan Martin",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 6.0,
+      "votes": 1579188
+    },
+    "tags": [
+      "supernatural",
+      "mystery",
+      "survival"
+    ],
+    "created_at": "2026-02-16T07:54:14Z"
+  },
+  {
+    "movie_id": "M101",
+    "title": "Test movie api",
+    "release_year": 2026,
+    "genres": [
+      "Action"
+    ],
+    "duration_minutes": 120,
+    "director": "naeem",
+    "language": "en",
+    "release": {
+      "country": "UK",
+      "date": "2026-03-10"
+    },
+    "cast": [
+      {
+        "actor_name": "luffy",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "abbas",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 2.0,
+      "votes": 100
+    },
+    "tags": [
+      "test",
+      "api"
+    ],
+    "created_at": "2026-03-09T00:00:00Z"
+  },
+  {
+    "movie_id": "M102",
+    "title": "Jongi Ashraf",
+    "release_year": 2026,
+    "genres": [
+      "Action"
+    ],
+    "duration_minutes": 126,
+    "director": "naeem",
+    "language": "en",
+    "release": {
+      "country": "UK",
+      "date": "2026-03-10"
+    },
+    "cast": [
+      {
+        "actor_name": "luffy",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "abbas",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 5.0,
+      "votes": 100
+    },
+    "tags": [
+      "test",
+      "api"
+    ],
+    "created_at": "2026-03-09T00:00:00Z"
+  },
+  {
+    "movie_id": "M106",
+    "title": "Postman",
+    "release_year": 2026,
+    "genres": [
+      "Action"
+    ],
+    "duration_minutes": 126,
+    "director": "naeem1",
+    "language": "en",
+    "release": {
+      "country": "UK",
+      "date": "2026-03-10"
+    },
+    "cast": [
+      {
+        "actor_name": "luffy",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "abbas",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 5.0,
+      "votes": 100
+    },
+    "tags": [
+      "test",
+      "api"
+    ],
+    "created_at": "2026-03-09T00:00:00Z"
+  },
+  {
+    "movie_id": "M108",
+    "title": "Full stack",
+    "release_year": 2026,
+    "genres": [
+      "Action",
+      "Drama"
+    ],
+    "duration_minutes": 120,
+    "director": "naeem",
+    "language": "en",
+    "release": {
+      "country": "UK",
+      "date": "2026-03-10"
+    },
+    "cast": [
+      {
+        "actor_name": "Rubel",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "abbas",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 5.0,
+      "votes": 100
+    },
+    "tags": [
+      "test",
+      "api"
+    ],
+    "created_at": "2026-03-09T00:00:00Z"
+  },
+  {
+    "movie_id": "M110",
+    "title": "Superman",
+    "release_year": 2026,
+    "genres": [
+      "Action",
+      "Drama"
+    ],
+    "duration_minutes": 120,
+    "director": "naeem",
+    "language": "en",
+    "release": {
+      "country": "UK",
+      "date": "2026-03-10"
+    },
+    "cast": [
+      {
+        "actor_name": "zoro",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "abbas",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 5.0,
+      "votes": 100
+    },
+    "tags": [
+      "test",
+      "api"
+    ],
+    "created_at": "2026-03-09T00:00:00Z"
+  },
+  {
+    "movie_id": "M113",
+    "title": "Frontend",
+    "release_year": 2026,
+    "genres": [
+      "Drama"
+    ],
+    "duration_minutes": 150,
+    "director": "SH",
+    "language": "English",
+    "release": {
+      "country": "Uk",
+      "date": "2026-04-14"
+    },
+    "cast": [
+      {
+        "actor_name": "Thor",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Fin",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 9.0,
+      "votes": 256
+    },
+    "tags": [
+      "epic"
+    ],
+    "created_at": "2026-03-09T00:00:00Z"
+  },
+  {
+    "movie_id": "M114",
+    "title": "API-test",
+    "release_year": 2026,
+    "genres": [
+      "Action"
+    ],
+    "duration_minutes": 120,
+    "director": "Naeem",
+    "language": "English",
+    "release": {
+      "country": "Uk",
+      "date": "2026-04-16"
+    },
+    "cast": [
+      {
+        "actor_name": "SH",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Fullstack",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 6.0,
+      "votes": 4
+    },
+    "tags": [
+      "sci-fi"
+    ],
+    "created_at": "2026-03-09T00:00:00Z"
+  },
+  {
+    "movie_id": "M115",
+    "title": "One Piece",
+    "release_year": 2002,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Comedy"
+    ],
+    "duration_minutes": 60,
+    "director": "Oda",
+    "language": "English",
+    "release": {
+      "country": "Japan",
+      "date": "2000-01-01"
+    },
+    "cast": [
+      {
+        "actor_name": "Luffy",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Teach",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 9.0,
+      "votes": 870
+    },
+    "tags": [
+      "epic",
+      "war",
+      "adventure",
+      "comedy"
+    ],
+    "created_at": "2026-03-09T00:00:00Z"
+  },
+  {
+    "movie_id": "M116",
+    "title": "Attack On Titan",
+    "release_year": 2025,
+    "genres": [
+      "Action",
+      "suspense",
+      "darama"
+    ],
+    "duration_minutes": 130,
+    "director": "sajuar husen naeem",
+    "language": "English",
+    "release": {
+      "country": "Japan",
+      "date": "2025-07-22"
+    },
+    "cast": [
+      {
+        "actor_name": "Eren Yeager",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "Karl Fritz",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 8.6,
+      "votes": 20
+    },
+    "tags": [
+      "adventure",
+      "military"
+    ],
+    "created_at": "2026-03-09T00:00:00Z"
+  },
+  {
+    "movie_id": "M117",
+    "title": "Football",
+    "release_year": 2026,
+    "genres": [
+      "Drama",
+      "Sports"
+    ],
+    "duration_minutes": 100,
+    "director": "Jhon",
+    "language": "English",
+    "release": {
+      "country": "USA",
+      "date": "2026-04-28"
+    },
+    "cast": [
+      {
+        "actor_name": "Maark",
+        "role": "Hero"
+      },
+      {
+        "actor_name": "vila",
+        "role": "Villain"
+      }
+    ],
+    "ratings": {
+      "average": 0.0,
+      "votes": 0
+    },
+    "tags": [
+      "epic"
+    ],
+    "created_at": "2026-03-09T00:00:00Z"
+  }
+]

@@ -351,7 +351,7 @@ source venv/bin/activate
 
 pip install -r requirements.txt
 cp .env.example .env        # fill in credentials
-python seed_data.py         # optional — loads sample data
+python seed_data.py         # seeds the database from data/ folder
 python app.py               # http://localhost:5001
 ```
 
@@ -364,6 +364,18 @@ ng serve                    # http://localhost:4200
 ```
 
 Both servers must be running simultaneously. The Angular app communicates with Flask directly via CORS — no proxy configuration required.
+
+### Test Accounts
+
+After running `seed_data.py` the following accounts are available:
+
+| Role | Username | Password |
+|---|---|---|
+| Admin | `sh` | `admin123` |
+| Admin | `parkeranderson` | `admin123` |
+| User | any other username | `user123` |
+
+> Admin accounts have access to the Movies management panel, Analytics dashboard, and User management. The seed script prints these credentials to the terminal when it completes.
 
 ---
 

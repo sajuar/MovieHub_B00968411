@@ -1,0 +1,2274 @@
+[
+  {
+    "review_id": "R0001",
+    "movie_id": "M036",
+    "user_id": "U029",
+    "rating": 6,
+    "comment": "updated by postman",
+    "review_date": "2025-07-31",
+    "helpful_votes": 11
+  },
+  {
+    "review_id": "R0004",
+    "movie_id": "M073",
+    "user_id": "U008",
+    "rating": 10,
+    "comment": "Excellent world-building and characters.",
+    "review_date": "2025-02-02",
+    "helpful_votes": 42
+  },
+  {
+    "review_id": "R0006",
+    "movie_id": "M096",
+    "user_id": "U012",
+    "rating": 2,
+    "comment": "Not for everyone, but I appreciated it.",
+    "review_date": "2024-04-10",
+    "helpful_votes": 29
+  },
+  {
+    "review_id": "R0009",
+    "movie_id": "M058",
+    "user_id": "U016",
+    "rating": 4,
+    "comment": "Excellent world-building and characters.",
+    "review_date": "2024-12-30",
+    "helpful_votes": 120
+  },
+  {
+    "review_id": "R0011",
+    "movie_id": "M049",
+    "user_id": "U003",
+    "rating": 10,
+    "comment": "A fun watch with a strong ending.",
+    "review_date": "2024-10-29",
+    "helpful_votes": 91
+  },
+  {
+    "review_id": "R0012",
+    "movie_id": "M010",
+    "user_id": "U003",
+    "rating": 6,
+    "comment": "updated by postman",
+    "review_date": "2024-06-06",
+    "helpful_votes": 11
+  },
+  {
+    "review_id": "R0013",
+    "movie_id": "M082",
+    "user_id": "U005",
+    "rating": 8,
+    "comment": "Visually stunning and emotionally grounded.",
+    "review_date": "2024-11-20",
+    "helpful_votes": 13
+  },
+  {
+    "review_id": "R0015",
+    "movie_id": "M035",
+    "user_id": "U004",
+    "rating": 4,
+    "comment": "Interesting concept but uneven execution.",
+    "review_date": "2024-03-30",
+    "helpful_votes": 55
+  },
+  {
+    "review_id": "R0016",
+    "movie_id": "M058",
+    "user_id": "U018",
+    "rating": 10,
+    "comment": "Not for everyone, but I appreciated it.",
+    "review_date": "2025-06-08",
+    "helpful_votes": 13
+  },
+  {
+    "review_id": "R0017",
+    "movie_id": "M004",
+    "user_id": "U003",
+    "rating": 6,
+    "comment": "Great performances and direction.",
+    "review_date": "2025-07-21",
+    "helpful_votes": 76
+  },
+  {
+    "review_id": "R0018",
+    "movie_id": "M077",
+    "user_id": "U026",
+    "rating": 6,
+    "comment": "Loved the pacing and soundtrack.",
+    "review_date": "2025-01-29",
+    "helpful_votes": 37
+  },
+  {
+    "review_id": "R0020",
+    "movie_id": "M032",
+    "user_id": "U019",
+    "rating": 10,
+    "comment": "Not for everyone, but I appreciated it.",
+    "review_date": "2024-06-22",
+    "helpful_votes": 21
+  },
+  {
+    "review_id": "R0021",
+    "movie_id": "M018",
+    "user_id": "U009",
+    "rating": 6,
+    "comment": "A bit predictable, yet entertaining.",
+    "review_date": "2024-10-01",
+    "helpful_votes": 18
+  },
+  {
+    "review_id": "R0022",
+    "movie_id": "M009",
+    "user_id": "U006",
+    "rating": 8,
+    "comment": "Not for everyone, but I appreciated it.",
+    "review_date": "2024-10-09",
+    "helpful_votes": 38
+  },
+  {
+    "review_id": "R0023",
+    "movie_id": "M062",
+    "user_id": "U026",
+    "rating": 2,
+    "comment": "Could have been shorter, but still enjoyable.",
+    "review_date": "2025-01-04",
+    "helpful_votes": 120
+  },
+  {
+    "review_id": "R0024",
+    "movie_id": "M032",
+    "user_id": "U024",
+    "rating": 6,
+    "comment": "updated by postman",
+    "review_date": "2025-08-31",
+    "helpful_votes": 11
+  },
+  {
+    "review_id": "R0031",
+    "movie_id": "M015",
+    "user_id": "U030",
+    "rating": 10,
+    "comment": "The plot twist was genuinely surprising.",
+    "review_date": "2024-07-23",
+    "helpful_votes": 69
+  },
+  {
+    "review_id": "R0032",
+    "movie_id": "M024",
+    "user_id": "U022",
+    "rating": 10,
+    "comment": "A bit predictable, yet entertaining.",
+    "review_date": "2024-01-28",
+    "helpful_votes": 120
+  },
+  {
+    "review_id": "R0033",
+    "movie_id": "M091",
+    "user_id": "U007",
+    "rating": 8,
+    "comment": "Great performances and direction.",
+    "review_date": "2024-10-25",
+    "helpful_votes": 104
+  },
+  {
+    "review_id": "R0034",
+    "movie_id": "M053",
+    "user_id": "U022",
+    "rating": 8,
+    "comment": "Could have been shorter, but still enjoyable.",
+    "review_date": "2024-05-22",
+    "helpful_votes": 30
+  },
+  {
+    "review_id": "R0035",
+    "movie_id": "M033",
+    "user_id": "U022",
+    "rating": 4,
+    "comment": "Not for everyone, but I appreciated it.",
+    "review_date": "2026-01-02",
+    "helpful_votes": 101
+  },
+  {
+    "review_id": "R0036",
+    "movie_id": "M049",
+    "user_id": "U003",
+    "rating": 8,
+    "comment": "A bit predictable, yet entertaining.",
+    "review_date": "2025-09-04",
+    "helpful_votes": 74
+  },
+  {
+    "review_id": "R0037",
+    "movie_id": "M052",
+    "user_id": "U018",
+    "rating": 10,
+    "comment": "Not for everyone, but I appreciated it.",
+    "review_date": "2025-12-09",
+    "helpful_votes": 69
+  },
+  {
+    "review_id": "R0039",
+    "movie_id": "M082",
+    "user_id": "U030",
+    "rating": 2,
+    "comment": "A fun watch with a strong ending.",
+    "review_date": "2024-04-21",
+    "helpful_votes": 84
+  },
+  {
+    "review_id": "R0040",
+    "movie_id": "M086",
+    "user_id": "U012",
+    "rating": 4,
+    "comment": "The plot twist was genuinely surprising.",
+    "review_date": "2025-10-24",
+    "helpful_votes": 5
+  },
+  {
+    "review_id": "R0042",
+    "movie_id": "M056",
+    "user_id": "U004",
+    "rating": 2,
+    "comment": "Could have been shorter, but still enjoyable.",
+    "review_date": "2024-04-10",
+    "helpful_votes": 28
+  },
+  {
+    "review_id": "R0043",
+    "movie_id": "M066",
+    "user_id": "U024",
+    "rating": 10,
+    "comment": "The plot twist was genuinely surprising.",
+    "review_date": "2025-07-25",
+    "helpful_votes": 88
+  },
+  {
+    "review_id": "R0044",
+    "movie_id": "M074",
+    "user_id": "U008",
+    "rating": 8,
+    "comment": "Not for everyone, but I appreciated it.",
+    "review_date": "2025-01-18",
+    "helpful_votes": 59,
+    "not_helpful_votes": 1,
+    "not_helpful_votes_users": [
+      "U037"
+    ],
+    "helpful_votes_users": []
+  },
+  {
+    "review_id": "R0045",
+    "movie_id": "M099",
+    "user_id": "U022",
+    "rating": 10,
+    "comment": "Excellent world-building and characters.",
+    "review_date": "2025-12-08",
+    "helpful_votes": 19
+  },
+  {
+    "review_id": "R0047",
+    "movie_id": "M011",
+    "user_id": "U004",
+    "rating": 4,
+    "comment": "Could have been shorter, but still enjoyable.",
+    "review_date": "2024-12-22",
+    "helpful_votes": 43
+  },
+  {
+    "review_id": "R0048",
+    "movie_id": "M059",
+    "user_id": "U026",
+    "rating": 4,
+    "comment": "A bit predictable, yet entertaining.",
+    "review_date": "2025-06-17",
+    "helpful_votes": 44
+  },
+  {
+    "review_id": "R0049",
+    "movie_id": "M061",
+    "user_id": "U004",
+    "rating": 8,
+    "comment": "A bit predictable, yet entertaining.",
+    "review_date": "2026-01-09",
+    "helpful_votes": 40
+  },
+  {
+    "review_id": "R0050",
+    "movie_id": "M009",
+    "user_id": "U010",
+    "rating": 2,
+    "comment": "Great performances and direction.",
+    "review_date": "2025-12-28",
+    "helpful_votes": 2
+  },
+  {
+    "review_id": "R0052",
+    "movie_id": "M095",
+    "user_id": "U008",
+    "rating": 10,
+    "comment": "Excellent world-building and characters.",
+    "review_date": "2024-06-27",
+    "helpful_votes": 20
+  },
+  {
+    "review_id": "R0053",
+    "movie_id": "M043",
+    "user_id": "U018",
+    "rating": 8,
+    "comment": "A fun watch with a strong ending.",
+    "review_date": "2025-04-18",
+    "helpful_votes": 102
+  },
+  {
+    "review_id": "R0055",
+    "movie_id": "M004",
+    "user_id": "U024",
+    "rating": 10,
+    "comment": "A bit predictable, yet entertaining.",
+    "review_date": "2024-07-21",
+    "helpful_votes": 75
+  },
+  {
+    "review_id": "R0057",
+    "movie_id": "M036",
+    "user_id": "U025",
+    "rating": 2,
+    "comment": "Great performances and direction.",
+    "review_date": "2025-08-14",
+    "helpful_votes": 102
+  },
+  {
+    "review_id": "R0058",
+    "movie_id": "M069",
+    "user_id": "U006",
+    "rating": 6,
+    "comment": "A fun watch with a strong ending.",
+    "review_date": "2024-11-29",
+    "helpful_votes": 58
+  },
+  {
+    "review_id": "R0059",
+    "movie_id": "M015",
+    "user_id": "U009",
+    "rating": 8,
+    "comment": "Visually stunning and emotionally grounded.",
+    "review_date": "2025-06-24",
+    "helpful_votes": 76
+  },
+  {
+    "review_id": "R0061",
+    "movie_id": "M046",
+    "user_id": "U028",
+    "rating": 8,
+    "comment": "Interesting concept but uneven execution.",
+    "review_date": "2025-09-24",
+    "helpful_votes": 104
+  },
+  {
+    "review_id": "R0062",
+    "movie_id": "M087",
+    "user_id": "U023",
+    "rating": 6,
+    "comment": "The plot twist was genuinely surprising.",
+    "review_date": "2025-09-21",
+    "helpful_votes": 10
+  },
+  {
+    "review_id": "R0063",
+    "movie_id": "M087",
+    "user_id": "U005",
+    "rating": 6,
+    "comment": "A fun watch with a strong ending.",
+    "review_date": "2024-04-30",
+    "helpful_votes": 39
+  },
+  {
+    "review_id": "R0064",
+    "movie_id": "M015",
+    "user_id": "U006",
+    "rating": 6,
+    "comment": "Interesting concept but uneven execution.",
+    "review_date": "2025-12-11",
+    "helpful_votes": 65
+  },
+  {
+    "review_id": "R0066",
+    "movie_id": "M055",
+    "user_id": "U006",
+    "rating": 8,
+    "comment": "Excellent world-building and characters.",
+    "review_date": "2025-10-12",
+    "helpful_votes": 88
+  },
+  {
+    "review_id": "R0067",
+    "movie_id": "M083",
+    "user_id": "U030",
+    "rating": 4,
+    "comment": "Interesting concept but uneven execution.",
+    "review_date": "2025-07-22",
+    "helpful_votes": 62
+  },
+  {
+    "review_id": "R0068",
+    "movie_id": "M037",
+    "user_id": "U005",
+    "rating": 4,
+    "comment": "A bit predictable, yet entertaining.",
+    "review_date": "2024-11-18",
+    "helpful_votes": 79
+  },
+  {
+    "review_id": "R0072",
+    "movie_id": "M022",
+    "user_id": "U003",
+    "rating": 10,
+    "comment": "A fun watch with a strong ending.",
+    "review_date": "2024-02-01",
+    "helpful_votes": 37
+  },
+  {
+    "review_id": "R0074",
+    "movie_id": "M100",
+    "user_id": "U015",
+    "rating": 10,
+    "comment": "A bit predictable, yet entertaining.",
+    "review_date": "2026-01-30",
+    "helpful_votes": 70
+  },
+  {
+    "review_id": "R0075",
+    "movie_id": "M066",
+    "user_id": "U004",
+    "rating": 10,
+    "comment": "Could have been shorter, but still enjoyable.",
+    "review_date": "2024-04-26",
+    "helpful_votes": 99
+  },
+  {
+    "review_id": "R0077",
+    "movie_id": "M093",
+    "user_id": "U015",
+    "rating": 10,
+    "comment": "Not for everyone, but I appreciated it.",
+    "review_date": "2024-08-11",
+    "helpful_votes": 13
+  },
+  {
+    "review_id": "R0079",
+    "movie_id": "M034",
+    "user_id": "U012",
+    "rating": 2,
+    "comment": "Great performances and direction.",
+    "review_date": "2025-03-25",
+    "helpful_votes": 99
+  },
+  {
+    "review_id": "R0080",
+    "movie_id": "M031",
+    "user_id": "U007",
+    "rating": 10,
+    "comment": "Visually stunning and emotionally grounded.",
+    "review_date": "2025-12-06",
+    "helpful_votes": 110
+  },
+  {
+    "review_id": "R0083",
+    "movie_id": "M069",
+    "user_id": "U009",
+    "rating": 10,
+    "comment": "Interesting concept but uneven execution.",
+    "review_date": "2025-07-05",
+    "helpful_votes": 41
+  },
+  {
+    "review_id": "R0084",
+    "movie_id": "M091",
+    "user_id": "U010",
+    "rating": 6,
+    "comment": "Could have been shorter, but still enjoyable.",
+    "review_date": "2025-08-09",
+    "helpful_votes": 109
+  },
+  {
+    "review_id": "R0085",
+    "movie_id": "M066",
+    "user_id": "U029",
+    "rating": 2,
+    "comment": "Not for everyone, but I appreciated it.",
+    "review_date": "2024-05-18",
+    "helpful_votes": 117
+  },
+  {
+    "review_id": "R0086",
+    "movie_id": "M008",
+    "user_id": "U009",
+    "rating": 4,
+    "comment": "Interesting concept but uneven execution.",
+    "review_date": "2025-12-19",
+    "helpful_votes": 31
+  },
+  {
+    "review_id": "R0087",
+    "movie_id": "M019",
+    "user_id": "U023",
+    "rating": 6,
+    "comment": "Not for everyone, but I appreciated it.",
+    "review_date": "2024-09-10",
+    "helpful_votes": 62
+  },
+  {
+    "review_id": "R0088",
+    "movie_id": "M019",
+    "user_id": "U019",
+    "rating": 6,
+    "comment": "Not for everyone, but I appreciated it.",
+    "review_date": "2025-10-04",
+    "helpful_votes": 48
+  },
+  {
+    "review_id": "R0089",
+    "movie_id": "M058",
+    "user_id": "U003",
+    "rating": 2,
+    "comment": "Excellent world-building and characters.",
+    "review_date": "2025-02-16",
+    "helpful_votes": 95
+  },
+  {
+    "review_id": "R0090",
+    "movie_id": "M036",
+    "user_id": "U023",
+    "rating": 6,
+    "comment": "A bit predictable, yet entertaining.",
+    "review_date": "2025-04-10",
+    "helpful_votes": 41
+  },
+  {
+    "review_id": "R0092",
+    "movie_id": "M086",
+    "user_id": "U023",
+    "rating": 6,
+    "comment": "Excellent world-building and characters.",
+    "review_date": "2024-03-05",
+    "helpful_votes": 50
+  },
+  {
+    "review_id": "R0095",
+    "movie_id": "M063",
+    "user_id": "U026",
+    "rating": 6,
+    "comment": "Loved the pacing and soundtrack.",
+    "review_date": "2025-11-29",
+    "helpful_votes": 5
+  },
+  {
+    "review_id": "R0097",
+    "movie_id": "M021",
+    "user_id": "U015",
+    "rating": 8,
+    "comment": "Not for everyone, but I appreciated it.",
+    "review_date": "2024-01-01",
+    "helpful_votes": 25
+  },
+  {
+    "review_id": "R0098",
+    "movie_id": "M089",
+    "user_id": "U030",
+    "rating": 4,
+    "comment": "Could have been shorter, but still enjoyable.",
+    "review_date": "2025-10-27",
+    "helpful_votes": 20
+  },
+  {
+    "review_id": "R0099",
+    "movie_id": "M036",
+    "user_id": "U003",
+    "rating": 6,
+    "comment": "Great performances and direction.",
+    "review_date": "2024-09-13",
+    "helpful_votes": 47
+  },
+  {
+    "review_id": "R0100",
+    "movie_id": "M086",
+    "user_id": "U029",
+    "rating": 4,
+    "comment": "Not for everyone, but I appreciated it.",
+    "review_date": "2024-02-23",
+    "helpful_votes": 80
+  },
+  {
+    "review_id": "R0101",
+    "movie_id": "M040",
+    "user_id": "U024",
+    "rating": 4,
+    "comment": "Great performances and direction.",
+    "review_date": "2025-03-15",
+    "helpful_votes": 90
+  },
+  {
+    "review_id": "R0103",
+    "movie_id": "M076",
+    "user_id": "U008",
+    "rating": 10,
+    "comment": "A bit predictable, yet entertaining.",
+    "review_date": "2025-11-27",
+    "helpful_votes": 1
+  },
+  {
+    "review_id": "R0105",
+    "movie_id": "M017",
+    "user_id": "U016",
+    "rating": 2,
+    "comment": "Not for everyone, but I appreciated it.",
+    "review_date": "2024-08-22",
+    "helpful_votes": 11
+  },
+  {
+    "review_id": "R0106",
+    "movie_id": "M094",
+    "user_id": "U026",
+    "rating": 2,
+    "comment": "Visually stunning and emotionally grounded.",
+    "review_date": "2024-04-15",
+    "helpful_votes": 47
+  },
+  {
+    "review_id": "R0107",
+    "movie_id": "M039",
+    "user_id": "U005",
+    "rating": 8,
+    "comment": "Interesting concept but uneven execution.",
+    "review_date": "2026-02-10",
+    "helpful_votes": 82
+  },
+  {
+    "review_id": "R0108",
+    "movie_id": "M087",
+    "user_id": "U005",
+    "rating": 2,
+    "comment": "The plot twist was genuinely surprising.",
+    "review_date": "2025-06-27",
+    "helpful_votes": 1
+  },
+  {
+    "review_id": "R0111",
+    "movie_id": "M057",
+    "user_id": "U028",
+    "rating": 4,
+    "comment": "Great performances and direction.",
+    "review_date": "2024-03-29",
+    "helpful_votes": 17
+  },
+  {
+    "review_id": "R0112",
+    "movie_id": "M097",
+    "user_id": "U004",
+    "rating": 10,
+    "comment": "Not for everyone, but I appreciated it.",
+    "review_date": "2026-01-17",
+    "helpful_votes": 44,
+    "helpful_votes_users": [],
+    "not_helpful_votes": 1,
+    "not_helpful_votes_users": [
+      "U037"
+    ]
+  },
+  {
+    "review_id": "R0114",
+    "movie_id": "M011",
+    "user_id": "U008",
+    "rating": 10,
+    "comment": "The plot twist was genuinely surprising.",
+    "review_date": "2025-09-07",
+    "helpful_votes": 92
+  },
+  {
+    "review_id": "R0115",
+    "movie_id": "M078",
+    "user_id": "U010",
+    "rating": 2,
+    "comment": "Could have been shorter, but still enjoyable.",
+    "review_date": "2025-11-05",
+    "helpful_votes": 26
+  },
+  {
+    "review_id": "R0118",
+    "movie_id": "M031",
+    "user_id": "U016",
+    "rating": 10,
+    "comment": "Excellent world-building and characters.",
+    "review_date": "2024-03-13",
+    "helpful_votes": 113
+  },
+  {
+    "review_id": "R0121",
+    "movie_id": "M061",
+    "user_id": "U025",
+    "rating": 2,
+    "comment": "The plot twist was genuinely surprising.",
+    "review_date": "2024-01-18",
+    "helpful_votes": 8
+  },
+  {
+    "review_id": "R0123",
+    "movie_id": "M051",
+    "user_id": "U017",
+    "rating": 6,
+    "comment": "Excellent world-building and characters.",
+    "review_date": "2025-10-05",
+    "helpful_votes": 98
+  },
+  {
+    "review_id": "R0125",
+    "movie_id": "M079",
+    "user_id": "U005",
+    "rating": 6,
+    "comment": "Could have been shorter, but still enjoyable.",
+    "review_date": "2024-03-26",
+    "helpful_votes": 10
+  },
+  {
+    "review_id": "R0126",
+    "movie_id": "M066",
+    "user_id": "U030",
+    "rating": 4,
+    "comment": "Excellent world-building and characters.",
+    "review_date": "2024-06-08",
+    "helpful_votes": 41
+  },
+  {
+    "review_id": "R0127",
+    "movie_id": "M051",
+    "user_id": "U019",
+    "rating": 2,
+    "comment": "Not for everyone, but I appreciated it.",
+    "review_date": "2024-11-13",
+    "helpful_votes": 93
+  },
+  {
+    "review_id": "R0130",
+    "movie_id": "M095",
+    "user_id": "U022",
+    "rating": 4,
+    "comment": "Loved the pacing and soundtrack.",
+    "review_date": "2024-05-02",
+    "helpful_votes": 90
+  },
+  {
+    "review_id": "R0131",
+    "movie_id": "M018",
+    "user_id": "U023",
+    "rating": 2,
+    "comment": "A bit predictable, yet entertaining.",
+    "review_date": "2024-06-16",
+    "helpful_votes": 44
+  },
+  {
+    "review_id": "R0132",
+    "movie_id": "M067",
+    "user_id": "U017",
+    "rating": 6,
+    "comment": "Visually stunning and emotionally grounded.",
+    "review_date": "2024-06-19",
+    "helpful_votes": 16
+  },
+  {
+    "review_id": "R0133",
+    "movie_id": "M096",
+    "user_id": "U025",
+    "rating": 6,
+    "comment": "Great performances and direction.",
+    "review_date": "2026-01-20",
+    "helpful_votes": 98
+  },
+  {
+    "review_id": "R0135",
+    "movie_id": "M034",
+    "user_id": "U023",
+    "rating": 10,
+    "comment": "Great performances and direction.",
+    "review_date": "2025-10-04",
+    "helpful_votes": 63
+  },
+  {
+    "review_id": "R0136",
+    "movie_id": "M059",
+    "user_id": "U017",
+    "rating": 6,
+    "comment": "A bit predictable, yet entertaining.",
+    "review_date": "2024-02-26",
+    "helpful_votes": 109
+  },
+  {
+    "review_id": "R0137",
+    "movie_id": "M073",
+    "user_id": "U006",
+    "rating": 6,
+    "comment": "Could have been shorter, but still enjoyable.",
+    "review_date": "2024-06-10",
+    "helpful_votes": 98
+  },
+  {
+    "review_id": "R0138",
+    "movie_id": "M014",
+    "user_id": "U029",
+    "rating": 10,
+    "comment": "Great performances and direction.",
+    "review_date": "2025-11-21",
+    "helpful_votes": 29
+  },
+  {
+    "review_id": "R0139",
+    "movie_id": "M095",
+    "user_id": "U017",
+    "rating": 2,
+    "comment": "Loved the pacing and soundtrack.",
+    "review_date": "2024-02-15",
+    "helpful_votes": 31
+  },
+  {
+    "review_id": "R0140",
+    "movie_id": "M006",
+    "user_id": "U016",
+    "rating": 6,
+    "comment": "Interesting concept but uneven execution.",
+    "review_date": "2025-01-27",
+    "helpful_votes": 22
+  },
+  {
+    "review_id": "R0142",
+    "movie_id": "M054",
+    "user_id": "U030",
+    "rating": 6,
+    "comment": "Great performances and direction.",
+    "review_date": "2024-10-04",
+    "helpful_votes": 73
+  },
+  {
+    "review_id": "R0143",
+    "movie_id": "M048",
+    "user_id": "U004",
+    "rating": 10,
+    "comment": "Loved the pacing and soundtrack.",
+    "review_date": "2025-11-20",
+    "helpful_votes": 22
+  },
+  {
+    "review_id": "R0144",
+    "movie_id": "M029",
+    "user_id": "U026",
+    "rating": 10,
+    "comment": "Not for everyone, but I appreciated it.",
+    "review_date": "2024-02-17",
+    "helpful_votes": 8
+  },
+  {
+    "review_id": "R0145",
+    "movie_id": "M060",
+    "user_id": "U028",
+    "rating": 6,
+    "comment": "Visually stunning and emotionally grounded.",
+    "review_date": "2024-11-14",
+    "helpful_votes": 11
+  },
+  {
+    "review_id": "R0146",
+    "movie_id": "M071",
+    "user_id": "U015",
+    "rating": 2,
+    "comment": "A fun watch with a strong ending.",
+    "review_date": "2025-01-12",
+    "helpful_votes": 37
+  },
+  {
+    "review_id": "R0147",
+    "movie_id": "M073",
+    "user_id": "U026",
+    "rating": 6,
+    "comment": "The plot twist was genuinely surprising.",
+    "review_date": "2026-01-27",
+    "helpful_votes": 31
+  },
+  {
+    "review_id": "R0148",
+    "movie_id": "M060",
+    "user_id": "U012",
+    "rating": 10,
+    "comment": "A fun watch with a strong ending.",
+    "review_date": "2025-05-20",
+    "helpful_votes": 93
+  },
+  {
+    "review_id": "R0149",
+    "movie_id": "M070",
+    "user_id": "U025",
+    "rating": 4,
+    "comment": "Loved the pacing and soundtrack.",
+    "review_date": "2024-06-03",
+    "helpful_votes": 119
+  },
+  {
+    "review_id": "R0151",
+    "movie_id": "M089",
+    "user_id": "U029",
+    "rating": 2,
+    "comment": "Loved the pacing and soundtrack.",
+    "review_date": "2024-12-09",
+    "helpful_votes": 97
+  },
+  {
+    "review_id": "R0154",
+    "movie_id": "M036",
+    "user_id": "U003",
+    "rating": 2,
+    "comment": "Excellent world-building and characters.",
+    "review_date": "2024-08-25",
+    "helpful_votes": 52
+  },
+  {
+    "review_id": "R0155",
+    "movie_id": "M090",
+    "user_id": "U029",
+    "rating": 6,
+    "comment": "Great performances and direction.",
+    "review_date": "2025-04-14",
+    "helpful_votes": 74
+  },
+  {
+    "review_id": "R0156",
+    "movie_id": "M013",
+    "user_id": "U017",
+    "rating": 4,
+    "comment": "Not for everyone, but I appreciated it.",
+    "review_date": "2025-10-14",
+    "helpful_votes": 9
+  },
+  {
+    "review_id": "R0157",
+    "movie_id": "M076",
+    "user_id": "U019",
+    "rating": 2,
+    "comment": "Interesting concept but uneven execution.",
+    "review_date": "2025-03-21",
+    "helpful_votes": 30
+  },
+  {
+    "review_id": "R0158",
+    "movie_id": "M038",
+    "user_id": "U009",
+    "rating": 6,
+    "comment": "Visually stunning and emotionally grounded.",
+    "review_date": "2025-02-06",
+    "helpful_votes": 40
+  },
+  {
+    "review_id": "R0159",
+    "movie_id": "M058",
+    "user_id": "U009",
+    "rating": 4,
+    "comment": "A fun watch with a strong ending.",
+    "review_date": "2024-03-17",
+    "helpful_votes": 17
+  },
+  {
+    "review_id": "R0160",
+    "movie_id": "M100",
+    "user_id": "U025",
+    "rating": 10,
+    "comment": "Interesting concept but uneven execution.",
+    "review_date": "2024-04-21",
+    "helpful_votes": 13
+  },
+  {
+    "review_id": "R0161",
+    "movie_id": "M022",
+    "user_id": "U015",
+    "rating": 8,
+    "comment": "Not for everyone, but I appreciated it.",
+    "review_date": "2024-11-17",
+    "helpful_votes": 15
+  },
+  {
+    "review_id": "R0162",
+    "movie_id": "M069",
+    "user_id": "U012",
+    "rating": 4,
+    "comment": "Could have been shorter, but still enjoyable.",
+    "review_date": "2025-04-07",
+    "helpful_votes": 59
+  },
+  {
+    "review_id": "R0163",
+    "movie_id": "M034",
+    "user_id": "U028",
+    "rating": 2,
+    "comment": "Interesting concept but uneven execution.",
+    "review_date": "2024-04-02",
+    "helpful_votes": 103
+  },
+  {
+    "review_id": "R0164",
+    "movie_id": "M088",
+    "user_id": "U010",
+    "rating": 10,
+    "comment": "A fun watch with a strong ending.",
+    "review_date": "2024-02-11",
+    "helpful_votes": 106
+  },
+  {
+    "review_id": "R0165",
+    "movie_id": "M042",
+    "user_id": "U005",
+    "rating": 2,
+    "comment": "A fun watch with a strong ending.",
+    "review_date": "2025-12-29",
+    "helpful_votes": 45
+  },
+  {
+    "review_id": "R0166",
+    "movie_id": "M051",
+    "user_id": "U017",
+    "rating": 2,
+    "comment": "Could have been shorter, but still enjoyable.",
+    "review_date": "2025-11-24",
+    "helpful_votes": 33
+  },
+  {
+    "review_id": "R0168",
+    "movie_id": "M071",
+    "user_id": "U008",
+    "rating": 2,
+    "comment": "Great performances and direction.",
+    "review_date": "2025-04-18",
+    "helpful_votes": 102
+  },
+  {
+    "review_id": "R0169",
+    "movie_id": "M018",
+    "user_id": "U004",
+    "rating": 2,
+    "comment": "A fun watch with a strong ending.",
+    "review_date": "2024-03-04",
+    "helpful_votes": 16
+  },
+  {
+    "review_id": "R0171",
+    "movie_id": "M076",
+    "user_id": "U009",
+    "rating": 2,
+    "comment": "Great performances and direction.",
+    "review_date": "2024-01-23",
+    "helpful_votes": 25
+  },
+  {
+    "review_id": "R0172",
+    "movie_id": "M083",
+    "user_id": "U015",
+    "rating": 4,
+    "comment": "Visually stunning and emotionally grounded.",
+    "review_date": "2024-04-04",
+    "helpful_votes": 15
+  },
+  {
+    "review_id": "R0173",
+    "movie_id": "M006",
+    "user_id": "U015",
+    "rating": 2,
+    "comment": "The plot twist was genuinely surprising.",
+    "review_date": "2024-06-21",
+    "helpful_votes": 55
+  },
+  {
+    "review_id": "R0175",
+    "movie_id": "M055",
+    "user_id": "U006",
+    "rating": 6,
+    "comment": "Interesting concept but uneven execution.",
+    "review_date": "2024-08-07",
+    "helpful_votes": 35
+  },
+  {
+    "review_id": "R0176",
+    "movie_id": "M036",
+    "user_id": "U015",
+    "rating": 4,
+    "comment": "The plot twist was genuinely surprising.",
+    "review_date": "2024-02-05",
+    "helpful_votes": 79
+  },
+  {
+    "review_id": "R0177",
+    "movie_id": "M079",
+    "user_id": "U008",
+    "rating": 6,
+    "comment": "Not for everyone, but I appreciated it.",
+    "review_date": "2025-05-25",
+    "helpful_votes": 112
+  },
+  {
+    "review_id": "R0178",
+    "movie_id": "M071",
+    "user_id": "U016",
+    "rating": 2,
+    "comment": "Could have been shorter, but still enjoyable.",
+    "review_date": "2024-03-30",
+    "helpful_votes": 49
+  },
+  {
+    "review_id": "R0180",
+    "movie_id": "M081",
+    "user_id": "U026",
+    "rating": 10,
+    "comment": "Not for everyone, but I appreciated it.",
+    "review_date": "2024-01-20",
+    "helpful_votes": 100
+  },
+  {
+    "review_id": "R0181",
+    "movie_id": "M092",
+    "user_id": "U012",
+    "rating": 8,
+    "comment": "A bit predictable, yet entertaining.",
+    "review_date": "2025-07-11",
+    "helpful_votes": 44
+  },
+  {
+    "review_id": "R0182",
+    "movie_id": "M073",
+    "user_id": "U017",
+    "rating": 6,
+    "comment": "Could have been shorter, but still enjoyable.",
+    "review_date": "2025-02-01",
+    "helpful_votes": 23
+  },
+  {
+    "review_id": "R0184",
+    "movie_id": "M100",
+    "user_id": "U009",
+    "rating": 2,
+    "comment": "Excellent world-building and characters.",
+    "review_date": "2025-04-28",
+    "helpful_votes": 45
+  },
+  {
+    "review_id": "R0185",
+    "movie_id": "M099",
+    "user_id": "U019",
+    "rating": 4,
+    "comment": "Great performances and direction.",
+    "review_date": "2024-06-12",
+    "helpful_votes": 31
+  },
+  {
+    "review_id": "R0186",
+    "movie_id": "M085",
+    "user_id": "U008",
+    "rating": 6,
+    "comment": "Loved the pacing and soundtrack.",
+    "review_date": "2025-06-30",
+    "helpful_votes": 97
+  },
+  {
+    "review_id": "R0187",
+    "movie_id": "M029",
+    "user_id": "U019",
+    "rating": 8,
+    "comment": "Interesting concept but uneven execution.",
+    "review_date": "2024-12-29",
+    "helpful_votes": 22
+  },
+  {
+    "review_id": "R0188",
+    "movie_id": "M031",
+    "user_id": "U019",
+    "rating": 6,
+    "comment": "Visually stunning and emotionally grounded.",
+    "review_date": "2026-01-25",
+    "helpful_votes": 116
+  },
+  {
+    "review_id": "R0190",
+    "movie_id": "M073",
+    "user_id": "U007",
+    "rating": 8,
+    "comment": "Could have been shorter, but still enjoyable.",
+    "review_date": "2025-07-09",
+    "helpful_votes": 22
+  },
+  {
+    "review_id": "R0193",
+    "movie_id": "M079",
+    "user_id": "U007",
+    "rating": 4,
+    "comment": "Interesting concept but uneven execution.",
+    "review_date": "2024-12-14",
+    "helpful_votes": 117
+  },
+  {
+    "review_id": "R0195",
+    "movie_id": "M019",
+    "user_id": "U025",
+    "rating": 2,
+    "comment": "Visually stunning and emotionally grounded.",
+    "review_date": "2025-06-22",
+    "helpful_votes": 9
+  },
+  {
+    "review_id": "R0196",
+    "movie_id": "M048",
+    "user_id": "U023",
+    "rating": 8,
+    "comment": "Great performances and direction.",
+    "review_date": "2025-08-23",
+    "helpful_votes": 43
+  },
+  {
+    "review_id": "R0198",
+    "movie_id": "M082",
+    "user_id": "U016",
+    "rating": 6,
+    "comment": "Excellent world-building and characters.",
+    "review_date": "2024-06-27",
+    "helpful_votes": 88
+  },
+  {
+    "review_id": "R0199",
+    "movie_id": "M079",
+    "user_id": "U026",
+    "rating": 6,
+    "comment": "The plot twist was genuinely surprising.",
+    "review_date": "2024-08-16",
+    "helpful_votes": 104
+  },
+  {
+    "review_id": "R0201",
+    "movie_id": "M023",
+    "user_id": "U024",
+    "rating": 2,
+    "comment": "The plot twist was genuinely surprising.",
+    "review_date": "2025-12-19",
+    "helpful_votes": 50
+  },
+  {
+    "review_id": "R0202",
+    "movie_id": "M099",
+    "user_id": "U019",
+    "rating": 2,
+    "comment": "The plot twist was genuinely surprising.",
+    "review_date": "2024-07-05",
+    "helpful_votes": 40
+  },
+  {
+    "review_id": "R0203",
+    "movie_id": "M079",
+    "user_id": "U008",
+    "rating": 10,
+    "comment": "A bit predictable, yet entertaining.",
+    "review_date": "2024-04-16",
+    "helpful_votes": 18
+  },
+  {
+    "review_id": "R0204",
+    "movie_id": "M043",
+    "user_id": "U024",
+    "rating": 2,
+    "comment": "Visually stunning and emotionally grounded.",
+    "review_date": "2024-08-31",
+    "helpful_votes": 40
+  },
+  {
+    "review_id": "R0207",
+    "movie_id": "M033",
+    "user_id": "U026",
+    "rating": 2,
+    "comment": "Loved the pacing and soundtrack.",
+    "review_date": "2026-01-07",
+    "helpful_votes": 6
+  },
+  {
+    "review_id": "R0208",
+    "movie_id": "M050",
+    "user_id": "U015",
+    "rating": 8,
+    "comment": "Not for everyone, but I appreciated it.",
+    "review_date": "2024-06-19",
+    "helpful_votes": 63
+  },
+  {
+    "review_id": "R0209",
+    "movie_id": "M049",
+    "user_id": "U012",
+    "rating": 10,
+    "comment": "Great performances and direction.",
+    "review_date": "2025-01-19",
+    "helpful_votes": 106
+  },
+  {
+    "review_id": "R0210",
+    "movie_id": "M062",
+    "user_id": "U026",
+    "rating": 10,
+    "comment": "A fun watch with a strong ending.",
+    "review_date": "2025-10-28",
+    "helpful_votes": 20
+  },
+  {
+    "review_id": "R0211",
+    "movie_id": "M058",
+    "user_id": "U003",
+    "rating": 2,
+    "comment": "Loved the pacing and soundtrack.",
+    "review_date": "2024-10-28",
+    "helpful_votes": 40
+  },
+  {
+    "review_id": "R0212",
+    "movie_id": "M034",
+    "user_id": "U004",
+    "rating": 2,
+    "comment": "Interesting concept but uneven execution.",
+    "review_date": "2024-12-16",
+    "helpful_votes": 113,
+    "helpful_votes_users": [],
+    "not_helpful_votes": 0,
+    "not_helpful_votes_users": []
+  },
+  {
+    "review_id": "R0213",
+    "movie_id": "M049",
+    "user_id": "U006",
+    "rating": 2,
+    "comment": "Great performances and direction.",
+    "review_date": "2025-07-14",
+    "helpful_votes": 43
+  },
+  {
+    "review_id": "R0215",
+    "movie_id": "M084",
+    "user_id": "U006",
+    "rating": 10,
+    "comment": "Interesting concept but uneven execution.",
+    "review_date": "2025-03-20",
+    "helpful_votes": 6
+  },
+  {
+    "review_id": "R0217",
+    "movie_id": "M071",
+    "user_id": "U024",
+    "rating": 10,
+    "comment": "Could have been shorter, but still enjoyable.",
+    "review_date": "2024-09-28",
+    "helpful_votes": 38
+  },
+  {
+    "review_id": "R0218",
+    "movie_id": "M031",
+    "user_id": "U004",
+    "rating": 2,
+    "comment": "The plot twist was genuinely surprising.",
+    "review_date": "2025-02-06",
+    "helpful_votes": 70
+  },
+  {
+    "review_id": "R0219",
+    "movie_id": "M063",
+    "user_id": "U005",
+    "rating": 2,
+    "comment": "Loved the pacing and soundtrack.",
+    "review_date": "2025-01-04",
+    "helpful_votes": 54
+  },
+  {
+    "review_id": "R0220",
+    "movie_id": "M012",
+    "user_id": "U010",
+    "rating": 10,
+    "comment": "A fun watch with a strong ending.",
+    "review_date": "2025-05-06",
+    "helpful_votes": 12
+  },
+  {
+    "review_id": "R0221",
+    "movie_id": "M004",
+    "user_id": "U007",
+    "rating": 4,
+    "comment": "Could have been shorter, but still enjoyable.",
+    "review_date": "2025-10-15",
+    "helpful_votes": 10
+  },
+  {
+    "review_id": "R0222",
+    "movie_id": "M061",
+    "user_id": "U028",
+    "rating": 2,
+    "comment": "Not for everyone, but I appreciated it.",
+    "review_date": "2024-11-11",
+    "helpful_votes": 60
+  },
+  {
+    "review_id": "R0223",
+    "movie_id": "M063",
+    "user_id": "U029",
+    "rating": 6,
+    "comment": "Excellent world-building and characters.",
+    "review_date": "2024-04-03",
+    "helpful_votes": 49
+  },
+  {
+    "review_id": "R0224",
+    "movie_id": "M024",
+    "user_id": "U012",
+    "rating": 8,
+    "comment": "Interesting concept but uneven execution.",
+    "review_date": "2025-01-13",
+    "helpful_votes": 57
+  },
+  {
+    "review_id": "R0225",
+    "movie_id": "M006",
+    "user_id": "U009",
+    "rating": 8,
+    "comment": "Could have been shorter, but still enjoyable.",
+    "review_date": "2025-04-21",
+    "helpful_votes": 28
+  },
+  {
+    "review_id": "R0226",
+    "movie_id": "M035",
+    "user_id": "U019",
+    "rating": 2,
+    "comment": "Great performances and direction.",
+    "review_date": "2024-06-03",
+    "helpful_votes": 10
+  },
+  {
+    "review_id": "R0227",
+    "movie_id": "M086",
+    "user_id": "U012",
+    "rating": 10,
+    "comment": "The plot twist was genuinely surprising.",
+    "review_date": "2025-02-27",
+    "helpful_votes": 29
+  },
+  {
+    "review_id": "R0229",
+    "movie_id": "M088",
+    "user_id": "U028",
+    "rating": 8,
+    "comment": "A fun watch with a strong ending.",
+    "review_date": "2025-08-09",
+    "helpful_votes": 60
+  },
+  {
+    "review_id": "R0230",
+    "movie_id": "M039",
+    "user_id": "U003",
+    "rating": 8,
+    "comment": "Loved the pacing and soundtrack.",
+    "review_date": "2026-01-01",
+    "helpful_votes": 64
+  },
+  {
+    "review_id": "R0231",
+    "movie_id": "M074",
+    "user_id": "U029",
+    "rating": 10,
+    "comment": "The plot twist was genuinely surprising.",
+    "review_date": "2025-08-08",
+    "helpful_votes": 19,
+    "helpful_votes_users": [
+      "U037"
+    ],
+    "not_helpful_votes": 0,
+    "not_helpful_votes_users": []
+  },
+  {
+    "review_id": "R0232",
+    "movie_id": "M016",
+    "user_id": "U025",
+    "rating": 8,
+    "comment": "Interesting concept but uneven execution.",
+    "review_date": "2024-06-26",
+    "helpful_votes": 27
+  },
+  {
+    "review_id": "R0233",
+    "movie_id": "M025",
+    "user_id": "U005",
+    "rating": 2,
+    "comment": "Great performances and direction.",
+    "review_date": "2025-03-09",
+    "helpful_votes": 87
+  },
+  {
+    "review_id": "R0234",
+    "movie_id": "M056",
+    "user_id": "U007",
+    "rating": 4,
+    "comment": "Could have been shorter, but still enjoyable.",
+    "review_date": "2025-09-01",
+    "helpful_votes": 40
+  },
+  {
+    "review_id": "R0235",
+    "movie_id": "M094",
+    "user_id": "U030",
+    "rating": 2,
+    "comment": "Not for everyone, but I appreciated it.",
+    "review_date": "2024-03-30",
+    "helpful_votes": 71
+  },
+  {
+    "review_id": "R0236",
+    "movie_id": "M051",
+    "user_id": "U018",
+    "rating": 6,
+    "comment": "Excellent world-building and characters.",
+    "review_date": "2024-10-09",
+    "helpful_votes": 58
+  },
+  {
+    "review_id": "R0238",
+    "movie_id": "M054",
+    "user_id": "U004",
+    "rating": 8,
+    "comment": "Interesting concept but uneven execution.",
+    "review_date": "2024-06-02",
+    "helpful_votes": 72
+  },
+  {
+    "review_id": "R0239",
+    "movie_id": "M076",
+    "user_id": "U019",
+    "rating": 2,
+    "comment": "The plot twist was genuinely surprising.",
+    "review_date": "2024-04-18",
+    "helpful_votes": 99
+  },
+  {
+    "review_id": "R0240",
+    "movie_id": "M013",
+    "user_id": "U026",
+    "rating": 6,
+    "comment": "Visually stunning and emotionally grounded.",
+    "review_date": "2025-07-02",
+    "helpful_votes": 112
+  },
+  {
+    "review_id": "R0241",
+    "movie_id": "M053",
+    "user_id": "U009",
+    "rating": 8,
+    "comment": "A bit predictable, yet entertaining.",
+    "review_date": "2025-11-01",
+    "helpful_votes": 73
+  },
+  {
+    "review_id": "R0242",
+    "movie_id": "M078",
+    "user_id": "U016",
+    "rating": 2,
+    "comment": "Could have been shorter, but still enjoyable.",
+    "review_date": "2024-06-25",
+    "helpful_votes": 51
+  },
+  {
+    "review_id": "R0244",
+    "movie_id": "M051",
+    "user_id": "U029",
+    "rating": 6,
+    "comment": "A fun watch with a strong ending.",
+    "review_date": "2025-12-08",
+    "helpful_votes": 6
+  },
+  {
+    "review_id": "R0245",
+    "movie_id": "M096",
+    "user_id": "U016",
+    "rating": 6,
+    "comment": "Loved the pacing and soundtrack.",
+    "review_date": "2025-01-16",
+    "helpful_votes": 43
+  },
+  {
+    "review_id": "R0246",
+    "movie_id": "M039",
+    "user_id": "U010",
+    "rating": 6,
+    "comment": "Great performances and direction.",
+    "review_date": "2025-05-18",
+    "helpful_votes": 111
+  },
+  {
+    "review_id": "R0247",
+    "movie_id": "M030",
+    "user_id": "U005",
+    "rating": 6,
+    "comment": "A bit predictable, yet entertaining.",
+    "review_date": "2026-01-31",
+    "helpful_votes": 99
+  },
+  {
+    "review_id": "R0248",
+    "movie_id": "M042",
+    "user_id": "U009",
+    "rating": 8,
+    "comment": "Great performances and direction.",
+    "review_date": "2025-09-11",
+    "helpful_votes": 24
+  },
+  {
+    "review_id": "R0249",
+    "movie_id": "M057",
+    "user_id": "U007",
+    "rating": 8,
+    "comment": "A bit predictable, yet entertaining.",
+    "review_date": "2026-01-28",
+    "helpful_votes": 97
+  },
+  {
+    "review_id": "R0250",
+    "movie_id": "M067",
+    "user_id": "U028",
+    "rating": 6,
+    "comment": "Excellent world-building and characters.",
+    "review_date": "2024-02-27",
+    "helpful_votes": 101
+  },
+  {
+    "review_id": "R0251",
+    "movie_id": "M021",
+    "user_id": "U003",
+    "rating": 6,
+    "comment": "Excellent world-building and characters.",
+    "review_date": "2025-12-27",
+    "helpful_votes": 51
+  },
+  {
+    "review_id": "R0252",
+    "movie_id": "M018",
+    "user_id": "U025",
+    "rating": 10,
+    "comment": "Loved the pacing and soundtrack.",
+    "review_date": "2025-08-05",
+    "helpful_votes": 22
+  },
+  {
+    "review_id": "R0253",
+    "movie_id": "M025",
+    "user_id": "U029",
+    "rating": 4,
+    "comment": "A fun watch with a strong ending.",
+    "review_date": "2024-02-29",
+    "helpful_votes": 4
+  },
+  {
+    "review_id": "R0256",
+    "movie_id": "M016",
+    "user_id": "U022",
+    "rating": 2,
+    "comment": "Visually stunning and emotionally grounded.",
+    "review_date": "2024-09-04",
+    "helpful_votes": 62
+  },
+  {
+    "review_id": "R0257",
+    "movie_id": "M077",
+    "user_id": "U015",
+    "rating": 4,
+    "comment": "The plot twist was genuinely surprising.",
+    "review_date": "2025-04-30",
+    "helpful_votes": 70
+  },
+  {
+    "review_id": "R0258",
+    "movie_id": "M045",
+    "user_id": "U012",
+    "rating": 4,
+    "comment": "Great performances and direction.",
+    "review_date": "2024-09-21",
+    "helpful_votes": 36
+  },
+  {
+    "review_id": "R0261",
+    "movie_id": "M027",
+    "user_id": "U009",
+    "rating": 8,
+    "comment": "Loved the pacing and soundtrack.",
+    "review_date": "2025-06-09",
+    "helpful_votes": 110
+  },
+  {
+    "review_id": "R0262",
+    "movie_id": "M100",
+    "user_id": "U025",
+    "rating": 2,
+    "comment": "Interesting concept but uneven execution.",
+    "review_date": "2025-04-30",
+    "helpful_votes": 82
+  },
+  {
+    "review_id": "R0264",
+    "movie_id": "M040",
+    "user_id": "U023",
+    "rating": 6,
+    "comment": "Not for everyone, but I appreciated it.",
+    "review_date": "2025-03-09",
+    "helpful_votes": 109
+  },
+  {
+    "review_id": "R0265",
+    "movie_id": "M045",
+    "user_id": "U015",
+    "rating": 6,
+    "comment": "A bit predictable, yet entertaining.",
+    "review_date": "2024-08-11",
+    "helpful_votes": 38
+  },
+  {
+    "review_id": "R0266",
+    "movie_id": "M087",
+    "user_id": "U017",
+    "rating": 10,
+    "comment": "The plot twist was genuinely surprising.",
+    "review_date": "2025-02-10",
+    "helpful_votes": 13
+  },
+  {
+    "review_id": "R0267",
+    "movie_id": "M001",
+    "user_id": "U017",
+    "rating": 6,
+    "comment": "The plot twist was genuinely surprising.",
+    "review_date": "2025-07-28",
+    "helpful_votes": 77
+  },
+  {
+    "review_id": "R0268",
+    "movie_id": "M037",
+    "user_id": "U010",
+    "rating": 2,
+    "comment": "Great performances and direction.",
+    "review_date": "2025-05-08",
+    "helpful_votes": 43
+  },
+  {
+    "review_id": "R0270",
+    "movie_id": "M092",
+    "user_id": "U029",
+    "rating": 6,
+    "comment": "Interesting concept but uneven execution.",
+    "review_date": "2024-07-11",
+    "helpful_votes": 66
+  },
+  {
+    "review_id": "R0271",
+    "movie_id": "M098",
+    "user_id": "U008",
+    "rating": 2,
+    "comment": "Not for everyone, but I appreciated it.",
+    "review_date": "2025-09-06",
+    "helpful_votes": 84
+  },
+  {
+    "review_id": "R0272",
+    "movie_id": "M041",
+    "user_id": "U022",
+    "rating": 4,
+    "comment": "Loved the pacing and soundtrack.",
+    "review_date": "2026-01-08",
+    "helpful_votes": 83
+  },
+  {
+    "review_id": "R0273",
+    "movie_id": "M064",
+    "user_id": "U010",
+    "rating": 6,
+    "comment": "Not for everyone, but I appreciated it.",
+    "review_date": "2025-03-04",
+    "helpful_votes": 49
+  },
+  {
+    "review_id": "R0276",
+    "movie_id": "M061",
+    "user_id": "U030",
+    "rating": 6,
+    "comment": "Could have been shorter, but still enjoyable.",
+    "review_date": "2025-06-03",
+    "helpful_votes": 108
+  },
+  {
+    "review_id": "R0278",
+    "movie_id": "M061",
+    "user_id": "U005",
+    "rating": 6,
+    "comment": "Excellent world-building and characters.",
+    "review_date": "2026-01-12",
+    "helpful_votes": 97
+  },
+  {
+    "review_id": "R0279",
+    "movie_id": "M024",
+    "user_id": "U022",
+    "rating": 6,
+    "comment": "Great performances and direction.",
+    "review_date": "2025-11-01",
+    "helpful_votes": 28
+  },
+  {
+    "review_id": "R0280",
+    "movie_id": "M046",
+    "user_id": "U008",
+    "rating": 6,
+    "comment": "Visually stunning and emotionally grounded.",
+    "review_date": "2025-03-06",
+    "helpful_votes": 47
+  },
+  {
+    "review_id": "R0281",
+    "movie_id": "M034",
+    "user_id": "U019",
+    "rating": 6,
+    "comment": "Great performances and direction.",
+    "review_date": "2025-04-19",
+    "helpful_votes": 60
+  },
+  {
+    "review_id": "R0283",
+    "movie_id": "M061",
+    "user_id": "U029",
+    "rating": 4,
+    "comment": "Great performances and direction.",
+    "review_date": "2025-05-27",
+    "helpful_votes": 111
+  },
+  {
+    "review_id": "R0286",
+    "movie_id": "M059",
+    "user_id": "U005",
+    "rating": 6,
+    "comment": "Interesting concept but uneven execution.",
+    "review_date": "2026-01-02",
+    "helpful_votes": 99
+  },
+  {
+    "review_id": "R0287",
+    "movie_id": "M011",
+    "user_id": "U016",
+    "rating": 6,
+    "comment": "Interesting concept but uneven execution.",
+    "review_date": "2025-10-08",
+    "helpful_votes": 40
+  },
+  {
+    "review_id": "R0289",
+    "movie_id": "M098",
+    "user_id": "U025",
+    "rating": 4,
+    "comment": "Interesting concept but uneven execution.",
+    "review_date": "2025-08-13",
+    "helpful_votes": 62
+  },
+  {
+    "review_id": "R0290",
+    "movie_id": "M098",
+    "user_id": "U025",
+    "rating": 2,
+    "comment": "The plot twist was genuinely surprising.",
+    "review_date": "2024-05-12",
+    "helpful_votes": 55
+  },
+  {
+    "review_id": "R0293",
+    "movie_id": "M042",
+    "user_id": "U025",
+    "rating": 10,
+    "comment": "Loved the pacing and soundtrack.",
+    "review_date": "2024-07-14",
+    "helpful_votes": 86
+  },
+  {
+    "review_id": "R0295",
+    "movie_id": "M017",
+    "user_id": "U004",
+    "rating": 8,
+    "comment": "The plot twist was genuinely surprising.",
+    "review_date": "2025-05-30",
+    "helpful_votes": 39
+  },
+  {
+    "review_id": "R0296",
+    "movie_id": "M022",
+    "user_id": "U003",
+    "rating": 2,
+    "comment": "Could have been shorter, but still enjoyable.",
+    "review_date": "2024-11-01",
+    "helpful_votes": 58
+  },
+  {
+    "review_id": "R0297",
+    "movie_id": "M094",
+    "user_id": "U017",
+    "rating": 10,
+    "comment": "Visually stunning and emotionally grounded.",
+    "review_date": "2025-06-20",
+    "helpful_votes": 55
+  },
+  {
+    "review_id": "R0298",
+    "movie_id": "M088",
+    "user_id": "U005",
+    "rating": 6,
+    "comment": "Visually stunning and emotionally grounded.",
+    "review_date": "2025-05-16",
+    "helpful_votes": 96
+  },
+  {
+    "review_id": "R0299",
+    "movie_id": "M025",
+    "user_id": "U006",
+    "rating": 8,
+    "comment": "A fun watch with a strong ending.",
+    "review_date": "2024-01-20",
+    "helpful_votes": 28
+  },
+  {
+    "review_id": "R0300",
+    "movie_id": "M094",
+    "user_id": "U005",
+    "rating": 4,
+    "comment": "Loved the pacing and soundtrack.",
+    "review_date": "2026-01-21",
+    "helpful_votes": 75
+  },
+  {
+    "review_id": "R308",
+    "movie_id": "M113",
+    "user_id": "U037",
+    "rating": 9,
+    "comment": "Test",
+    "review_date": "2026-04-16",
+    "helpful_votes": 0
+  },
+  {
+    "review_id": "R309",
+    "movie_id": "M081",
+    "user_id": "U037",
+    "rating": 2,
+    "comment": "",
+    "review_date": "2026-04-16",
+    "helpful_votes": 0
+  },
+  {
+    "review_id": "R310",
+    "movie_id": "M064",
+    "user_id": "U037",
+    "rating": 8,
+    "comment": "Not bad",
+    "review_date": "2026-04-20",
+    "helpful_votes": 0
+  },
+  {
+    "review_id": "R319",
+    "movie_id": "M116",
+    "user_id": "U004",
+    "rating": 10,
+    "comment": "One of the best movies I have seen.",
+    "review_date": "2026-03-20",
+    "helpful_votes": 0
+  },
+  {
+    "review_id": "R320",
+    "movie_id": "M116",
+    "user_id": "U006",
+    "rating": 10,
+    "comment": "Great performances from the whole cast.",
+    "review_date": "2026-04-28",
+    "helpful_votes": 10
+  },
+  {
+    "review_id": "R321",
+    "movie_id": "M116",
+    "user_id": "U007",
+    "rating": 10,
+    "comment": "Brilliant direction and cinematography.",
+    "review_date": "2026-01-19",
+    "helpful_votes": 14
+  },
+  {
+    "review_id": "R322",
+    "movie_id": "M116",
+    "user_id": "U008",
+    "rating": 10,
+    "comment": "Gripping story from start to finish.",
+    "review_date": "2026-02-13",
+    "helpful_votes": 4
+  },
+  {
+    "review_id": "R323",
+    "movie_id": "M116",
+    "user_id": "U009",
+    "rating": 8,
+    "comment": "A masterpiece of modern cinema.",
+    "review_date": "2026-03-15",
+    "helpful_votes": 15
+  },
+  {
+    "review_id": "R324",
+    "movie_id": "M116",
+    "user_id": "U010",
+    "rating": 8,
+    "comment": "Exceeded all my expectations.",
+    "review_date": "2026-04-25",
+    "helpful_votes": 15
+  },
+  {
+    "review_id": "R326",
+    "movie_id": "M116",
+    "user_id": "U012",
+    "rating": 10,
+    "comment": "Incredible visuals and strong writing.",
+    "review_date": "2026-02-11",
+    "helpful_votes": 2
+  },
+  {
+    "review_id": "R329",
+    "movie_id": "M116",
+    "user_id": "U016",
+    "rating": 10,
+    "comment": "Loved every minute of it.",
+    "review_date": "2026-01-04",
+    "helpful_votes": 13
+  },
+  {
+    "review_id": "R330",
+    "movie_id": "M116",
+    "user_id": "U017",
+    "rating": 10,
+    "comment": "A must watch for any movie fan.",
+    "review_date": "2026-02-19",
+    "helpful_votes": 10
+  },
+  {
+    "review_id": "R331",
+    "movie_id": "M116",
+    "user_id": "U018",
+    "rating": 6,
+    "comment": "Stunning film with emotional impact.",
+    "review_date": "2026-03-15",
+    "helpful_votes": 13
+  },
+  {
+    "review_id": "R334",
+    "movie_id": "M116",
+    "user_id": "U022",
+    "rating": 6,
+    "comment": "Could not take my eyes off the screen.",
+    "review_date": "2026-02-22",
+    "helpful_votes": 0
+  },
+  {
+    "review_id": "R335",
+    "movie_id": "M116",
+    "user_id": "U024",
+    "rating": 8,
+    "comment": "Powerful story told extremely well.",
+    "review_date": "2026-03-02",
+    "helpful_votes": 4
+  },
+  {
+    "review_id": "R336",
+    "movie_id": "M116",
+    "user_id": "U025",
+    "rating": 10,
+    "comment": "A truly memorable experience.",
+    "review_date": "2026-04-21",
+    "helpful_votes": 3
+  },
+  {
+    "review_id": "R337",
+    "movie_id": "M116",
+    "user_id": "U026",
+    "rating": 8,
+    "comment": "Superb acting and tight script.",
+    "review_date": "2026-01-24",
+    "helpful_votes": 4
+  },
+  {
+    "review_id": "R339",
+    "movie_id": "M116",
+    "user_id": "U028",
+    "rating": 8,
+    "comment": "Absolutely loved this film, great story.",
+    "review_date": "2026-03-12",
+    "helpful_votes": 14
+  },
+  {
+    "review_id": "R340",
+    "movie_id": "M116",
+    "user_id": "U029",
+    "rating": 8,
+    "comment": "Really well done, highly recommend.",
+    "review_date": "2026-04-06",
+    "helpful_votes": 8
+  },
+  {
+    "review_id": "R341",
+    "movie_id": "M116",
+    "user_id": "U030",
+    "rating": 6,
+    "comment": "One of the best movies I have seen.",
+    "review_date": "2026-01-21",
+    "helpful_votes": 2
+  },
+  {
+    "review_id": "R342",
+    "movie_id": "M116",
+    "user_id": "U032",
+    "rating": 6,
+    "comment": "Great performances from the whole cast.",
+    "review_date": "2026-02-18",
+    "helpful_votes": 12
+  },
+  {
+    "review_id": "R343",
+    "movie_id": "M116",
+    "user_id": "U033",
+    "rating": 10,
+    "comment": "Brilliant direction and cinematography.",
+    "review_date": "2026-03-05",
+    "helpful_votes": 10
+  },
+  {
+    "review_id": "R344",
+    "movie_id": "M116",
+    "user_id": "U034",
+    "rating": 8,
+    "comment": "Gripping story from start to finish.",
+    "review_date": "2026-04-15",
+    "helpful_votes": 0
+  },
+  {
+    "review_id": "R345",
+    "movie_id": "M116",
+    "user_id": "U035",
+    "rating": 10,
+    "comment": "A masterpiece of modern cinema.",
+    "review_date": "2026-01-05",
+    "helpful_votes": 4
+  },
+  {
+    "review_id": "R346",
+    "movie_id": "M116",
+    "user_id": "U036",
+    "rating": 10,
+    "comment": "Exceeded all my expectations.",
+    "review_date": "2026-02-18",
+    "helpful_votes": 12
+  },
+  {
+    "review_id": "R347",
+    "movie_id": "M116",
+    "user_id": "U037",
+    "rating": 8,
+    "comment": "Fantastic film, will watch again.",
+    "review_date": "2026-03-17",
+    "helpful_votes": 2
+  },
+  {
+    "review_id": "R348",
+    "movie_id": "M003",
+    "user_id": "U037",
+    "rating": 10,
+    "comment": "excellent movie",
+    "review_date": "2026-04-27",
+    "helpful_votes": 0
+  },
+  {
+    "review_id": "R349",
+    "movie_id": "M114",
+    "user_id": "U037",
+    "rating": 4,
+    "comment": "its boring",
+    "review_date": "2026-04-27",
+    "helpful_votes": 1,
+    "helpful_votes_users": [
+      "U039"
+    ]
+  },
+  {
+    "review_id": "R350",
+    "movie_id": "M014",
+    "user_id": "U037",
+    "rating": 6,
+    "comment": "",
+    "review_date": "2026-04-27",
+    "helpful_votes": 0
+  },
+  {
+    "review_id": "R351",
+    "movie_id": "M012",
+    "user_id": "U037",
+    "rating": 8,
+    "comment": "",
+    "review_date": "2026-04-27",
+    "helpful_votes": 0
+  },
+  {
+    "review_id": "R352",
+    "movie_id": "M084",
+    "user_id": "U037",
+    "rating": 8,
+    "comment": "",
+    "review_date": "2026-04-27",
+    "helpful_votes": 0
+  },
+  {
+    "review_id": "R353",
+    "movie_id": "M097",
+    "user_id": "U037",
+    "rating": 9,
+    "comment": "",
+    "review_date": "2026-04-27",
+    "helpful_votes": 0,
+    "helpful_votes_users": []
+  },
+  {
+    "review_id": "R354",
+    "movie_id": "M115",
+    "user_id": "U037",
+    "rating": 9,
+    "comment": "",
+    "review_date": "2026-04-27",
+    "helpful_votes": 0
+  },
+  {
+    "review_id": "R355",
+    "movie_id": "M052",
+    "user_id": "U037",
+    "rating": 7,
+    "comment": "",
+    "review_date": "2026-04-27",
+    "helpful_votes": 0
+  },
+  {
+    "review_id": "R356",
+    "movie_id": "M093",
+    "user_id": "U037",
+    "rating": 6,
+    "comment": "average",
+    "review_date": "2026-04-27",
+    "helpful_votes": 0
+  },
+  {
+    "review_id": "R357",
+    "movie_id": "M114",
+    "user_id": "U039",
+    "rating": 8,
+    "comment": "",
+    "review_date": "2026-04-30",
+    "helpful_votes": 0
+  }
+]
